@@ -1,0 +1,572 @@
+/* ROOT STYLING */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	/* overflow-x: hidden; */
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+    color: white;
+	/* line-height: 1; */
+	font-weight: 400;
+	background: url('../assets/website-background.png');
+	background-size: cover;
+	height: 100vh;
+	/* overflow-x: hidden; */
+}
+
+button {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+.temp-border {
+    border: 1px solid #ffffff;
+}
+
+/* GENERAL STYLING */
+
+/* 1. Navbar Styling */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 2rem;
+    height: 12rem;
+}
+
+.navbar > * {
+	padding: .5rem 1rem;
+}
+
+.logo {
+	height: 100%;
+    align-self: center;
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 8rem;
+    align-items: center;
+}
+
+.nav-links a {
+	text-decoration: none;
+    font-size: 2.8rem ;
+	color: white;
+}
+
+.login-btn {
+    background-color: #ECFF82;
+    border-radius: 4rem;
+    padding: 1rem 4rem;
+    font-size: 2.3rem;
+}
+
+main > section {
+    justify-content: center;
+}
+.hero-section {
+    height: 650px;
+    width: 80%;
+    padding: 4rem;
+    justify-self: center;
+}
+
+.hero-section-text-content > h1 {
+    font-size: 7.7rem;
+}
+
+.hero-section-text-content > p {
+    font-size: 3rem;
+    margin-top: 1.2rem;
+}
+
+.hero-section > img {
+    height: 500px;
+    width: auto;
+    position: relative;
+    left: 38rem;
+    bottom: 20rem;
+}
+
+.hero-section-text-content > button {
+    background-color: #ECFF82;
+    padding: 1rem 3rem;
+    border-radius: 4rem;
+    margin-top: 4rem;
+    font-size: 24px;
+}
+
+.hero-section-details {
+    height: 625px;
+    width: 90%;
+    justify-self: center;
+    padding: 2rem;
+}
+.hero-section-details > h3 {
+    font-size: 5rem;
+    justify-self: center;
+    margin-bottom: 4rem;
+}
+
+.hero-section-details > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section-details > div > img {
+    width: 647px;
+    height: 202px;
+    margin-right: 5rem;
+}
+
+.hero-section-details > div > p {
+    font-size: 2.8rem;
+    width: 60%;
+}
+
+.why-choose-section {
+    height: 450px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.why-choose-section > h3 {
+    font-size: 5rem;
+    justify-self: center;
+    margin-bottom: 5rem;
+    align-self: center;
+}
+
+.why-choose-section > div {
+    display: flex;
+    /* gap: 10rem; */
+    padding: 6rem;
+    background-color: #20211C;
+    border-radius: 3rem;
+    height: max-content;
+    width: 80%;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.why-choose-section > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-choose-section-icons {
+    width: 9.8rem;
+    height: 9.8rem;
+}
+
+.why-choose-section > div > div > p {
+    padding-top: 1rem;
+    font-size: 2.3rem;
+}
+
+
+.explore-vehicles-section {
+    height: 1350px;
+    width: 80%;
+    margin: auto;
+    padding: 5rem;
+}
+
+.explore-vehicles-section > h3 {
+    font-size: 5rem;
+    justify-self: center;
+    margin-bottom: 5rem;
+}
+
+.vehicles-grid {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.vehicles-grid > div {
+    background: linear-gradient(to bottom, #20211C, #595F38);
+    border-radius: 2rem;
+    width: 438px;
+    height: 542px;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#lamborghini-yellow {
+    width: 354px;
+    height: 178px;
+    margin-bottom: 5rem;
+}
+
+#mercedes-green {
+    width: 328px;
+    height: 169px;
+    margin-bottom: 5rem;
+}
+
+.vehicles-grid > div > span,
+.vehicles-grid > div > p{
+    font-size: 2.3rem;
+}
+
+.vehicles-grid > div > span {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.vehicles-grid > div > p > strong {
+    font-size: 2.8rem;
+}
+
+.card-inner-container {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: #323523;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+.card-inner-container > img[alt="engine"] {
+    size: 3.2rem;
+    grid-row: 1 / span 1;
+    grid-column: 1/ span 1;
+}
+
+.card-inner-container > img[alt="fuel"] {
+    size: 3.2rem;
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.card-inner-container > p {
+    font-size: 2.8rem;
+    position: relative;
+}
+
+#engine {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 3;
+}
+
+#speed {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 3;
+}
+
+img[alt="Go"] {
+    grid-row: 1 / span 2;
+    grid-column: 5 / span 1;
+    align-self: flex-end;
+}
+
+.offer-close-section {
+    background-image: url("../assets/rolls-royce.png");
+    width: 90%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer-close-section > h2 {
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+}
+
+.countdown-timer-container {
+    /* height: 184px; */
+    width: 625px;
+    border: white solid;
+}
+
+.countdown-timer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
+  .countdown-box {
+    width: 12.9rem;
+    /* height: 13.5rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .countdown-value {
+    height: 13.5rem !important;
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #ECFF82;
+    background-image: url("../assets/timerbg.svg");
+    border-radius: 8px;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .countdown-label {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    text-transform: uppercase;
+  }
+  
+
+.offer-close-section > p {
+    font-size: 3.2rem;
+    margin-top: 3.5rem;
+}
+
+.hurry-up-section {
+    height: min-content;
+    padding: 4rem 0;
+}
+
+.hurry-up-banner {
+    position: relative;
+    width: 100%;
+}
+
+.faq-section {
+    height: 720px;
+    width: 90%;
+    justify-self: center;
+    padding: 3rem;
+}
+
+.faq-section > h3 {
+    font-size: 4.1rem;
+    margin-bottom: 3.5rem;
+    justify-self: center;
+}
+
+.faq-main-content {
+    display: flex;
+    height: 55rem;
+}
+
+.faq-categories {
+    width: 30%;
+    padding: 3rem;
+    margin-right: 5rem;
+    border-radius: 2rem;
+    /* background-color: aqua */
+    background: linear-gradient(to bottom, #21231D, #575D37);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.faq-categories > span {
+    font-size: 2.8rem;
+    font-weight: 700;
+    display: block;
+    align-self: center;
+    /* margin-bottom: 2rem; */
+}
+
+.faq-categories li {
+    list-style: none;
+    font-size: 2.8rem;
+    line-height: 1.9;
+    padding: 0 1rem;
+    border-radius: .8rem;
+}
+
+.faq-categories li:hover {
+    background: #ECFF82;
+    color: black;
+}
+
+.faq-accordians {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.faq-accordians strong,
+.faq-accordians p {
+    font-size: 2.6rem;
+}
+
+.faq-accordians > strong {
+    margin-bottom: 1rem;
+}
+
+.faq-accordians p {
+    font-weight: 300;
+}
+
+.faq-accordians > div {
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    background-color: #20211C;
+}
+
+.faq-accordians > div > p {
+    margin-top: 1rem;
+}
+
+.form-section {
+    height: 925px;
+    width: 90%;
+    padding: 12rem;
+    border-radius: 2rem;
+    justify-self: center;
+    background-image: url("../assets/black-car-bg.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    width: 34%;
+}
+
+img[src="assets/two-cars-frame.png"] {
+    scale: .9
+}
+
+.form-section h3 {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+}
+
+form * {
+    padding: 1.5rem 3rem;
+    border-radius: 3rem;
+    display: block;
+    width: 100%;
+    height: 7rem;
+    margin-bottom: 2rem;
+}
+
+form input::placeholder {
+    font-size: 2.5rem;
+}
+/* 
+div.dropdown-div {
+    display: flex;
+    justify-content: space-between;
+} */
+
+select {
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    width: 47%;
+    font-size: 2.5rem;
+    color: gray;
+}
+
+form :nth-last-child(2) {
+    margin-left: 2rem;
+}
+
+button.form-get-quote {
+    width: 50%;
+    padding: 1.5rem 3rem;
+    color: black;
+    background-color: #ECFF82;
+    font-size: 2.3rem;
+}
+
+footer {
+    height: 450px;
+    width: 100%;
+    padding: 6rem 3rem;
+    background: linear-gradient(to right, #22241D, #565C36);
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.quick-links-div {
+    margin: 0 20rem 0 30rem;
+}
+
+.quick-links-div > span {
+    font-size: 3.2rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.quick-links-div li {
+    font-size: 2.8rem;
+    line-height: 2.2;
+}
+
+.working-time * {
+    display: block;
+    margin-bottom: .8rem;
+}
+
+.working-time > span {
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+
+.working-time > p {
+    font-size: 2.8rem;
+}
+
+.reserved-rights {
+    height: 60px;
+    padding: 2rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    background-color: black;
+}
+
+.reserved-rights > p {
+    font-size: 1.8rem;
+    justify-self: center;
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
