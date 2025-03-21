@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/phone-queries.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
-
+    <!-- <script src="js/accordian.js"></script> -->
 </head>
 <body>
-    <nav class="navbar temp-border">
+    <nav class="navbar">
         <img class="logo" src="assets/Privewhite.svg" alt="Prive Drive Logo">
         <ul class="nav-links">
             <li><a href='#'>Home</a></li>
@@ -19,19 +21,32 @@
             <button class="login-btn">
                 Login/Signup
             </button>
-        </ul>
+        </ul> 
     </nav>
+    <div class="mobile-header">
+        <img class="mobile-logo" src="assets/Privewhite.svg" alt="Prive Drive Logo">
+        <div class="vertical-navbar">
+            <ul class="mobile-nav-links">
+                <li><a href='#'>Home</a></li>
+                <li><a href='#'>Services</a></li>
+                <li><a href='#'>About Us</a></li>
+                <li><a href='#'>Contact Us</a></li>
+        </div>
+        <button class="mobile-login-btn">
+            Login/Signup
+        </button>
+    </div>
     <main>
-        <section class="hero-section temp-border">
+        <section class="hero-section">
             <div class="hero-section-text-content">
-                <h1>Prive Drive. The Ultimate<br>Luxury Experience</h1>
+                <h1>Privé Drive. The Ultimate<br>Luxury Experience</h1>
                 <p>Drive Your Dream Car at a Fraction of the Cost</p>
                 <button class="get-started-btn">Get Started</button>
             </div>
             <img src="assets/mercedes-white.png" alt="Mercedes White">
         </section>
-        <section class="hero-section-details temp-border">
-            <h3>Prive Drive - The Ultimate Luxury Experience</h3>
+        <section class="hero-section-details">
+            <h3>Privé Drive - The Ultimate Luxury Experience</h3>
             <div>
                 <img src="assets/luxury-black-cars.png" alt="Luxury Black Cars">
                 <p>
@@ -47,7 +62,7 @@
                 </p>
             </div>
         </section>
-        <section class="why-choose-section temp-border">
+        <section class="why-choose-section">
             <h3>Why Choose Us</h3>
             <div>
                 <div>
@@ -72,7 +87,7 @@
                 </div>
             </div>
         </section>
-        <section class="explore-vehicles-section temp-border">
+        <section class="explore-vehicles-section">
             <h3>Explore Our Range of Vehicles</h3>
             <div class="vehicles-grid temp-border">
                 <div>
@@ -150,7 +165,7 @@
             </div>
             <!-- <button>Show All</button> -->
         </section>
-        <section class="offer-close-section temp-border">
+        <section class="offer-close-section">
             <h2>OFFER CLOSES IN</h2>
             <div class="countdown-timer-container">
                 <div class="countdown-timer">
@@ -178,48 +193,37 @@
             <p>500 pre launch early birds across India should have a chance<br>
                 to get Rs 10000/- off on yearly maintainence.</p>
         </section>
-        <section class="hurry-up-section temp-border">
+        <section class="hurry-up-section">
             <img class="hurry-up-banner" src="assets/hurry-up-banner.png" alt="Hurry Up Banner">
         </section>
-        <section class="faq-section temp-border">
+        <section class="faq-section">
             <h3>FAQ's Section</h3>
             <div class="faq-main-content">
                 <div class="faq-categories">
                     <span>Categories</span>
-                    <ul>
-                        <li>Understanding Prive</li>
-                        <li>Pricing</li>
-                        <li>Car Delivery</li>
-                        <li>Car Usage Policy</li>
-                        <li>Challans/Accidents/Thefts</li>
-                        <li>Selling/Exiting of Contract</li>
-                        <li>Community</li>
-                    </ul>
+                    <div class="sidebar">
+                        <ul>
+                            <li class="faq-category" data-content="set1">Prive Drive Simplified</li>
+                            <li class="faq-category" data-content="set2">Pricing and Charges</li>
+                            <li class="faq-category" data-content="set3">Booking Procedure</li>
+                            <li class="faq-category" data-content="set4">Car Usage Rules</li>
+                            <li class="faq-category" data-content="set5">Refer</li>
+                            <li class="faq-category" data-content="set6">Selling/Transfer of Membership</li>
+                            <li class="faq-category" data-content="set7">Membership</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="faq-accordians">
-                    <strong>Understanding Prive</strong>
-                    <div>
-                        <strong>What is Prive?</strong>
-                        <p>
-                            At Prive'Drive, we don't just offer luxury cars; we offer the ultimate luxury experience. Through our exclusive fractional ownership and subscription model, indulge in the finest automobiles—Mercedes, BMW, Audi, Rolls-Royce, Jaguar, and Range Rover—without the complexities and costs of full ownership.
-                        </p>
-                    </div>
-                    <div>
-                        <strong>How does it work?</strong>
-                    </div>
-                    <div>
-                        <strong>Who will own the car?</strong>
-                    </div>
-                    <div>
-                        <strong>How it is different from renting a car?</strong>
-                    </div>
-                    <div>
-                        <strong>Who does your company Prive do?</strong>
+                    <!-- <strong>Understanding Prive</strong> -->
+                    <div class="accordion-container">
+                        <div class="accordion" id="accordion">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="form-section temp-border">
+        <section class="form-section">
             <img src="assets/two-cars-frame.png" alt="">
             <div class="form-container">
                 <h3>Find The Right Car For You</h3>
@@ -236,6 +240,18 @@
                         <option value="" selected disabled>Select Car</option>
                         <!-- <option value="option1">Option 1</option> -->
                         <!-- <option value="option2">Option 2</option> -->
+                    </select>
+                    <select id="dropdown" name="select-city-options">
+                        <option value="" selected disabled>Select City</option>
+                        <option value="option1">Delhi</option>
+                        <option value="option2">Gurugram</option>
+                        <option value="option3">Noida</option>
+                        <option value="option4">Pune</option>
+                        <option value="option5">Chennai</option>
+                        <option value="option6">Mumbai</option>
+                        <option value="option7">Jammu</option>
+                        <option value="option8">Kolkata</option>
+
                     </select>
                     <button class="form-get-quote">Get Quote</button>
                 </form>
@@ -262,8 +278,12 @@
             <p>MONDAY TO SATURDAY</p>
         </div>
     </footer>
-    <div class="reserved-rights temp-border">
+    <div class="reserved-rights">
         <p>2025. All Rights Reserved</p>
     </div>
+
+
+
+    <script src="js/accordian.js"></script>
 </body>
 </html>

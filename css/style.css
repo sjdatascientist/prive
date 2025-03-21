@@ -17,7 +17,6 @@ html {
 body {
 	font-family: Montserrat, sans-serif;
     color: white;
-	/* line-height: 1; */
 	font-weight: 400;
 	background: url('../assets/website-background.png');
 	background-size: cover;
@@ -30,19 +29,27 @@ button {
     font-weight: 700;
 }
 
-.temp-border {
+/* .temp-border {
     border: 1px solid #ffffff;
-}
+    width: inherit;
+} */
 
 /* GENERAL STYLING */
+.mobile-header {
+    display: none;
+}
+
 
 /* 1. Navbar Styling */
 .navbar {
+    width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem 2rem;
+    justify-self: center;
+	padding: 1.5rem 5rem;
     height: 12rem;
+    position: relative;
 }
 
 .navbar > * {
@@ -51,13 +58,16 @@ button {
 
 .logo {
 	height: 100%;
-    align-self: center;
+    /* align-self: center; */
 }
 
 .nav-links {
+    min-width: 50%;
+    max-width: 65%;
+    flex-grow: 1;
 	list-style: none;
 	display: flex;
-	gap: 8rem;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -82,6 +92,12 @@ main > section {
     width: 80%;
     padding: 4rem;
     justify-self: center;
+    position: relative;
+}
+
+.hero-section-text-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-section-text-content > h1 {
@@ -98,7 +114,7 @@ main > section {
     width: auto;
     position: relative;
     left: 38rem;
-    bottom: 20rem;
+    bottom: 20rem;;
 }
 
 .hero-section-text-content > button {
@@ -107,6 +123,7 @@ main > section {
     border-radius: 4rem;
     margin-top: 4rem;
     font-size: 24px;
+    width: 25rem;
 }
 
 .hero-section-details {
@@ -131,6 +148,7 @@ main > section {
     width: 647px;
     height: 202px;
     margin-right: 5rem;
+    overflow: hidden;
 }
 
 .hero-section-details > div > p {
@@ -198,13 +216,14 @@ main > section {
 }
 
 .vehicles-grid {
-    width: 100%;
+    width: inherit;
     height: max-content;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     gap: 5rem;
     justify-content: center;
+    margin: auto;
 }
 
 .vehicles-grid > div {
@@ -365,7 +384,7 @@ img[alt="Go"] {
 }
 
 .faq-section {
-    height: 720px;
+    height: 820px;
     width: 90%;
     justify-self: center;
     padding: 3rem;
@@ -404,7 +423,7 @@ img[alt="Go"] {
 
 .faq-categories li {
     list-style: none;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     line-height: 1.9;
     padding: 0 1rem;
     border-radius: .8rem;
@@ -415,34 +434,64 @@ img[alt="Go"] {
     color: black;
 }
 
+.active {
+    background: #ECFF82;
+    color: black
+}
+
 .faq-accordians {
     width: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.faq-accordians strong,
-.faq-accordians p {
-    font-size: 2.6rem;
+    /* justify-content: space-between; */
 }
 
 .faq-accordians > strong {
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
-.faq-accordians p {
-    font-weight: 300;
+.accordian-container {
+    height: 100%;
 }
 
-.faq-accordians > div {
-    padding: 1rem 3rem;
+.accordion {
+    width: inherit;
+    max-height: 100%;
+    margin: 1rem auto;
     border-radius: 2rem;
-    background-color: #20211C;
+    overflow: hidden;
 }
-
-.faq-accordians > div > p {
-    margin-top: 1rem;
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+.accordion-header {
+    background: black;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+.accordion-header:hover {
+    background: #232323;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    background: black;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+.accordion-content p {
+    color: white;
+    margin: 12px;
+    font-size: 1.8rem;
+}
+.active .accordion-content {
+    max-height: 20rem;
+    padding: 10px 15px;
 }
 
 .form-section {
@@ -468,7 +517,7 @@ img[src="assets/two-cars-frame.png"] {
 
 .form-section h3 {
     font-size: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 form * {
@@ -497,8 +546,12 @@ select {
     color: gray;
 }
 
-form :nth-last-child(2) {
+form :nth-last-child(3) {
     margin-left: 2rem;
+}
+
+select[name="select-city-options"] {
+    width: 100%;
 }
 
 button.form-get-quote {
@@ -564,7 +617,9 @@ footer {
 }
 
 
-
+.countdown-timer-container {
+    border: none;
+}
 
 
 

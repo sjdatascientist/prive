@@ -1,0 +1,308 @@
+@media (min-width: 320px) and (max-width: 620px) {
+
+    
+    .navbar {
+       display: none;
+    }
+
+    .mobile-header {
+        width: 100vw;
+        height: 8rem;
+        justify-self: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .mobile-logo {
+        height: 100%;
+        width: auto;
+    }
+
+    .vertical-navbar {
+        background-color: black;
+        padding: 2rem;
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        position: absolute;
+        top: 9rem;
+        left: 22rem;
+    }
+
+    .vertical-navbar li {
+        list-style: none;
+        padding: .4rem;
+        text-decoration: none;
+    }
+    
+    .vertical-navbar li a {
+        font-size: 1.6rem;
+        color: white;
+
+    }
+
+
+    .mobile-login-btn {
+        padding: .5rem 1rem;
+        justify-self: flex-end;
+        background-color: #ECFF82;
+        color: black;
+        border-radius: 4rem;
+    }
+
+    .vertical-navbar {
+        display: none;
+    }
+
+
+
+
+
+
+    /* body > *:not(:nth-child(2)) {
+        display: none;
+    } */
+
+/* 
+    .explore-vehicles-section,
+    .offer-close-section,
+    .hurry-up-section,
+    .faq-section,
+    .form-section,
+    .footer-links {
+        display: none;
+    } */
+
+
+    .hero-section {
+        width: 100vw;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-section-text-content > h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section-text-content > p {
+        font-size: calc(3rem - calc(0.5 * 3rem));
+        margin-top: 1.5rem;
+    }
+
+    .hero-section-text-content > button {
+        margin-top: 2rem;
+        font-size: 22px;
+        width: 21rem;
+    }
+
+    img[src="assets/mercedes-white.png"] {
+        width: 100%;
+        height: auto;
+        scale: 1.2;
+        position: relative;
+        left: 0;
+        right: 0;
+        transform: translate(0, 200px);
+    }
+
+    .hero-section-details {
+        height: 525px;
+    }
+
+    .hero-section-details > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .hero-section-details > h3 {
+        font-size: calc(5rem * .45);
+    }
+
+    .hero-section-details > div > p {
+        font-size: calc(2.8rem * .45);
+        width: 100%;
+    }
+
+    .hero-section-details > div > img {
+        width: calc(647px * .5);
+        height: calc(202px * .5);
+        margin: auto;
+    }
+
+    .why-choose-section {
+        height: 250px;
+    }
+
+    .why-choose-section > div {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    .why-choose-section > h3 {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-section-icons {
+        width: calc(9.8rem * .45);
+        height: calc(9.8rem * .45);
+    }
+
+    .why-choose-section > div > div > p {
+        /* padding-top: 1rem; */
+        font-size: calc(2.3rem * .45);
+    }
+
+    .explore-vehicles-section {
+        display: flex;
+        flex-direction: column;
+        padding: 2.5rem 0;
+        height: 2500px;
+    }
+
+    .explore-vehicles-section > h3 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        width: 100%;
+        /* height: 1500px; */
+        height: 100%;
+        row-gap: 3rem;
+        position: relative;
+        top: -100px;
+        transform: translateY(-500px);
+    }
+
+    .explore-vehicles-section > div {
+        scale: .65;
+        /* transform: translateY(-900px); */
+        /* margin: 0; */
+        position: relative;
+        bottom: 950px;
+    }
+
+
+    .explore-vehicles-section > div > div {
+        /* scale: .65; */
+        margin: 0;
+    }
+
+    .offer-close-section * {
+        scale: .95;
+    }
+
+    .offer-close-section > div {
+        scale: .45;
+    }
+
+    .offer-close-section > h2 {
+        font-size: calc(5.5rem * .6);
+    }
+
+    .offer-close-section > p {
+        font-size: calc(3.2rem * .5);
+        margin-top: 1.5rem;
+    }
+
+    .faq-section {
+        height: 1150px;
+    }
+
+    .faq-section > h3 {
+        font-size: 3rem;
+    }
+
+    .faq-main-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .faq-categories {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .faq-categories li {
+        font-size: 2rem;
+    }
+
+    .faq-accordians {
+        width: 100%;
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    .form-section h3 {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        width: 350px;
+    }
+
+    form * {
+        width: 300px;
+        /* height: 6rem; */
+    }
+
+    form > * {
+        height: 6rem;
+    }
+
+    select[name="select-car-options"] {
+        margin-left: 0;
+    }
+
+    select[name="select-city-options"] {
+        width: 300px;
+    }
+
+    button.form-get-quote {
+        width: 200px;
+    }
+
+    .form-section {
+        height: 1000px;
+    }
+
+    .footer-links {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem;
+    }
+
+    footer img {
+        height: 100px;
+        width: auto;
+    }
+
+    .quick-links-div {
+        margin: 0 2rem 0 4rem;
+        min-width: 20%;
+        height: fit-content;
+    }
+
+    .quick-links-div li {
+        font-size: 2.5rem;
+        line-height: 1.6;
+    }
+
+    .working-time {
+        scale: .9;
+    }
+}

@@ -1,0 +1,256 @@
+@media (min-width: 1024px) and (max-width: 1368px) {
+
+    nav {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .nav-links {
+        width: 90%;
+        gap: 3.5rem;
+    }
+
+    .nav-links a {
+        font-size: 2rem;
+    }
+
+    .login-btn {
+        background-color: #ECFF82;
+        border-radius: 3rem;
+        padding: 1rem 2rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-section {
+        width: 90%;
+        max-height:425px;
+    }
+
+    .hero-section-text-content > h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero-section-text-content > p {
+        font-size: calc(3rem - calc(0.33 * 3rem));
+        margin-top: 1.5rem;
+    }
+
+    .hero-section-text-content > button {
+        background-color: #ECFF82;
+        padding: 1rem 3rem;
+        border-radius: 4rem;
+        margin-top: 3rem;
+        font-size: 24px;
+        width: 25rem;
+    }
+
+    .hero-section > img {
+        height: calc(500px - calc(.35 * 500px));
+        position: absolute;
+        top: 12rem;
+        margin-left: 100px;
+    }
+
+    .hero-section-details {
+        height: max-content;
+    }
+
+    .hero-section-details > h3 {
+        font-size: calc(5rem * .65);
+    }
+
+    .hero-section-details > div > p {
+        font-size: calc(2.8rem * .65);
+    }
+
+    .hero-section-details > div > img {
+        width: calc(647px * .65);
+        height: calc(202px * .6);
+    }
+
+    .why-choose-section {
+        height: max-content;
+        padding: 3rem;
+    }
+
+    .why-choose-section > h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-section-icons {
+        width: calc(9.8rem * .65);
+        height: calc(9.8rem * .65);
+    }
+
+    .why-choose-section > div > div > p {
+        /* padding-top: 1rem; */
+        font-size: calc(2.3rem * .65);
+    }
+
+    .explore-vehicles-section {
+        height: min-content;
+    }
+
+    .explore-vehicles-section > h3 {
+        font-size: calc(5rem * .65);
+    }
+
+    .vehicles-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .vehicles-grid > div {
+        scale: .85
+    }
+
+    .offer-close-section * {
+        scale: .95;
+    }
+
+    .offer-close-section > h2 {
+        font-size: calc(5.5rem * .8);
+        margin-bottom: 2rem;
+    }
+
+    .offer-close-section > p {
+        font-size: calc(3.2rem * .8);
+        margin-top: 3.5rem;
+    }
+
+    .sidebar {
+        padding: 0 .2rem;
+    }
+
+    .faq-categories {
+        width: 35%;
+        height: 500px;
+        padding: 2rem;
+        margin-right: 2rem;
+        border-radius: 2rem;
+        /* background-color: aqua; */
+        background: linear-gradient(to bottom, #21231D, #575D37);
+        display: flex
+    ;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .faq-categories li {
+        font-size: 2rem;
+        line-height: 2;
+        padding: 3 .25rem;
+    }
+
+
+    .accordion-header {
+        font-size: 2rem;
+    }
+    
+    .form-section {
+        padding: 6rem;
+        height: calc(925px * .68);
+        justify-content: space-around;
+    }
+
+    img[src="assets/two-cars-frame.png"] {
+        height: 475px;
+        width: auto;
+    }
+
+    .form-section h3 {
+        font-size: calc(5rem * .65);
+        margin-bottom: 1.5rem;
+    }
+
+    form {
+       padding: 0;
+    }
+
+    form * {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1rem;
+        height: 6rem;
+    }
+
+    form > * {
+        scale: .8;
+    }    
+    select {
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        width: 47%;
+        font-size: 2rem;
+        color: gray;
+    }
+
+    form :nth-last-child(3) {
+        margin-left: 2rem;
+    }
+
+    form input::placeholder {
+        font-size: 2rem;
+    }
+
+    form :nth-last-child(4) {
+        position: relative;
+        left: 2rem;
+    }
+
+    form :nth-last-child(3) {
+        margin-left: .75rem;
+        position: relative;
+        right: 1rem;
+    }
+
+    button.form-get-quote {
+        width: 65%;
+        padding: 1.5rem 3rem;
+        margin-left: 1rem;
+        font-size: 2.1rem;
+    }
+
+    footer {
+        padding: 4rem 3rem;
+        height: 375px;
+    }
+
+    footer img {
+        scale: .9;
+    }
+
+    footer > *{
+        scale: .9;
+        height: calc(450 * .65);
+    }
+
+    .quick-links-div {
+        margin: 0 5rem 0 11rem;
+        min-width: 20%;
+        height: fit-content;
+    }
+
+    .quick-links-div > span {
+        font-size: 2.8rem;
+    }
+
+    .quick-links-div li {
+        font-size: 2.7rem;
+        line-height: 1.9;
+    }
+
+    .working-time > * {
+        margin-bottom: 2rem;
+    }
+
+    .working-time > span {
+        font-size: 2.8rem;
+    }
+
+    .working-time > p {
+        font-size: 2.6rem;
+    }
+
+}
+        
