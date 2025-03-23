@@ -151,7 +151,7 @@
 
     .why-choose-section > div > div > p {
         /* padding-top: 1rem; */
-        font-size: calc(2.3rem * .38);
+        font-size: calc(2.3rem * .33);
     }
 
     .explore-vehicles-section {
@@ -297,7 +297,7 @@
     }
 
     .faq-categories li {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .faq-accordians {
