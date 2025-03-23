@@ -30,7 +30,7 @@ const accordionData = {
         { header: "Can I refer and get something back?", content: "Yes you can refer, and if your referred party becomes a customer, you are credited with Rs 10000 and your referred party is credited with Rs5000 one time." },
     ],
     set6: [
-        { header: "Can I sell my membership or transfer the membership?", content: "Yes. The membership is saleable or transferred. The members waitlisted on the list have the first priority to claim the membership at a negotiated price between themselves. The company would help out in identifying the members. There would be a service charge by the company as documentation charges." },
+        { header: "Can I sell my membership or transfer the membership?", content: "Yes. The membership is saleable or transferable. The members waitlisted on the list have the first priority to claim the membership at a negotiated price between the seller and the buyer. The company would help out in identifying the members. There would be a service charge by the company as documentation charges." },
     ],
     set7: [
         { header: "Can I form my own group?", content: "Yes, you can and we encourage you to do it" },
