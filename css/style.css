@@ -127,7 +127,7 @@ main > section {
 }
 
 .hero-section-details {
-    height: 625px;
+    height: 675px;
     width: 90%;
     justify-self: center;
     padding: 2rem;
@@ -199,11 +199,12 @@ main > section {
 .why-choose-section > div > div > p {
     padding-top: 1rem;
     font-size: 2.3rem;
+    text-align: -webkit-center;
 }
 
 
 .explore-vehicles-section {
-    height: 1350px;
+    /* height: 1350px; */
     width: 80%;
     margin: auto;
     padding: 5rem;
@@ -317,6 +318,7 @@ img[alt="Go"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5rem 0;
 }
 
 .offer-close-section > h2 {
@@ -386,7 +388,7 @@ img[alt="Go"] {
 
 .faq-section {
     /* height: 820px; */
-    width: 90%;
+    width: 95%;
     justify-self: center;
     padding: 3rem;
 }
@@ -403,7 +405,8 @@ img[alt="Go"] {
 }
 
 .faq-categories {
-    width: 30%;
+    width: 35%;
+    max-height: 500px;
     padding: 3rem;
     margin-right: 5rem;
     border-radius: 2rem;
@@ -419,7 +422,7 @@ img[alt="Go"] {
     font-weight: 700;
     display: block;
     align-self: center;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 2rem;
 }
 
 .faq-categories li {
@@ -480,7 +483,7 @@ img[alt="Go"] {
 }
 .accordion-content {
     max-height: 0;
-    overflow: scroll;
+    overflow: auto;
     padding: 0 15px;
     background: black;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
@@ -548,7 +551,7 @@ select {
 }
 
 form :nth-last-child(3) {
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
 }
 
 select[name="select-city-options"] {
@@ -623,24 +626,15 @@ footer {
     border: none;
 }
 
-/*
-button[id="show-all-button"] {
-    margin: auto;
-    background-color: #ECFF82;
-    padding: 1rem 3rem;
-    font-size: 2.3rem;
-    border-radius: 4rem;
-}
-    */
-
 .explore-vehicles-section button {
     background-color: #ECFF82;
     padding: 1rem 4rem;
-    font-size: 2.3rem;
+    font-size: 3rem;
     border-radius: 4rem;
     margin: 1em 0;
     display: block;
     margin: auto;
+    margin-top: 5rem;
 } 
 
 .whatsapp-div {

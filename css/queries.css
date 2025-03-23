@@ -186,17 +186,17 @@
     }
 
     form :nth-last-child(3) {
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
     }
 
     form input::placeholder {
         font-size: 2rem;
     }
-
+/* 
     form :nth-last-child(4) {
         position: relative;
         left: 2rem;
-    }
+    } */
 
     form :nth-last-child(3) {
         margin-left: .75rem;

@@ -26,6 +26,7 @@
         align-self: center;
         position: relative;
         left: 5rem;
+        margin: 0 1rem;
     }
 
     .vertical-navbar {
@@ -68,26 +69,6 @@
         /* display: none; */
         z-index: 2;
     }
-
-
-
-
-
-
-    /* body > *:not(:nth-child(2)) {
-        display: none;
-    } */
-
-/* 
-    .explore-vehicles-section,
-    .offer-close-section,
-    .hurry-up-section,
-    .faq-section,
-    .form-section,
-    .footer-links {
-        display: none;
-    } */
-
 
     .hero-section {
         width: 100vw;
@@ -170,7 +151,7 @@
 
     .why-choose-section > div > div > p {
         /* padding-top: 1rem; */
-        font-size: calc(2.3rem * .33);
+        font-size: calc(2.3rem * .38);
     }
 
     .explore-vehicles-section {
@@ -269,7 +250,7 @@
     }
 
     .offer-close-section > h2 {
-        font-size: calc(5.5rem * .6);
+        font-size: calc(5.5rem * .5);
         margin-bottom: 0;
     }
 
@@ -316,7 +297,7 @@
     }
 
     .faq-categories li {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .faq-accordians {
@@ -378,6 +359,11 @@
         height: 1000px;
     }
 
+    form input::placeholder,
+    select {
+        font-size: 2rem;
+    }
+
     .footer-links {
         height: 600px;
         display: flex;
@@ -387,8 +373,9 @@
     }
 
     footer img {
-        height: 100px;
+        height: 90px;
         width: auto;
+        margin-left: 3rem;
     }
 
     .quick-links-div {
@@ -398,12 +385,12 @@
     }
 
     .quick-links-div li {
-        font-size: 2.5rem;
-        line-height: 1.6;
+        font-size: 2.2rem;
+        line-height: 1.4;
     }
 
     .working-time {
-        scale: .9;
+        scale: .8;
     }
 
 }
