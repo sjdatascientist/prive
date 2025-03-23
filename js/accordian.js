@@ -111,3 +111,7 @@ document.querySelectorAll(".accordian-header").forEach(header => {
   document.querySelector(".whatsapp-div").addEventListener("click", () => {
     window.location.href = "https://wa.me/+919844033345"; // Replace with your desired link
   });
+
+  document.querySelector(".get-started-btn").addEventListener("click", () => {
+    document.querySelector(".form-container").scrollIntoView({ behavior: "smooth" });
+  });
