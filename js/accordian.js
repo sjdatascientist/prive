@@ -90,3 +90,24 @@ document.querySelectorAll('.sidebar li').forEach(item => {
             this.classList.add('active');
         });
     });
+
+
+const menuButton = document.getElementById('menu-btn');
+const verticalNavbar = document.querySelector('.vertical-navbar');
+menuButton.addEventListener('click', function() {
+    verticalNavbar.classList.toggle('vertical-navbar-hidden');
+});
+
+
+document.querySelectorAll(".accordian-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling; // Select the next sibling (.accordian-content)
+      content.style.overflow = "scroll";
+
+    });
+  });
+  
+
+  document.querySelector(".whatsapp-div").addEventListener("click", () => {
+    window.location.href = "https://wa.me/+919844033345"; // Replace with your desired link
+  });

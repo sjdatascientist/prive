@@ -20,6 +20,14 @@
         width: auto;
     }
 
+    img[src="assets/menu.png"] {
+        height: 60%;
+        width: auto;
+        align-self: center;
+        position: relative;
+        left: 5rem;
+    }
+
     .vertical-navbar {
         background-color: black;
         padding: 2rem;
@@ -27,8 +35,12 @@
         flex-direction: column;
         row-gap: 3rem;
         position: absolute;
-        top: 9rem;
-        left: 22rem;
+        top: 7rem;
+        left: 24rem;
+    }
+
+    .vertical-navbar-hidden {
+        display: none;
     }
 
     .vertical-navbar li {
@@ -53,7 +65,8 @@
     }
 
     .vertical-navbar {
-        display: none;
+        /* display: none; */
+        z-index: 2;
     }
 
 
@@ -81,6 +94,7 @@
         height: max-content;
         display: flex;
         flex-direction: column;
+        padding-top: 0;
     }
 
     .hero-section-text-content > h1 {
@@ -135,11 +149,12 @@
     }
 
     .why-choose-section {
-        height: 250px;
+        height: 100px;
+        margin-bottom: 2rem;
     }
 
     .why-choose-section > div {
-        width: 95%;
+        width: 100%;
         padding: 2rem;
     }
 
@@ -149,52 +164,100 @@
     }
 
     .why-choose-section-icons {
-        width: calc(9.8rem * .45);
-        height: calc(9.8rem * .45);
+        width: calc(9.8rem * .33);
+        height: calc(9.8rem * .33);
     }
 
     .why-choose-section > div > div > p {
         /* padding-top: 1rem; */
-        font-size: calc(2.3rem * .45);
+        font-size: calc(2.3rem * .33);
     }
 
     .explore-vehicles-section {
         display: flex;
         flex-direction: column;
         padding: 2.5rem 0;
-        height: 2500px;
+        height: 2550px;
+        margin-top: 3.5rem;
     }
 
     .explore-vehicles-section > h3 {
         font-size: 2rem;
+        margin: auto;
         margin-bottom: 3rem;
     }
 
-    
     .vehicles-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 0;
-        width: 100%;
-        /* height: 1500px; */
-        height: 100%;
-        row-gap: 3rem;
-        position: relative;
-        top: -100px;
-        transform: translateY(-500px);
+        row-gap: 2rem;
     }
 
-    .explore-vehicles-section > div {
-        scale: .65;
-        /* transform: translateY(-900px); */
-        /* margin: 0; */
-        position: relative;
-        bottom: 950px;
+    .vehicles-grid > div {
+        width: 325px;
+        /* height: 425px; */
+        height: fit-content;
+        padding: 2.5rem;
     }
 
+    .vehicles-grid > div > span {
+        font-size: 2rem;
+    }
+
+    .vehicles-grid > div > p > strong {
+        font-size: 1.8rem;
+    }
+
+
+    .vehicles-grid > div > p {
+        font-size: 1.8rem;
+    }
+
+    .card-inner-container {
+        padding: 1.7rem;
+    }
+
+    .card-inner-container * {
+        width: 60%;
+        height: auto;
+    }
+
+    .card-inner-container > p {
+        font-size: 1.8rem;
+    }
+
+    #lamborghini-yellow {
+        width: 250px;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+    #mercedes-green {
+        width: 250px;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+
+
+    #speed {
+        grid-area: 2 / 2 / 3 / 6;
+    }
 
     .explore-vehicles-section > div > div {
         /* scale: .65; */
         margin: 0;
+    }
+
+    .explore-vehicles-section button {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding: 1rem 3rem;
+    }
+
+    .offer-close-section {
+        height: 300px;
+        padding: 4rem 2.8rem;
     }
 
     .offer-close-section * {
@@ -202,35 +265,54 @@
     }
 
     .offer-close-section > div {
-        scale: .45;
+        scale: .55;
     }
 
     .offer-close-section > h2 {
         font-size: calc(5.5rem * .6);
+        margin-bottom: 0;
     }
 
     .offer-close-section > p {
         font-size: calc(3.2rem * .5);
         margin-top: 1.5rem;
+        display: block;
+        margin: auto;
+    }
+
+    .hurry-up-section {
+        padding: 3rem 0;
+        padding-bottom: 0;
     }
 
     .faq-section {
-        height: 1150px;
+        /* min-height: 1150px; */
+        /* max-height: 1500px; */
+        display: flex;
+        flex-direction: column;
     }
 
     .faq-section > h3 {
         font-size: 3rem;
+        display: block;
+        margin: auto;
+        margin-bottom: 3rem;
     }
 
     .faq-main-content {
         display: flex;
         flex-direction: column;
         row-gap: 3rem;
+        /* height: auto; */
     }
 
     .faq-categories {
         width: 100%;
         padding: 2rem;
+    }
+
+    .faq-categories > span {
+        margin-bottom: 2rem;
     }
 
     .faq-categories li {
@@ -239,6 +321,24 @@
 
     .faq-accordians {
         width: 100%;
+    }
+
+    .accordion-header {
+        font-size: 1.8rem;
+    }
+
+    .active .accordian-content {
+        max-height: 50rem;
+        /* overflow: scroll; */
+    }
+
+    .accordian-content {
+        max-height: 30rem;
+        /* overflow: scroll !important; */
+    }
+
+    .accordion-content p {
+        font-size: 1.4rem;
     }
 
     .form-section {
@@ -305,4 +405,5 @@
     .working-time {
         scale: .9;
     }
+
 }
