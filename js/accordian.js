@@ -19,7 +19,7 @@ const accordionData = {
     set4: [
         { header: "How do we make car usage booking?", content: "The bookings are done first come first serve basis . One can make booking in the APP maximum of 60 days in advance and a continuous period of 10 days at a stretch so that the other members have a fairly equitable chance of usage. Cancellation of days can be done maximum 5 days in advance from the date of usage booking. Beyond this date if cancellation is done, a penalty will be levied of 2 days lost from the total allotted days in the year " },
         { header: "How many days can I use the car in a year?", content: "Remember you are allotted 40 days in a year and 200 days in 5 years time." },
-        { header: "What if someone else has booked on my days already?", content: "The booking is done on first come first serve basis." },
+        { header: "What if someone else has booked on my days already?", content: "The booking is done on first come first serve basis. That's the reason we recommend early booking of slots. In this case, only if there's some other vehicle available, it can be provided in emergency cases, if you agree to it." },
         { header: "Can I carry over my leftover days to the next year?", content: "Yes one can carry over their 3 days maximum leftover days to the next year." },
         { header: "What if I do not get the car on my booking day?", content: "The company will try to make sure that you get some car for the usage . If the delay if due to non compliance of rules by some other members, that member would be levied a penalty of 3 days for each day of delay." },
         { header: " What if the car is not available due to repair / service on my booking days?", content: "The company would try it best to provide an alternative car or credit that many days to your account at a later date." },
@@ -27,7 +27,7 @@ const accordionData = {
         { header: "Are there any fixed hours for the Chauffeurs?", content: "While we recommend max of 9-10 hours of duty for the chauffeurs , the extra hours if any could be paid to them as overtime charges of Rs500/hour." }
     ],
     set5: [
-        { header: "Can I refer and get something back?", content: "Yes you can refer, and if your referred party becomes a customer, you are credited with Rs 10000 and your referral party is credited with Rs5000 one time." },
+        { header: "Can I refer and get something back?", content: "Yes you can refer, and if your referred party becomes a customer, you are credited with Rs 10000 and your referred party is credited with Rs5000 one time." },
     ],
     set6: [
         { header: "Can I sell my membership or transfer the membership?", content: "Yes. The membership is saleable or transferred. The members waitlisted on the list have the first priority to claim the membership at a negotiated price between themselves. The company would help out in identifying the members. There would be a service charge by the company as documentation charges." },
