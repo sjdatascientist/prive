@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	/* overflow-x: hidden; */
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+    color: white;
+	font-weight: 400;
+	background: url('../assets/website-background.png');
+	background-size: cover;
+	height: 100vh;
+	/* overflow-x: hidden; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vw;
+    align-items: center;
+}
+
+button {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+.temp-border {
+    border: 1px solid #ffffff;
+    width: inherit;
+}
+
+.mobile-header {
+    display: none;
+}
+
+
+/* 1. Navbar Styling */
+.navbar {
+    width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    justify-self: center;
+	padding: 1.5rem 4.4vw;
+    height: 12rem;
+    position: relative;
+}
+
+.navbar > * {
+	padding: .5rem 1rem;
+}
+
+.logo {
+	height: 100%;
+    width: auto;
+    max-width: 150px;
+    /* align-self: center; */
+}
+
+.nav-links {
+    min-width: 40%;
+    max-width: 55%;
+    flex-grow: 1;
+	list-style: none;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+	text-decoration: none;
+    /* font-size: 2.8rem ; */
+    font-size: 2.2vw;
+	color: white;
+}
+
+.login-btn {
+    background-color: #ECFF82;
+    border-radius: 4rem;
+    padding: 1rem 4rem;
+    font-size: 2.3rem;
+}
+
+main {
+    /* height: 2200px; */
+    width: 80% !important;
+}
+
+main > h3 {
+    font-size: 2.4vw;
+    justify-self: center;
+    margin-bottom: 4.4vw;
+}
+
+.cars-section {
+    width: 100%;
+    /* height: 2000px; */
+    display: inline-flex;
+    flex-direction: row;
+    column-gap: 4.4vw;
+}
+
+.cars-section > div {
+    /* width: 33%; */
+}
+
+.cars-section img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    height: fit-content(500px);
+    width: 100%;
+    padding: 5vw;
+    background: linear-gradient(to right, #22241D, #565C36);
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-links img[src="assets/Privewhite.svg"] {
+    width: 75%;
+    height: auto;
+}
+
+.footer-links > div {
+    /* margin: 0 20rem 0 30rem; */
+    width: 33%;
+}
+
+.quick-links-div {
+    padding-left: 4vw;
+}
+
+.quick-links-div > span {
+    /* font-size: 3.2rem; */
+    font-size: 2.6vw;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.quick-links-div li {
+    /* font-size: 2.8rem; */
+    font-size: 2.2vw;
+    line-height: 2.2;
+}
+
+.working-time * {
+    display: block;
+    margin-bottom: .8rem;
+}
+
+.working-time > span {
+    /* font-size: 3.2rem; */
+    font-size: 2.6vw;
+    font-weight: 800;
+}
+
+.working-time > p {
+    /* font-size: 2.8rem; */
+    font-size: 2.2vw;
+}
+
+.reserved-rights {
+    width: 100%;
+    height: 60px;
+    padding: 2rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    background-color: black;
+    position: relative;
+}
+
+.reserved-rights > p {
+    font-size: 1.5vw;
+    justify-self: center;
+}
+
+.whatsapp-div {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    z-index: 3;
+    cursor: pointer;
+    /* position: fixed; */
+    /* right: 1px; */
+    /* top: -10px; */
+    /* left: -10px; */
+    /* right: -10rem; */
+    /* float: right; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    top: -100px;
+    left: -1px;
+    transform: translate(-20px, -120px);
+}
+
+.whatsapp-icon {
+    height: 32px;
+    width: auto;
+    /* position: fixed; */
+    /* padding: 2rem; */
+}
