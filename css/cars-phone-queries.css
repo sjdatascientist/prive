@@ -16,15 +16,15 @@
         /* height: 2000px; */
         display: inline-flex;
         flex-direction: row;
-        column-gap: 0;
+        column-gap: 3rem;
     }
     
     .cars-column-mobile-div {
-        width: 50%;
+        width: auto%;
     }
     
     .cars-section img {
-        width: 100%;
+        width: 70%;
         height: auto;
     }
 
