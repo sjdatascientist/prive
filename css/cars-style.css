@@ -30,24 +30,87 @@ button {
     font-weight: 700;
 }
 
-.temp-border {
+/* .temp-border {
     border: 1px solid #ffffff;
     width: inherit;
-}
+} */
 
 .mobile-header {
     display: none;
 }
 
 
-/* 1. Navbar Styling */
+@media (min-width: 320px) and (max-width: 620px) {
+
+    
+    .navbar {
+       display: none;
+    }
+
+    .mobile-header {
+        width: 100vw;
+        height: 8rem;
+        justify-self: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 2rem;
+    }
+
+    .mobile-logo {
+        height: 100%;
+        width: auto;
+    }
+
+    #menu-btn {
+        height: 60%;
+        width: auto;
+        align-self: center;
+        /* position: relative; */
+        /* left: 5rem; */
+        margin: 0 1rem;
+    }
+
+    .vertical-navbar {
+        background-color: black;
+        padding: 2rem;
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        position: absolute;
+        top: 7rem;
+        right: 2rem 
+    }
+
+    .vertical-navbar-hidden {
+        display: none;
+    }
+
+    .vertical-navbar li {
+        list-style: none;
+        padding: .4rem;
+        text-decoration: none;
+    }
+    
+    .vertical-navbar li a {
+        font-size: 1.6rem;
+        color: white;
+
+    }
+
+    .vertical-navbar {
+        /* display: none; */
+        z-index: 2;
+    }
+}
+
 .navbar {
     width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
     justify-self: center;
-	padding: 1.5rem 4.4vw;
+	padding: 1.5rem 5rem;
     height: 12rem;
     position: relative;
 }
@@ -58,14 +121,12 @@ button {
 
 .logo {
 	height: 100%;
-    width: auto;
-    max-width: 150px;
     /* align-self: center; */
 }
 
 .nav-links {
-    min-width: 40%;
-    max-width: 55%;
+    min-width: 50%;
+    max-width: 65%;
     flex-grow: 1;
 	list-style: none;
 	display: flex;
@@ -75,16 +136,8 @@ button {
 
 .nav-links a {
 	text-decoration: none;
-    /* font-size: 2.8rem ; */
-    font-size: 2.2vw;
+    font-size: 2.8rem ;
 	color: white;
-}
-
-.login-btn {
-    background-color: #ECFF82;
-    border-radius: 4rem;
-    padding: 1rem 4rem;
-    font-size: 2.3rem;
 }
 
 main {
@@ -115,42 +168,37 @@ main > h3 {
     height: auto;
 }
 
+.cars-mobile-section {
+    display: none;
+}
+
+
+
+
 footer {
-    height: fit-content(500px);
+    height: 450px;
     width: 100%;
-    padding: 5vw;
+    padding: 6rem 3rem;
     background: linear-gradient(to right, #22241D, #565C36);
     justify-self: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.footer-links img[src="assets/Privewhite.svg"] {
-    width: 75%;
-    height: auto;
-}
-
-.footer-links > div {
-    /* margin: 0 20rem 0 30rem; */
-    width: 33%;
+    justify-content: space-evenly;
 }
 
 .quick-links-div {
-    padding-left: 4vw;
+    margin: 0 20rem 0 30rem;
 }
 
 .quick-links-div > span {
-    /* font-size: 3.2rem; */
-    font-size: 2.6vw;
+    font-size: 3.2rem;
     font-weight: 800;
     display: block;
     margin-bottom: 1rem;
 }
 
 .quick-links-div li {
-    /* font-size: 2.8rem; */
-    font-size: 2.2vw;
+    font-size: 2.8rem;
     line-height: 2.2;
 }
 
@@ -160,14 +208,12 @@ footer {
 }
 
 .working-time > span {
-    /* font-size: 3.2rem; */
-    font-size: 2.6vw;
+    font-size: 3.2rem;
     font-weight: 800;
 }
 
 .working-time > p {
-    /* font-size: 2.8rem; */
-    font-size: 2.2vw;
+    font-size: 2.8rem;
 }
 
 .reserved-rights {
@@ -181,35 +227,132 @@ footer {
 }
 
 .reserved-rights > p {
-    font-size: 1.5vw;
+    font-size: 1.8rem;
     justify-self: center;
 }
 
-.whatsapp-div {
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    z-index: 3;
-    cursor: pointer;
-    /* position: fixed; */
-    /* right: 1px; */
-    /* top: -10px; */
-    /* left: -10px; */
-    /* right: -10rem; */
-    /* float: right; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    top: -100px;
-    left: -1px;
-    transform: translate(-20px, -120px);
+@media (min-width: 320px) and (max-width: 620px) {
+
+    .footer-links {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3rem;
+    }
+
+    footer img {
+        height: 90px;
+        width: auto;
+        margin-left: 3rem;
+    }
+
+    .quick-links-div {
+        margin: 0 2rem 0 4rem;
+        min-width: 20%;
+        height: fit-content;
+    }
+
+    .quick-links-div li {
+        font-size: 2.2rem;
+        line-height: 1.4;
+    }
+
+    .working-time {
+        scale: .8;
+    }
+
 }
 
-.whatsapp-icon {
-    height: 32px;
-    width: auto;
-    /* position: fixed; */
-    /* padding: 2rem; */
+
+@media (min-width: 320px) and (max-width: 620px) {
+
+    .navbar {
+        display: none;
+     }
+ 
+     .mobile-header {
+         width: 100vw;
+         height: 8rem;
+         justify-self: center;
+         display: flex;
+         justify-content: space-between;
+         position: relative;
+         padding: 2rem;
+     }
+ 
+     .mobile-logo {
+         height: 100%;
+         width: auto;
+     }
+ 
+     #menu-btn {
+        height: 60%;
+        width: auto;
+        align-self: center;
+        /* position: relative; */
+        /* left: 5rem; */
+        margin: 0 1rem;
+    }
+
+     .vertical-navbar {
+        background-color: black;
+        padding: 2rem;
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        position: absolute;
+        top: 7rem;
+        left: 24rem;
+    }
+
+    .vertical-navbar-hidden {
+        display: none;
+    }
+
+    .vertical-navbar li {
+        list-style: none;
+        padding: .4rem;
+        text-decoration: none;
+    }
+    
+    .vertical-navbar li a {
+        font-size: 1.6rem;
+        color: white;
+
+    }
+
+
+    /* .mobile-login-btn {
+        padding: .5rem 1rem;
+        justify-self: flex-end;
+        background-color: #ECFF82;
+        color: black;
+        border-radius: 4rem;
+    } */
+
+    
+
+    .vertical-navbar {
+        /* display: none; */
+        z-index: 2;
+    }
+
+
+    .cars-section {
+        display: none;
+    }
+
+    .cars-mobile-section {
+        width: 100%;
+        /* height: 2000px; */
+        display: inline-flex;
+        flex-direction: row;
+        column-gap: 4.4vw;
+    }
+
+    .cars-column-mobile-div {
+        width: 50%;
+    }
+
 }
