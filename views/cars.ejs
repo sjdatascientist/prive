@@ -8,29 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar">
-        <img class="logo" src="../assets/Privewhite.svg" alt="Prive Drive Logo">
-        <ul class="nav-links">
-            <li><a href='/'>Home</a></li>
-            <li><a href='/cars'>Cars</a></li>
-            <li><a href='/memberships'>Memberships</a></li>
-            <li><a href='#'>Contact Us</a></li>
-            <!-- <button class="login-btn">
-                Login/Signup
-            </button> -->
-        </ul> 
-    </nav>
-    <div class="mobile-header">
-        <img class="mobile-logo" src="../assets/Privewhite.svg" alt="Prive Drive Logo">
-        <div class="vertical-navbar vertical-navbar-hidden">
-            <ul class="mobile-nav-links">
-                <li><a href='/'>Home</a></li>
-                <li><a href='/cars'>Cars</a></li>
-                <li><a href='/memberships'>Memberships</a></li>
-                <li><a href='#'>Contact Us</a></li>
-        </div>
-        <img src="assets/menu.png" id="menu-btn" alt="Menu">
-    </div>
+    <%- include('partials/header') %>
+
 
     <main class="main-section temp-border">
         <h3>Explore Our Range Of Vehicles</h3>

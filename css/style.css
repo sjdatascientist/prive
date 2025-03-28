@@ -217,16 +217,22 @@ main > section {
 }
 
 .vehicles-grid {
-    width: inherit;
+    width: 100%;
     height: max-content;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 5rem;
     justify-content: center;
     margin: auto;
 }
 
+.vehicles-grid img {
+    width: 100%;
+    height: auto;
+}
+
+/*
 .vehicles-grid > div {
     background: linear-gradient(to bottom, #20211C, #595F38);
     border-radius: 2rem;
@@ -306,11 +312,14 @@ img[alt="Go"] {
     grid-column: 5 / span 1;
     align-self: flex-end;
 }
+    */
+
+
 
 .offer-close-section {
     background-image: url("../assets/rolls-royce.png");
     width: 90%;
-    height: 500px;
+    /* height: 500px; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -319,6 +328,7 @@ img[alt="Go"] {
     flex-direction: column;
     align-items: center;
     padding: 5rem 0;
+    text-align: center;
 }
 
 .offer-close-section > h2 {
@@ -373,7 +383,8 @@ img[alt="Go"] {
 .offer-close-section > p {
     font-size: 3.2rem;
     margin-top: 3.5rem;
-    margin: auto;
+    /* width: fit-content; */
+    /* margin: auto; */
 }
 
 .hurry-up-section {
