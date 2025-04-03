@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Out Payment Details</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <section>
+        <h3>Payment Form</h3>
+        <em>*Please fill out all details carefully</em>
+        <form action="/createorder" method="post" class="pay-form">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Enter Your Email">
+            <input type="tel" name="number" placeholder="Phone Number">
+            <select id="dropdown" name="select-membership-options">
+                <option value="" selected disabled>Select Membership Plan</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+                <option value="Platinum">Platinum</option>
+            </select>
+            <select id="dropdown" name="select-car-brand-options">
+                <option value="" selected disabled>Select Car Brand</option>
+                <option value="">BMW X3</option>
+                <option value="">Lexus ES350</option>
+                <option value="">Volvo S90</option>
+                <option value="">Mercedes A200</option>
+                <option value="">Kia EV6</option>
+                <option value="">Mercedes GLS450</option>
+                <option value="">Mercedes GLS450D</option>
+                <option value="">Land Rover Range</option>
+                <option value="">Mercedes G Class</option>
+                <option value="">Mercedes Cabriolet</option>
+                <option value="">BMW X5</option>
+                <option value="">Toyota Velfire</option>
+                <option value="">Range Rover Defender</option>
+                <option value="">Range Rover Velar</option>
+                <option value="">BMW i7</option>
+            </select>
+            <button type="submit">Proceed to Checkout</button>
+        </form>
+    </section>
+
+    <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QEWBXlMKNEeD46" async> </script>
+    </form>
+</body>
+</html>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/handle-form-submit.js"></script>
+<!-- <script src="../js/show-razorpay-modal.js"></script> -->

@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require("path");
 
+const paymentController = require('./controllers/paymentController');
+// import createOrder from "./controllers/paymentController"
+
 const app = express();
 
 // Serve Images from the assets folder
@@ -28,9 +31,15 @@ app.get('/cars', (req, res) => {
     res.render('cars')
 })
 
+app.get('/memberships/paymentform', (req, res) => {
+    res.render('paymentform')
+})
+
 app.get('/memberships', (req, res) => {
     res.render('memberships')
 })
+
+app.post('/memberships/paymentform/createOrder', paymentController.createOrder)
 
 // Start the server
 const PORT = process.env.PORT || 3000;

@@ -127,6 +127,10 @@ main > h3 {
     border-radius: 3.4rem;
 }
 
+.memberships-section form {
+    scale: 1.5;
+}
+
 .silver-btn {
     background-color: #ffffff;
 }
