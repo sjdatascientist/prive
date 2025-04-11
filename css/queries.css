@@ -1,26 +1,5 @@
 @media (min-width: 1024px) and (max-width: 1368px) {
 
-    nav {
-        width: 100%;
-        padding: 0 2rem;
-    }
-
-    .nav-links {
-        width: 90%;
-        gap: 3.5rem;
-    }
-
-    .nav-links a {
-        font-size: 2rem;
-    }
-
-    .login-btn {
-        background-color: #ECFF82;
-        border-radius: 3rem;
-        padding: 1rem 2rem;
-        font-size: 2.2rem;
-    }
-
     .hero-section {
         width: 90%;
         max-height:425px;

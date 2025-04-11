@@ -1,26 +1,37 @@
-<nav class="navbar">
-    <img class="logo" src="../assets/Privewhite.svg" alt="Prive Drive Logo">
-    <ul class="nav-links">
-        <li><a href='/'>Home</a></li>
-        <li><a href='/cars'>Cars</a></li>
-        <li><a href='/memberships'>Memberships</a></li>
-        <li><a href='#'>Contact Us</a></li>
-        <!-- <button class="login-btn">
-            Login/Signup
-        </button> -->
-    </ul> 
-</nav>
-<div class="mobile-header">
-    <img class="mobile-logo" src="../assets/Privewhite.svg" alt="Prive Drive Logo">
-    <div class="vertical-navbar vertical-navbar-hidden">
-        <ul class="mobile-nav-links">
-            <li><a href='/'>Home</a></li>
-            <li><a href='/cars'>Cars</a></li>
-            <li><a href='/memberships'>Memberships</a></li>
-            <li><a href='#'>Contact Us</a></li>
-    </div>
-    <img src="assets/menu.png" id="menu-btn" alt="Menu">
-    <!-- <button class="mobile-login-btn">
-        Login/Signup
-    </button> -->
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../css/partials/header.css" />
+	</head>
+	<body>
+		<nav class="navbar ref-line">
+			<img class="logo ref-line" src="../assets/Privewhite.svg" alt="Prive Drive Logo" />
+			<ul class="nav-links hidden-navbar ref-line">
+				<li><a href="/">Home</a></li>
+				<li><a href="/cars">Cars</a></li>
+				<li><a href="/memberships">Memberships</a></li>
+				<li><a href="/book">Book Now</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			<img src="assets/menu.png" id="menu-btn" alt="Menu" />
+		</nav>
+
+		<script>
+			document.getElementById('menu-btn').addEventListener('click', () => {
+				document.querySelector('.nav-links').classList.toggle('hidden-navbar')
+			})
+            /* 
+			const navLinks = document.querySelectorAll('nav ul li')
+			navLinks.forEach((link) => {
+				link.addEventListener('click', function () {
+					navLinks.forEach((link) => link.classList.remove('active-nav-link'));
+
+					this.classList.add('active-nav-link');
+				})
+			})
+             */
+		</script>
+	</body>
+</html>

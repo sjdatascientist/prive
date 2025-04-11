@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	/* overflow-x: hidden;; */
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+    color: white;
+	font-weight: 400;
+	background: url('../assets/website-background.png');
+	background-size: cover;
+	height: 100vh;
+	/* overflow-x: hidden; */
+}
+;

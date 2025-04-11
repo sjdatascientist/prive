@@ -21,12 +21,10 @@ app.set("view engine", "ejs");
 // Set views folder
 app.set("views", path.join(__dirname, "views"));
 
-// Setting home page path
 app.get('/', (req, res) => {
     res.render('index')
 })
 
-// Setting cars page path
 app.get('/cars', (req, res) => {
     res.render('cars')
 })
@@ -37,6 +35,15 @@ app.get('/memberships/paymentform', (req, res) => {
 
 app.get('/memberships', (req, res) => {
     res.render('memberships')
+})
+
+app.get('/book', (req, res) => {
+    res.render('book')
+})
+
+
+app.get('/calender', (req, res) => {
+    res.render('calender')
 })
 
 app.post('/memberships/paymentform/createOrder', paymentController.createOrder)
