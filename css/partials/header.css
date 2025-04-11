@@ -4,6 +4,7 @@
 
 nav {
     width: 90vw;
+    padding-top: 2rem;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -44,6 +45,10 @@ nav a:hover {
 }
 
 @container header (max-width: 560px) {
+    .logo {
+        height:64px
+    }
+
     #menu-btn {
         display: inline-block;
         scale: .5;
@@ -53,15 +58,15 @@ nav a:hover {
         flex-direction: column;
         width: fit-content;
         position: absolute;
-        right: -5px;
-        bottom: -140px;
+        right: 5px;
+        bottom: -200px;
         background-color: black;
-        padding: 1.5rem;
-        row-gap: 0.5rem;
+        padding: 2rem;
+        row-gap: 1rem;
     }
 
     nav a {
-        font-size: 13px;
+        font-size: 2rem;
     }
 
     /* Initializing hide menu*/
