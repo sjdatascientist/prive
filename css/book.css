@@ -131,8 +131,17 @@ form button {
 		width: 90%;
 	}
 
+	img[src="../assets/location.png"] {
+		height: 16px;
+	}
+
 	form {
 		row-gap: 2.5rem;
+	}
+
+	select {
+		font-size: 1.4rem;
+		padding-left: 10px;
 	}
 
 	form button {
