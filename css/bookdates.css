@@ -62,10 +62,105 @@ input::placeholder {
 }
 
 .calender-section p {
-	margin-top: 3rem;
+	margin-block: 3rem;
 	font-size: max(1rem,1.1vw);
 	padding: 1rem;
 	border-radius: 1rem;
 	background-color: #FFF3CD;
 	color: #AB6703;
+}
+
+.calender-section button {
+	display: block;
+	margin-top: 2vw;
+	width: 250px;
+	height: 50px;
+	/* padding-block: 1rem; */
+	border-radius: 1rem;
+	font-size: max(1.6rem, 1.1vw);
+	font-weight: 700;
+	border: none;
+	background-color: #ECFF82;
+}
+
+/* Calender Style */
+.flatpickr-calendar.inline {
+	box-sizing: content-box;
+	padding: 2rem;
+	background-color: #323523;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+	font-weight: 700 !important;
+}
+
+.flatpickr-next-month {
+	top: 15px !important;
+	right: 20px !important;
+}
+
+.flatpickr-prev-month {
+	top: 15px !important;
+	left: 20px !important;
+}
+
+
+.flatpickr-months .flatpickr-month {
+	background: #323523 !important;
+
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+	background: #323523 !important;
+}
+
+span.flatpickr-weekday {
+	background: #323523 !important;
+}
+
+.rangeMode .flatpickr-day {
+    margin-top: 5px !important;
+}
+
+.flatpickr-day {
+	border-radius: 1rem !important;
+	color: black !important;
+	background: #ECFF82 !important;
+	font-weight: 700 !important
+
+}
+
+
+.flatpickr-day.flatpickr-disabled {
+	color: #E82126 !important;
+	background: #767676 !important;
+}
+
+.flatpickr-day.flatpickr-disabled.flatpickr-day.prevMonthDay,
+.flatpickr-day.flatpickr-disabled.flatpickr-day.nextMonthDay {
+	background: black !important;
+	color: white !important;
+}
+
+
+.flatpickr-day.nextMonthDay {
+	background: #b6c17c8a !important;
+	color: white !important;
+
+}
+
+.flatpickr-day.prevMonthDay {
+	background: #b6c17c8a !important;
+	color: white !important;
+
+}
+
+.flatpickr-day.inRange,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+	color: white !important;
+	background: #3A72FF !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	border: 1px white solid !important;
 }
