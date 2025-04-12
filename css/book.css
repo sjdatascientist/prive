@@ -81,7 +81,7 @@ label {
 
 select {
 	width: 100%;
-	height: max(2.5rem, 2.5vw);
+	height: max(3rem, 2.5vw);
 	border-radius: 4rem;
 	color: black;
 }
