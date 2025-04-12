@@ -20,11 +20,11 @@ body {
 	height: 100vh;
 	/* overflow-x: hidden; */
 }
-/* 
+
 .ref-line {
 	border: 1px white dashed;
 }
- */
+
 section {
 	width: 80%;
 	margin: auto;
@@ -51,7 +51,7 @@ h3 {
 }
 
 strong, p {
-	font-size: clamp(1rem, 2.1vw, 2.8rem);
+	font-size: clamp(1.4rem, 2.1vw, 2.8rem);
 }
 
 .form-div {
@@ -81,7 +81,7 @@ label {
 
 select {
 	width: 100%;
-	height: max(1.7rem, 2.5vw);
+	height: max(2.5rem, 2.5vw);
 	border-radius: 4rem;
 	color: black;
 }
@@ -96,8 +96,24 @@ form button {
 	height: 3vw;
 	/* padding-block: 1rem; */
 	border-radius: 1rem;
-	font-size: 1.1vw;
+	font-size: max(1.4rem, 1.1vw);
 	font-weight: 700;
 	border: none;
 	background-color: #ECFF82;
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+
+	section {
+		width: 90%;
+	}
+
+	form {
+		row-gap: 2.5rem;
+	}
+
+	form button {
+		width: 200px;
+		height: 3rem;
+	}
 }
