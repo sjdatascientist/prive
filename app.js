@@ -41,10 +41,10 @@ app.get('/book', (req, res) => {
     res.render('book')
 })
 
-
-app.get('/calender', (req, res) => {
-    res.render('calender')
+app.get('/bookdates', (req, res) => {
+    res.render('bookdates')
 })
+
 
 app.post('/memberships/paymentform/createOrder', paymentController.createOrder)
 

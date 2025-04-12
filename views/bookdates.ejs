@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Book Now</title>
+		<link rel="stylesheet" href="../css/bookdates.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+	</head>
+	<body>
+		<%- include('partials/header.ejs') %>
+
+        <section class="calender-section ref-line">
+            <h3>Book Dates</h3>
+			<form action="" class="ref-line">
+				<input id="flatpickr-calender" type="datetime-local" value="" placeholder="Select Booking Dates Range" />
+			</form>
+			<p class="ref-line"><strong>Note: </strong>You can clearly see which dates are unable to select for bokings<small>(Greyed Out Dates)</small></p>
+        </section>
+		
+
+		<%- include('partials/footer.ejs') %>
+
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="../js/flatpickr-calender.js"></script>
+	</body>
+</html>
