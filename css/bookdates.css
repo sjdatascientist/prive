@@ -29,7 +29,7 @@ body {
  section {
 	width: 80%;
 	margin: auto;
-	padding: max(3.5rem, 4.3vw);
+	padding-block: max(3.5rem, 4.3vw);
 	padding-top: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -63,7 +63,7 @@ input::placeholder {
 
 .calender-section p {
 	margin-top: 3rem;
-	font-size: 1.6rem;
+	font-size: max(1rem,1.1vw);
 	padding: 1rem;
 	border-radius: 1rem;
 	background-color: #FFF3CD;
