@@ -190,46 +190,4 @@
         font-size: 2.1rem;
     }
 
-    footer {
-        padding: 4rem 3rem;
-        height: 375px;
-    }
-
-    footer img {
-        scale: .9;
-    }
-
-    footer > *{
-        scale: .9;
-        height: calc(450 * .65);
-    }
-
-    .quick-links-div {
-        margin: 0 5rem 0 11rem;
-        min-width: 20%;
-        height: fit-content;
-    }
-
-    .quick-links-div > span {
-        font-size: 2.8rem;
-    }
-
-    .quick-links-div li {
-        font-size: 2.7rem;
-        line-height: 1.9;
-    }
-
-    .working-time > * {
-        margin-bottom: 2rem;
-    }
-
-    .working-time > span {
-        font-size: 2.8rem;
-    }
-
-    .working-time > p {
-        font-size: 2.6rem;
-    }
-
 }
-        

@@ -20,4 +20,84 @@ body {
 	height: 100vh;
 	/* overflow-x: hidden; */
 }
-;
+/* 
+.ref-line {
+	border: 1px white dashed;
+}
+ */
+section {
+	width: 80%;
+	margin: auto;
+	padding: max(3.5rem, 4.3vw);
+	padding-top: 2rem;
+}
+
+h3 {
+	font-size: clamp(3rem, 4.3vw, 5rem);
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 2rem;
+}
+
+.user-info-div {
+	width: 100%;
+	padding: max(2rem, 2.3vw);
+	margin-bottom: 5rem;
+	border: 2px solid #ECFF82;
+	border-radius: 2rem;
+	display: inline-flex;
+	justify-content: space-between;
+
+}
+
+strong, p {
+	font-size: clamp(1rem, 2.1vw, 2.8rem);
+}
+
+.form-div {
+	width: 100%;
+	/* display: flex; */
+	/* flex-wrap: wrap; */
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 8%;
+	row-gap: 4rem;
+}
+
+.form-div > form > div {
+	width: 46%;
+	flex-grow: 1;
+	min-width: 225px;
+}
+
+label {
+	display: block;
+	font-size: clamp(1.8rem, 2.1vw, 2.8rem);
+	margin-bottom: 1rem;
+}
+
+select {
+	width: 100%;
+	height: max(1.7rem, 2.5vw);
+	border-radius: 4rem;
+	color: black;
+}
+form p {
+	font-size: clamp(1.6rem, 1.5vw, 2.2rem);
+}
+
+form button {
+	display: block;
+	margin-top: 2vw;
+	width: 38%;
+	height: 3vw;
+	/* padding-block: 1rem; */
+	border-radius: 1rem;
+	font-size: 1.1vw;
+	font-weight: 700;
+	border: none;
+	background-color: #ECFF82;
+}

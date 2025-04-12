@@ -21,7 +21,7 @@ body {
 	/* overflow-x: hidden; */
     display: flex;
     flex-direction: column;
-    row-gap: 4vw;
+    /* row-gap: 4vw; */
     align-items: center;
 }
 
@@ -37,6 +37,7 @@ button {
 
 main {
     width: 90% !important;
+    padding-block: 4rem;
 }
 
 main > h3 {
