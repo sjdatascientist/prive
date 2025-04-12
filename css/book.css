@@ -54,6 +54,15 @@ strong, p {
 	font-size: clamp(1.4rem, 2.1vw, 2.8rem);
 }
 
+.location-info {
+	display: flex;
+}
+
+img[src="../assets/location.png"] {
+	height: 38px;
+	margin-right: 3px;
+}
+
 .form-div {
 	width: 100%;
 	/* display: flex; */
@@ -84,7 +93,21 @@ select {
 	height: max(3rem, 2.5vw);
 	border-radius: 4rem;
 	color: black;
+	padding-inline: 30px;
+	font-size: 20px;
 }
+
+select:hover {
+	background-color: lightyellow;
+}
+
+option {
+	background-color: black;
+    color: #ECFF82;
+	font-size: 20px;
+	font-family: Montserrat;
+}
+
 form p {
 	font-size: clamp(1.6rem, 1.5vw, 2.2rem);
 }
@@ -97,7 +120,7 @@ form button {
 	/* padding-block: 1rem; */
 	border-radius: 1rem;
 	font-size: max(1.4rem, 1.1vw);
-	font-weight: 800;
+	font-weight: 700;
 	border: none;
 	background-color: #ECFF82;
 }

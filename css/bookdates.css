@@ -53,34 +53,12 @@ input {
 	border-radius: 1rem;
 	margin: auto;
 	margin-bottom: 3rem;
-	padding-left: 70px;
+	padding-left: 75px;
 }
 
 input::placeholder {
 	/* text-align: center; */
 	font-weight: 500;
-}
-
-.calender-section p {
-	margin-block: 3rem;
-	font-size: max(1rem,1.1vw);
-	padding: 1rem;
-	border-radius: 1rem;
-	background-color: #FFF3CD;
-	color: #AB6703;
-}
-
-.calender-section button {
-	display: block;
-	margin-top: 2vw;
-	width: 250px;
-	height: 50px;
-	/* padding-block: 1rem; */
-	border-radius: 1rem;
-	font-size: max(1.6rem, 1.1vw);
-	font-weight: 700;
-	border: none;
-	background-color: #ECFF82;
 }
 
 /* Calender Style */
@@ -107,7 +85,6 @@ input::placeholder {
 
 .flatpickr-months .flatpickr-month {
 	background: #323523 !important;
-
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {
@@ -127,9 +104,7 @@ span.flatpickr-weekday {
 	color: black !important;
 	background: #ECFF82 !important;
 	font-weight: 700 !important
-
 }
-
 
 .flatpickr-day.flatpickr-disabled {
 	color: #E82126 !important;
@@ -142,17 +117,14 @@ span.flatpickr-weekday {
 	color: white !important;
 }
 
-
 .flatpickr-day.nextMonthDay {
 	background: #b6c17c8a !important;
 	color: white !important;
-
 }
 
 .flatpickr-day.prevMonthDay {
 	background: #b6c17c8a !important;
 	color: white !important;
-
 }
 
 .flatpickr-day.inRange,
@@ -163,4 +135,63 @@ span.flatpickr-weekday {
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	border: 1px white solid !important;
+}
+/* Calender Style End Here */
+
+.legend {
+	height: 30px;
+	/* width: 40%; */
+	margin-top: 3rem;
+	display: flex;
+	column-gap: 25px;
+	justify-content: center;
+}
+
+.legend > div {
+	display: flex;
+	align-items: center;
+}
+
+.legend > div > div {
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	display: inline-block;
+	/* background: #ECFF82; */
+}
+
+#one {
+	background: #E82126;
+}
+#two {
+	background: #ECFF82;
+}
+#three {
+	background: #3A72FF;
+}
+
+.legend strong {
+	margin-left: 7px;
+	width: max-content;
+}
+
+.calender-section p {
+	margin-block: 3rem;
+	font-size: max(1rem,1.1vw);
+	padding: 1rem;
+	border-radius: 1rem;
+	background-color: #FFF3CD;
+	color: #AB6703;
+}
+
+.calender-section button {
+	display: block;
+	margin-top: 3vw;
+	width: 250px;
+	height: 50px;
+	/* padding-block: 1rem; */
+	border-radius: 1rem;
+	font-size: max(1.6rem, 1.1vw);
+	font-weight: 700;
+	border: none;
+	background-color: #ECFF82;
 }

@@ -8,7 +8,7 @@ flatpickr('#flatpickr-calender', {
 	mode: 'range',
 	minDate: today,
 	maxDate: maxDate,
-	disable: []		// Takes date[] as value
+	disable: ["2025-04-17"]		// Takes date[] as value
 })
 
 const value = document.querySelector('#flatpickr-calender').value;
