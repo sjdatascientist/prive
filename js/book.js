@@ -55,7 +55,7 @@ carsListArray.forEach((car) => {
 $(document).ready(function () {
 	// Validation patterns
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-	const phoneRegex = /^\d{10}$/
+	const phoneRegex = /^[1-9]\d{9}$/
 
 	// Form elements
 	const $name = $('#name')
@@ -69,7 +69,7 @@ $(document).ready(function () {
 	const $requiredNote = $('#requiredNote')
 
 	function validateForm() {
-		const nameValid = $name.val().trim().length >= 2
+		const nameValid = $name.val().trim().length >= 3
 		const emailValid = emailRegex.test($email.val().trim())
 		const phoneValid = phoneRegex.test($phone.val().trim())
 
@@ -84,8 +84,10 @@ $(document).ready(function () {
 
 	// Name validation
 	$name.on('input', function () {
-		const isValid = $(this).val().trim().length >= 2
+		const isValid = $(this).val().trim().length >= 3
 		toggleValidationState($(this), $('#nameError'), isValid)
+		const titleCaseValue = $name.val().toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+		$name.val(titleCaseValue)
 		validateForm()
 	})
 
@@ -93,6 +95,7 @@ $(document).ready(function () {
 	$email.on('input', function () {
 		const isValid = emailRegex.test($(this).val().trim())
 		toggleValidationState($(this), $('#emailError'), isValid)
+		$email.val($email.val().toLowerCase())
 		validateForm()
 	})
 
