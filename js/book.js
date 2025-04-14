@@ -54,6 +54,9 @@ carsListArray.forEach((car) => {
 
 $(document).ready(function () {
 	// Validation patterns
+	// const nameRegex = /^[a-zA-Z][a-zA-Z\s]{2,}$/
+	const nameRegex = /^(?:[a-zA-Z]{3,}|[a-zA-Z][a-zA-Z\s]*[a-zA-Z][a-zA-Z\s]*[a-zA-Z])$/
+	// const nameRegex = /^[a-zA-Z][a-zA-Z\s]*$/
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 	const phoneRegex = /^[1-9]\d{9}$/
 
@@ -69,7 +72,8 @@ $(document).ready(function () {
 	const $requiredNote = $('#requiredNote')
 
 	function validateForm() {
-		const nameValid = $name.val().trim().length >= 3
+		// const nameValid = $name.val().trim().length >= 3
+		const nameValid = nameRegex.test($name.val().trim())
 		const emailValid = emailRegex.test($email.val().trim())
 		const phoneValid = phoneRegex.test($phone.val().trim())
 
@@ -84,9 +88,9 @@ $(document).ready(function () {
 
 	// Name validation
 	$name.on('input', function () {
-		const isValid = $(this).val().trim().length >= 3
+		const isValid = nameRegex.test($name.val().trim())
 		toggleValidationState($(this), $('#nameError'), isValid)
-		const titleCaseValue = $name.val().toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+		const titleCaseValue = $name.val().replace(/[^a-zA-Z\s]/g, '').replace(/\s+/g, ' ').toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 		$name.val(titleCaseValue)
 		validateForm()
 	})
@@ -103,6 +107,7 @@ $(document).ready(function () {
 	$phone.on('input', function () {
 		const isValid = phoneRegex.test($(this).val().trim())
 		toggleValidationState($(this), $('#phoneError'), isValid)
+		$phone.val($phone.val().replace(/\D/g, ''))
 		validateForm()
 	})
 

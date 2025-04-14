@@ -18,17 +18,17 @@
 				<form action="/book/payment" method="POST" id="UserDetailsForm">
 					<div class="ref-line">
 						<label for="name">Name</label>
-						<input type="text" name="name" id="name" />
+						<input type="text" name="name" id="name" maxlength="50"/>
 						<p class="error-message" id="nameError">Name must be at least 3 characters long</p>
 					</div>
 					<div class="ref-line">
 						<label for="email">Email</label>
-						<input type="email" name="email" id="email" />
+						<input type="email" name="email" id="email" maxlength="40"/>
 						<p class="error-message" id="emailError">Please enter a valid email address</p>
 					</div>
 					<div class="ref-line">
 						<label for="phone">Phone</label>
-						<input type="tel" name="phone" id="phone" />
+						<input type="tel" name="phone" id="phone" maxlength="10"/>
 						<p class="error-message" id="phoneError">Please enter a valid 10-digit phone number</p>
 					</div>
 					<div class="ref-line">
