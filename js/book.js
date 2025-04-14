@@ -92,6 +92,6 @@ $(document).ready(function () {
 		}
 	}
 
-	const $profileCardsContainer = $('#profileCardsContainer')
+	// const $profileCardsContainer = $('#profileCardsContainer')
 
 })

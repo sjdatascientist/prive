@@ -195,3 +195,7 @@ span.flatpickr-weekday {
 	border: none;
 	background-color: #ECFF82;
 }
+
+em {
+	margin-top: 2rem;
+}
