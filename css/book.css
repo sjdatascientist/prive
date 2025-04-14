@@ -188,7 +188,7 @@ i {
 		row-gap: 2.5rem;
 	}
 
-	select {
+	select, input {
 		font-size: 1.4rem;
 		padding-left: 10px;
 	}
