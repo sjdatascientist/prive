@@ -16,24 +16,49 @@
 			<div class="form-div ref-line">
 				<form action="/book/payment" method="POST" id="UserDetailsForm">
 					<div class="ref-line">
-						<label for="name">Name<i>(*required)</i></label>
+						<label for="name">Name</label>
 						<input type="text" name="name" id="name" />
 						<p class="error-message" id="nameError">Name must be at least 2 characters long</p>
 					</div>
 					<div class="ref-line">
-						<label for="email">Email<i>(*required)</i></label>
+						<label for="email">Email</label>
 						<input type="email" name="email" id="email" />
 						<p class="error-message" id="emailError">Please enter a valid email address</p>
 					</div>
 					<div class="ref-line">
-						<label for="phone">Phone<i>(*required)</i></label>
+						<label for="phone">Phone</label>
 						<input type="tel" name="phone" id="phone" />
 						<p class="error-message" id="phoneError">Please enter a valid 10-digit phone number</p>
 					</div>
 					<div class="ref-line">
-						<label for="location">Location<i>(*required)</i></label>
-						<input type="text" name="location" id="location" />
-						<p class="error-message" id="locationError">Location be at least 3 characters long</p>
+						<label for="city">City</label>
+						<select name="city" id="city">
+							<option value="" selected disabled hidden>Select</option>
+							<option value="Banglore">Banglore</option>
+							<option value="New Delhi">New Delhi</option>
+							<option value="Mumbai">Mumbai</option>
+							<option value="Chennai">Chennai</option>
+							<option value="Hyderabad">Hyderabad</option>
+							<option value="Pune">Pune</option>
+							<option value="Lucknow">Lucknow</option>
+							<option value="Kanpur">Kanpur</option>
+							<option value="Dehradun">Dehradun</option>
+							<option value="Mysore">Mysore</option>
+							<option value="Mangalore">Mangalore</option>
+							<option value="Ahmedabad">Ahmedabad</option>
+							<option value="Kolkata">Kolkata</option>
+							<option value="Cochin">Cochin</option>
+							<option value="Trivandrum">Trivandrum</option>
+							<option value="Surat">Surat</option>
+							<option value="Vishakapatnam">Vishakapatnam</option>
+							<option value="Jaipur">Jaipur</option>
+							<option value="Nagpur">Nagpur</option>
+							<option value="Indore">Indore</option>
+							<option value="Bhopal">Bhopal</option>
+							<option value="Ludhiana">Ludhiana</option>
+							<option value="Vadodra">Vadodra</option>
+						</select>
+						<p class="error-message" id="cityError">city be at least 3 characters long</p>
 					</div>
 					<div class="ref-line">
 						<label for="car">Car Model</label>
@@ -42,7 +67,7 @@
 						</select>
 					</div>
 					<div class="ref-line">
-						<label for="tickets">Select Number of Tickets</label>
+						<label for="tickets">Number of Memberships</label>
 						<select name="tickets" id="tickets">
 							<option value="" selected disabled hidden>Select</option>
 							<option value="1">1</option>
@@ -59,15 +84,15 @@
 						</select>
 					</div>
 					<div class="ref-line">
-						<label for="">2 Tickets</label>
-						<p>18.66% ownership of the car</p>
+						<label for="">Per Membership Ownership</label>
+						<p>9.33% ownership of the car</p>
 					</div>
 					<div class="ref-line">
-						<label for="">Ticket Price</label>
-						<p>Rs 8.88 Lakhs (one time payment)</p>
+						<label for="">Per Membership Price</label>
+						<p>Rs 10,000 (one time payment)</p>
 					</div>
 					<div class="ref-line">
-						<label for="">Usage</label>
+						<label for="">Usage Per Membership</label>
 						<p>45 Days/Year</p>
 					</div>
 					<div class="ref-line">
@@ -75,7 +100,11 @@
 						<p>5 Years</p>
 					</div>
 				</form>
-				<button type="submit" form="UserDetailsForm" id="submitBtn" disabled>Proceed to Payment</button>
+				<div class="button-block">
+					<button type="submit" form="UserDetailsForm" id="submitBtn" disabled>Proceed to Payment</button>
+					<i id="requiredNote">(*All fields are required)</i>
+				</div>
+				<p class="note ref-line"><strong>&#9888; Note: </strong>Each plan costs Rs 10,000 and will be adjusted in membership price.</p>
 			</div>
 		</section>
 

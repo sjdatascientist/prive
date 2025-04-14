@@ -47,8 +47,8 @@ app.get('/book', (req, res) => {
 })
 
 app.post('/book/payment', (req, res) => {
-    const {name, email, phone, location, car, tickets, fuel} = req.body;
-    res.render('payment', {name, email, phone, location, car, tickets, fuel})
+    const {name, email, phone, city, car, tickets, fuel} = req.body;
+    res.render('payment', {name, email, phone, city, car, tickets, fuel})
 })
 
 app.get('/bookdates', (req, res) => {
