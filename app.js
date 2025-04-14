@@ -1,10 +1,15 @@
 const express = require("express");
+const bodyParser = require('body-parser');
 const path = require("path");
+
+// Middleware to parse form data
 
 const paymentController = require('./controllers/paymentController');
 // import createOrder from "./controllers/paymentController"
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve Images from the assets folder
 app.use("/assets", express.static(path.join(__dirname, "assets")));
@@ -39,6 +44,11 @@ app.get('/memberships', (req, res) => {
 
 app.get('/book', (req, res) => {
     res.render('book')
+})
+
+app.post('/book/payment', (req, res) => {
+    const {name, email, phone, location, car, tickets, fuel} = req.body;
+    res.render('payment', {name, email, phone, location, car, tickets, fuel})
 })
 
 app.get('/bookdates', (req, res) => {

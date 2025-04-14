@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Book Now</title>
+		<link rel="stylesheet" href="../css/payment.css" />
+	</head>
+	<body>
+		<%- include('partials/header.ejs') %>
+
+        <section class="profile-card">
+            <h3>Profile Card</h3>
+			<div class="user-info-div ref-line">
+				<div class="main-user-info ref-line">
+					<strong><%= name %></strong><br>
+					<strong><%= email %></strong>
+					<p>+91-<%= phone %></p>
+					<p><%= location %></p>
+					<p><%= car %> (<%= fuel %>)</p>
+					<p><%= tickets %> Tickets</p>
+				</div>
+			</div>
+        </section>
+
+        <div>its a payment page</div>
+        <button id="btn-to-bookdates">go to book dates</button>
+
+        <!-- <%- include('partials/footer.ejs') %> -->
+    
+        <script>
+            document.getElementById("btn-to-bookdates").addEventListener('click', () =>window.location.href = '/bookdates')
+        </script>
+
+	</body>
+</html>

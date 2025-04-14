@@ -8,10 +8,15 @@ flatpickr('#flatpickr-calender', {
 	mode: 'range',
 	minDate: today,
 	maxDate: maxDate,
-	disable: ["2025-04-17"]		// Takes date[] as value
+	disable: [""]		// Takes date[] as value
 })
 
-const value = document.querySelector('#flatpickr-calender').value;
-console.log("value is", value);
-
-// document.querySelector('em').innerHTML = `The selected booking dates are from ${value}`;
+const calenderInput = document.querySelector('#flatpickr-calender');
+calenderInput.addEventListener("change", (event) => {
+	bookingDates = event.target.value
+	
+	if (bookingDates) {
+		document.querySelector('em').innerHTML = `The selected booking dates are from ${bookingDates}`;
+	}
+})
+// 

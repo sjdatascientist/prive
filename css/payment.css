@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	/* overflow-x: hidden;; */
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+    color: white;
+	font-weight: 400;
+	background: url('../assets/website-background.png');
+	background-size: cover;
+	height: 100vh;
+	/* overflow-x: hidden; */
+}
+/* 
+.ref-line {
+	border: 1px white dashed;
+}
+ */
+section.profile-card {
+	width: 80%;
+	margin: auto;
+	padding: max(3.5rem, 4.3vw);
+	padding-top: 2rem;
+}
+
+h3 {
+	font-size: clamp(3rem, 4.3vw, 5rem);
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 3rem;
+}
+
+.user-info-div {
+	width: 100%;
+	padding: max(2rem, 2.3vw);
+	margin-bottom: 5rem;
+	border: 2px solid #ECFF82;
+	border-radius: 2rem;
+	display: inline-flex;
+	justify-content: space-between;
+
+}
+
+strong, p {
+	font-size: clamp(1.4rem, 2.1vw, 2.8rem);
+}
+/* 
+.location-info {
+	display: flex;
+}
+
+img[src="../assets/location.png"] {
+	height: 38px;
+	margin-right: 3px;
+}
+ */

@@ -5,56 +5,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Book Now</title>
 		<link rel="stylesheet" href="../css/book.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
 	</head>
 	<body>
 		<%- include('partials/header.ejs') %>
 
-		<section class="book-section ref-line">
-			<h3>Book Now</h3>
-			<div class="user-info-div ref-line">
-				<div class="main-user-info ref-line">
-					<strong>John Doe</strong><br>
-					<strong>1234567890</strong>
-					<p>johndoe@email.com</p>
-				</div>
-				<div class="location-info ref-line">
-					<img src="../assets/location.png" alt="">
-					<p>Location</p>
-				</div>
-			</div>
+		<section class="ref-line">
+			<h3>Enter Your Details</h3>
 			<div class="form-div ref-line">
-				<form action="">
+				<form action="/book/payment" method="POST" id="UserDetailsForm">
 					<div class="ref-line">
-						<label for="">Color</label>
-						<select name="" id="">
-							<option value="" selected disabled hidden>Select</option>
-						</select>
-							
+						<label for="name">Name<i>(*required)</i></label>
+						<input type="text" name="name" id="name" />
+						<p class="error-message" id="nameError">Name must be at least 2 characters long</p>
 					</div>
 					<div class="ref-line">
-						<label for="">Fuel Type</label>
-						<select name="" id="">
+						<label for="email">Email<i>(*required)</i></label>
+						<input type="email" name="email" id="email" />
+						<p class="error-message" id="emailError">Please enter a valid email address</p>
+					</div>
+					<div class="ref-line">
+						<label for="phone">Phone<i>(*required)</i></label>
+						<input type="tel" name="phone" id="phone" />
+						<p class="error-message" id="phoneError">Please enter a valid 10-digit phone number</p>
+					</div>
+					<div class="ref-line">
+						<label for="location">Location<i>(*required)</i></label>
+						<input type="text" name="location" id="location" />
+						<p class="error-message" id="locationError">Location be at least 3 characters long</p>
+					</div>
+					<div class="ref-line">
+						<label for="car">Car Model</label>
+						<select name="car" id="car">
 							<option value="" selected disabled hidden>Select</option>
-							<option value="Petrol" >Petrol</option>
-							<option value="Diesel" >Diesel</option>
 						</select>
 					</div>
 					<div class="ref-line">
-						<label for="">Variant</label>
-						<select name="" id="">
+						<label for="tickets">Select Number of Tickets</label>
+						<select name="tickets" id="tickets">
 							<option value="" selected disabled hidden>Select</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
 						</select>
 					</div>
 					<div class="ref-line">
-						<label for="">Select Number of Tickets</label>
-						<select name="" id="">
+						<label for="fuel">Fuel Type</label>
+						<select name="fuel" id="fuel">
 							<option value="" selected disabled hidden>Select</option>
-							<option value=1 >1</option>
-							<option value=2 >2</option>
-							<option value=3 >3</option>
+							<option value="Petrol">Petrol</option>
+							<option value="Diesel">Diesel</option>
 						</select>
-							
-
 					</div>
 					<div class="ref-line">
 						<label for="">2 Tickets</label>
@@ -72,12 +74,14 @@
 						<label for="">Service Term</label>
 						<p>5 Years</p>
 					</div>
-					<button>Proceed to Payment</button>
 				</form>
+				<button type="submit" form="UserDetailsForm" id="submitBtn" disabled>Proceed to Payment</button>
 			</div>
 		</section>
 
 		<%- include('partials/footer.ejs') %>
+
+		<script src="../js/book.js" type="module"></script>
 
 	</body>
 </html>
