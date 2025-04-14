@@ -1,6 +1,48 @@
 // const {carsListArray} = require('../data/cars_list');
-import carsListArray from './data/cars_list.js'
-console.log(carsListArray)
+// import carsListArray from './data/cars_list.js'
+// console.log(carsListArray)
+
+const carsListArray = [
+    'MG Cyberstar',
+    'Mahindra SUV 700 D',
+    'Mahindra Thar D',
+    'Jeep Meridian',
+    'Toyota Fortuner',
+    'Audi Q5',
+    'Mercedes E-class',
+    'Mercedes SUV GLC 300',
+    'BMW i7',
+    'Range Rover Defender',
+    'Jeep Wrangler',
+    'Range Rover Defender',
+    'Jeep Wrangler',
+    'Range Rover Velar Petrol',
+    'Innova Crysta',
+    'Toyota Vellfire',
+    'Kia Carens',
+    'Toyota Camry',
+    'BMW X5',
+    'MG Gloster',
+    'Mercedes Cabriolet',
+    'Mahindra Scorpio',
+    'Hyundai Creta',
+    'Kia Seltos',
+    'Mercedes GLS',
+    'Kia Carnival',
+    'Innova Hycross',
+    'Mahindra Thar Roxx',
+    'BMW X1 Sport',
+    'Jeep Compass',
+    'Land Rover Range Rover',
+    'Mahindra EV BE6',
+    'Mahindra EV BE9',
+    'BMW X3',
+    'Lexus ES 350H',
+    'Volvo S90',
+    'Grand Vitara',
+    'Mercedes CLA 200'
+  ]
+  
 
 const carsSelectElement = document.getElementById('car')
 
