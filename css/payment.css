@@ -63,3 +63,24 @@ img[src="../assets/location.png"] {
 	margin-right: 3px;
 }
  */
+.under-construction {
+	font-size: 3rem;
+	display: block;
+	margin-left: 33rem;
+	margin-bottom: 3rem;
+	font-weight: 900;
+}
+ 
+button {
+	display: block;
+	margin-top: 3vw;
+	margin: auto;
+	width: 250px;
+	height: 50px;
+	/* padding-block: 1rem; */
+	border-radius: 1rem;
+	font-size: max(1.6rem, 1.1vw);
+	font-weight: 700;
+	border: none;
+	background-color: #ECFF82;
+}
