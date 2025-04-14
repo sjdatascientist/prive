@@ -40,7 +40,7 @@ const carsListArray = [
 	'Lexus ES 350H',
 	'Volvo S90',
 	'Grand Vitara',
-	'Mercedes CLA 200',
+	'Mercedes GLA 200',
 ]
 
 const carsSelectElement = document.getElementById('car')
