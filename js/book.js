@@ -1,6 +1,6 @@
 // const {carsListArray} = require('../data/cars_list');
 import carsListArray from './data/cars_list.js'
-// console.log(carsListArray)
+console.log(carsListArray)
 
 const carsSelectElement = document.getElementById('car')
 
