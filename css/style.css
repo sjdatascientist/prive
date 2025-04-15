@@ -516,7 +516,7 @@ form :nth-last-child(3) {
 	/* margin-left: 2rem; */
 }
 
-select[name='select-city-options'] {
+select[name='city'] {
 	width: 100%;
 }
 

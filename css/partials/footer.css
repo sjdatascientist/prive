@@ -1,5 +1,5 @@
 footer {
-	height: 450px;
+	height: 500px;
 	width: 100%;
 	padding: 6rem 3rem;
 	background: linear-gradient(to right, #22241d, #565c36);
@@ -23,6 +23,11 @@ footer {
 .quick-links-div li {
 	font-size: 2.8rem;
 	line-height: 2.2;
+    cursor: pointer;
+}
+
+.quick-links-div li:hover {
+    color: #ecff82;
 }
 
 .working-time * {
@@ -88,7 +93,7 @@ footer {
 
     footer {
         padding: 4rem 3rem;
-        height: 375px;
+        height: 400px;
     }
 
     footer img {

@@ -281,11 +281,11 @@
         height: 6rem;
     }
 
-    select[name="select-car-options"] {
+    select[name="car"] {
         margin-left: 0;
     }
 
-    select[name="select-city-options"] {
+    select[name="city"] {
         width: 300px;
     }
 
