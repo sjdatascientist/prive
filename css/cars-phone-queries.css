@@ -20,11 +20,11 @@
     }
     
     .cars-column-mobile-div {
-        width: auto%;
+        width: 50%;
     }
     
-    .cars-section img {
-        width: 70%;
+    .cars-mobile-section img {
+        width: 100%;
         height: auto;
     }
 

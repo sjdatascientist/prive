@@ -28,10 +28,11 @@
 			const navLinks = document.querySelectorAll('nav ul li a')
 			navLinks.forEach((link) => {
 				let linkPath = link.getAttribute('href')
-				console.log(linkPath)
 
 				if (linkPath === currentPath) {
 					link.style.color = '#ecff82'
+					// link.style.fontWeight = 'bold'
+					// link.parentElement.style.borderBottom = '3px #ecff82 solid'
 				}
 				})
 			
