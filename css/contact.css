@@ -48,7 +48,7 @@ h3 {
 	padding: 7rem;
 	display: flex;
 	flex-direction: column;
-	row-gap: 5rem;
+	row-gap: 4vw;
 }
 
 .inner-div {
@@ -99,13 +99,16 @@ section.map-section {
 		.outer-div {
 			width: 100%;
 			padding: 2.5rem;
+			border-radius: 1rem
+
 		}
+		
 		.inner-div strong {
 			font-size: ;
 		}
 
 		.inner-div p {
-			width: 70%;
+			width: 50%;
 			/* font-size: 1rem; */
 		}
 

@@ -56,7 +56,8 @@ main > section {
 }
 
 .hero-section-text-content > h1 {
-	font-size: 7.7rem;
+	/* font-size: 7.7rem; */
+	font-size: 4vw;
 }
 
 .hero-section-text-content > p {
@@ -284,13 +285,13 @@ img[alt="Go"] {
 }
 
 .offer-close-section > h2 {
-	font-size: 5.5rem;
+	font-size: max(2.8rem, 3vw);
 	margin-bottom: 2rem;
 }
 
 .countdown-timer-container {
 	/* height: 184px; */
-	width: 625px;
+	width: 40%;
 	border: white solid;
 }
 
@@ -541,4 +542,16 @@ button.form-get-quote {
 	display: block;
 	margin: auto;
 	margin-top: 5rem;
+}
+
+.thanks-4-contacting {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+}
+
+.thanks-4-contacting img {
+	width: 100%;
+	height: auto;
 }
