@@ -42,7 +42,6 @@ h3 {
 .user-info-div {
 	width: 100%;
 	padding: max(2rem, 2.3vw);
-	margin-bottom: 5rem;
 	border: 2px solid #ECFF82;
 	border-radius: 2rem;
 	display: inline-flex;
@@ -51,7 +50,7 @@ h3 {
 }
 
 strong, p {
-	font-size: clamp(1.4rem, 2.1vw, 2.8rem);
+	font-size: clamp(1rem, 2.1vw, 2.8rem);
 }
 /* 
 .location-info {
@@ -64,9 +63,9 @@ img[src="../assets/location.png"] {
 }
  */
 .under-construction {
-	font-size: 3rem;
+	font-size: 2vw;
 	display: block;
-	margin-left: 33rem;
+	text-align: center;
 	margin-bottom: 3rem;
 	font-weight: 900;
 }
@@ -84,4 +83,11 @@ button {
 	font-weight: 700;
 	border: none;
 	background-color: #ECFF82;
+	margin-bottom: 5rem;
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+	section.profile-card {
+		width: 90%;
+	}
 }
