@@ -72,6 +72,7 @@ img[src="../assets/location.png"] {
 }
  
 button {
+	cursor: pointer;
 	display: block;
 	margin-top: 3vw;
 	margin: auto;
