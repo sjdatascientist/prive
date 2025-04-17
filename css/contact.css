@@ -84,7 +84,7 @@ h3 {
 	margin: auto;
 	height: 4vw;
 	margin-top: 3vw;
-	font-size: max(1.2rem,1.4vw);
+	font-size: max(1.6rem,1.4vw);
 	font-weight: bolder;
 	border: none;
 	border-radius: 1rem;
@@ -98,7 +98,6 @@ i {
 }
 
 section.map-section {
-	/* height: 60vw; */
 	padding: 8rem;
 	border-radius: 3rem;
 }
@@ -121,14 +120,9 @@ section.map-section {
 			border-radius: 1rem
 
 		}
-		
-		.inner-div strong {
-			font-size: ;
-		}
 
 		.inner-div p {
 			width: 50%;
-			/* font-size: 1rem; */
 		}
 
 		.whatsapp-button {
