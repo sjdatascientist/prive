@@ -1,7 +1,7 @@
 const accordionData = {
     set1: [
         { header: "What does Prive’drive do?", content: "Prive’Drive is a fractional car co-ownership facilitating platform which allows the members to enjoy co-owning a premium car at a fraction of the on road price ." },
-        { header: "How does this system work?", content: "In any city, once we once there are minimum 10-12 people interested in any premium car,we are able to form a group, after verification, to co-own the car ." },
+        { header: "How does this system work?", content: "In any city, once  there are minimum 10-12 people interested in any premium car,we are able to form a group, after verification, to co-own the car ." },
         { header: "Who will own the car?", content: "The car will be registered in the company name , and all the members of this privileged group co-own the car as equal share holders . One member can take more than 1 membership to avail more number of days and limited to 3 memberships only." },
         { header: "What is the role of the Prive’Drive?", content: "The main functions of the company starts with: Forming this group of privileged car owners: Facilitating and managing car allocation according to slot booking : managing the general maintenance of the car : managing parking and Chauffeur allotment : Enabling fair distribution of the car slots : Car Parking : Insurance issues : Distribution of car sale proceeds after 5 years." },
         { header: "Is this format better than renting a premium car?", content: "The advantage of this system is as follows: The feeling of a brand new car is different in this case. Rental will be all used cars : The car is chauffeur driven and hence well maintained and clean at all times : A chauffeur driven car has a better resale value than a multi driver car. : All parking issues and car safety while parking are looked at by the chauffeur. : The car is White board and not a yellow board. : There is no branding on the car and gives feeling of private ownership to everyone. : Plus the biggest advantage is that it comes to about 5-6 times cheaper than a rental Car." }
@@ -114,7 +114,7 @@ document.querySelectorAll(".accordian-header").forEach(header => {
   
 
   document.querySelector(".whatsapp-div").addEventListener("click", () => {
-    window.location.href = "https://wa.me/+919606996322"; // Replace with your desired link
+    window.location.href = "https://wa.me/+919606996321"; // Replace with your desired link
   });
 
   document.querySelector(".get-started-btn").addEventListener("click", () => {

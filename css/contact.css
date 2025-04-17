@@ -78,6 +78,25 @@ h3 {
 	width: 60%;
 }
 
+.whatsapp-button {
+	width: 40%;
+	display: block;
+	margin: auto;
+	height: 4vw;
+	margin-top: 3vw;
+	font-size: max(1.2rem,1.4vw);
+	font-weight: bolder;
+	border: none;
+	border-radius: 1rem;
+	background-color: #25D366;
+	color: white;
+	cursor: pointer;
+}
+i {
+	scale: 1.4;
+	margin-right: 1.5rem;
+}
+
 section.map-section {
 	/* height: 60vw; */
 	padding: 8rem;
@@ -110,6 +129,11 @@ section.map-section {
 		.inner-div p {
 			width: 50%;
 			/* font-size: 1rem; */
+		}
+
+		.whatsapp-button {
+			height: 4rem;
+			width: 100%;
 		}
 
 		section.map-section {
