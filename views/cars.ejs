@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-    <title>Explore Cars | Prive Drive</title>
-    <link rel="stylesheet" href="../css/cars-style.css">
-    <link rel="stylesheet" href="../css/cars-phone-queries.css">
-</head>
-<body>
-    <%- include('partials/header') %>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+		<title>Explore Cars | Prive Drive</title>
+		<link rel="stylesheet" href="../css/cars-style.css" />
+		<link rel="stylesheet" href="../css/cars-phone-queries.css" />
+	</head>
+	<body>
+		<%- include('partials/header') %>
 
+		<main class="main-section temp-border">
+			<div class="main-section-header temp-border">
+				<h3>Explore Our Vehicles</h3>
+				<button class="compare-btn">Compare</button>
+			</div>
+			<section class="cars-section temp-border">
+				<div class="cars-column-div temp-border">
+					<img src="assets/col1.png" alt="" />
+				</div>
+				<div class="cars-column-div temp-border">
+					<img src="assets/col2.png" alt="" />
+				</div>
+				<div class="cars-column-div temp-border">
+					<img src="assets/col3.png" alt="" />
+				</div>
+			</section>
+			<section class="cars-mobile-section temp-border">
+				<div class="cars-column-mobile-div temp-border">
+					<img src="assets/mobile-col1.svg" alt="" />
+				</div>
+				<div class="cars-column-mobile-div temp-border">
+					<img src="assets/mobile-col2.svg" alt="" />
+				</div>
+			</section>
+		</main>
 
-    <main class="main-section temp-border">
-        <h3>Explore Our Range Of Vehicles</h3>
-        <section class="cars-section temp-border">
-            <div class="cars-column-div temp-border">
-                <img src="assets/col1.png" alt="">
-            </div>
-            <div class="cars-column-div temp-border">
-                <img src="assets/col2.png" alt="">
-            </div>
-            <div class="cars-column-div temp-border">
-                <img src="assets/col3.png" alt="">
-            </div>
-        </section>
-        <section class="cars-mobile-section temp-border">
-            <div class="cars-column-mobile-div temp-border">
-                <img src="assets/mobile-col1.svg" alt="">
-            </div>
-            <div class="cars-column-mobile-div temp-border">
-                <img src="assets/mobile-col2.svg" alt="">
-            </div>
-        </section>
-    </main>
+		<%- include('partials/footer.ejs') %>
 
-    <%- include('partials/footer.ejs') %>
-
-
-    <script src="../js/menu-btn-script.js"></script>
-
-</body>
+		<script>
+			const compareButton = document.getElementsByClassName('compare-btn')[0]
+			compareButton.addEventListener('click', function () {
+				window.location.href = '/compare'
+			})
+		</script>
+	</body>
 </html>
