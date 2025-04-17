@@ -127,6 +127,7 @@ $('.thanks-4-contacting').hide()
 $('.form-get-quote').click(function(e) {
     e.preventDefault()
     $('.thanks-4-contacting').show()
+    $('.form-section').hide()
     setTimeout(function() {
         $('.thanks-4-contacting').hide()
     }, 5000)
