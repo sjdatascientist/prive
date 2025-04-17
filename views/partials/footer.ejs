@@ -16,6 +16,7 @@
                 <li class="explore-cars-link">Explore Cars</li>
                 <li class="memberships-link">Memberships</li>
                 <li class="book-now-link">Book Now</li>
+                <li class="compare-now-link">Compare</li>
                 <li class="contact-us-link">Contact Us</li>
                 <li class="faqs-link">FAQ's</li>
                 <li class="privacy-policy-link">Privacy Policy</li>
@@ -45,6 +46,10 @@
 
         document.getElementsByClassName('book-now-link')[0].addEventListener('click', (e) => {
             window.location.href = '/book'
+        })
+
+        document.getElementsByClassName('compare-now-link')[0].addEventListener('click', (e) => {
+            window.location.href = '/compare'
         })
 
         document.getElementsByClassName('contact-us-link')[0].addEventListener('click', (e) => {

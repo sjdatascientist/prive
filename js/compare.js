@@ -1,0 +1,247 @@
+
+const carsListArray = [
+	'MG Cyberstar',
+	'Mahindra SUV 700 D',
+	'Mahindra Thar D',
+	'Jeep Meridian',
+	'Toyota Fortuner',
+	'Audi Q5',
+	'Mercedes E-class',
+	'Mercedes SUV GLC 300',
+	'BMW i7',
+	'Range Rover Defender',
+	'Jeep Wrangler',
+	'Range Rover Velar Petrol',
+	'Innova Crysta',
+	'Toyota Vellfire',
+	'Kia Carens',
+	'Toyota Camry',
+	'BMW X5',
+	'MG Gloster',
+	'Mercedes Cabriolet',
+	'Mahindra Scorpio',
+	'Hyundai Creta',
+	'Kia Seltos',
+	'Mercedes GLS',
+	'Kia Carnival',
+	'Innova Hycross',
+	'Mahindra Thar Roxx',
+	'BMW X1 Sport',
+	'Jeep Compass',
+	'Land Rover Range Rover',
+	'Mahindra EV BE6',
+	'Mahindra EV BE9',
+	'BMW X3',
+	'Lexus ES 350H',
+	'Volvo S90',
+	'Grand Vitara',
+	'Mercedes GLA 200',
+]
+
+
+const carsObj = {
+	'MG Cyberstar': {
+		totalPrice: 78,
+		costPerDay: 5259,
+		rentPerDay: 25000
+	},
+	'Mahindra SUV 700 D': {
+		totalPrice: 26,
+		costPerDay: 1752,
+		rentPerDay: 10000
+	},
+	'Mahindra Thar D': {
+		totalPrice: 20,
+		costPerDay: 1348,
+		rentPerDay: 6000
+	},
+	'Jeep Meridian': {
+		totalPrice: 40,
+		costPerDay: 2696,
+		rentPerDay: 12000
+	},
+	'Toyota Fortuner': {
+		totalPrice: 54,
+		costPerDay: 3640,
+		rentPerDay: 15000
+	},
+	'Audi Q5': {
+		totalPrice: 89,
+		costPerDay: 5995,
+		rentPerDay: 25000
+	},
+	'Mercedes E-class': {
+		totalPrice: 98,
+		costPerDay: 6607,
+		rentPerDay: 32000
+	},
+	'Mercedes SUV GLC 300': {
+		totalPrice: 95,
+		costPerDay: 6401,
+		rentPerDay: 30000
+	},
+	'BMW i7': {
+		totalPrice: 235,
+		costPerDay: 15844,
+		rentPerDay: 49000
+	},
+	'Range Rover Defender': {
+		totalPrice: 130,
+		costPerDay: 8764,
+		rentPerDay: 25000
+	},
+	'Jeep Wrangler': {
+		totalPrice: 78,
+		costPerDay: 5259,
+		rentPerDay: 25000
+	},
+	'Range Rover Velar Petrol': {
+		totalPrice: 78,
+		costPerDay: 5259,
+		rentPerDay: 25000
+	},
+	'Innova Crysta': {
+		totalPrice: 78,
+		costPerDay: 5259,
+		rentPerDay: 25000
+	},
+	'Toyota Vellfire': {
+		totalPrice: 110,
+		costPerDay: 7461,
+		rentPerDay: 37000
+	},
+	'Kia Carens': {
+		totalPrice: 18,
+		costPerDay: 1196,
+		rentPerDay: 6000
+	},
+	'Toyota Camry': {
+		totalPrice: 60,
+		costPerDay: 3985,
+		rentPerDay: 17000
+	},
+	'BMW X5': {
+		totalPrice: 133,
+		costPerDay: 8967,
+		rentPerDay: 45000
+	},
+	'MG Gloster': {
+		totalPrice: 40,
+		costPerDay: 2663,
+		rentPerDay: 12000
+	},
+	'Mercedes Cabriolet': {
+		totalPrice: 139,
+		costPerDay: 9371,
+		rentPerDay: 50000
+	},
+	'Mahindra Scorpio': {
+		totalPrice: 27,
+		costPerDay: 1820,
+		rentPerDay: 11000
+	},
+	'Hyundai Creta': {
+		totalPrice: 24,
+		costPerDay: 1618,
+		rentPerDay: 10500
+	},
+	'Kia Seltos': {
+		totalPrice: 0,
+		costPerDay: 0,
+		rentPerDay: 0
+	},
+	'Mercedes GLS': {
+		totalPrice: 78,
+		costPerDay: 5259,
+		rentPerDay: 25000
+	},
+	'Kia Carnival': {
+		totalPrice: 80,
+		costPerDay: 5393,
+		rentPerDay: 24000
+	},
+	'Innova Hycross': {
+		totalPrice: 36,
+		costPerDay: 2400,
+		rentPerDay: 11000
+	},
+	'Mahindra Thar Roxx': {
+		totalPrice: 21,
+		costPerDay: 1415,
+		rentPerDay: 7000
+	},
+	'BMW X1 Sport': {
+		totalPrice: 64,
+		costPerDay: 4315,
+		rentPerDay: 20000
+	},
+	'Jeep Compass': {
+		totalPrice: 30,
+		costPerDay: 1998,
+		rentPerDay: 12000
+	},
+	'Land Rover Range Rover': {
+		totalPrice: 340,
+		costPerDay: 22923,
+		rentPerDay: 100000
+	},
+	'Mahindra EV BE6': {
+		totalPrice: 30,
+		costPerDay: 1998,
+		rentPerDay: 12000
+	},
+	'Mahindra EV BE9': {
+		totalPrice: 31,
+		costPerDay: 2070,
+		rentPerDay: 12500
+	},
+	'BMW X3': {
+		totalPrice: 89,
+		costPerDay: 5998,
+		rentPerDay: 21000
+	},
+	'Lexus ES 350H': {
+		totalPrice: 86,
+		costPerDay: 5798,
+		rentPerDay: 20000
+	},
+	'Volvo S90': {
+		totalPrice: 85,
+		costPerDay: 5730,
+		rentPerDay: 20000
+	},
+	'Grand Vitara': {
+		totalPrice: 26,
+		costPerDay: 1752,
+		rentPerDay: 10000
+	},
+	'Mercedes GLA 200': {
+		totalPrice: 60,
+		costPerDay: 3995,
+		rentPerDay: 23000
+	},
+}
+
+const carsList = Object.keys(carsObj)
+
+const carsSelectElement = document.getElementById('car')
+
+carsList.forEach((car) => {
+	const option = document.createElement('option')
+	option.value = car
+	option.textContent = car
+	carsSelectElement.appendChild(option)
+})
+
+// $('.display-results').css('display', none)
+$('.display-results').hide()
+
+$('#car').on("change", (e) => {
+	value = $('#car').val()
+	console.log(value)
+	$('.display-results').show()
+	$('.car-name').text(value)
+	$('.total-price').text(carsObj[value].totalPrice)
+	$('.cost-price').text(carsObj[value].costPerDay)
+	$('.rent-price').text(carsObj[value].rentPerDay)
+})

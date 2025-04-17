@@ -1,5 +1,5 @@
 footer {
-	height: 500px;
+	height: auto;
 	width: 100%;
 	padding: 6rem 3rem;
 	background: linear-gradient(to right, #22241d, #565c36);
@@ -93,7 +93,7 @@ footer {
 
     footer {
         padding: 4rem 3rem;
-        height: 400px;
+        /* height: 400px; */
     }
 
     footer img {

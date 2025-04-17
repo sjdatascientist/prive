@@ -67,6 +67,10 @@ app.get('/bookdates', (req, res) => {
     res.render('bookdates')
 })
 
+app.get('/compare', (req, res) => {
+    res.render('compare')
+})
+
 app.get('/privacy-policy', (req, res) => {
     filepath = path.join(__dirname, "public", "Prive Drive - Privacy Policy.pdf");
     try {

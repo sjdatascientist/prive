@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+		<title>Compare | Prive Drive</title>
+		<link rel="stylesheet" href="../css/compare.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+	</head>
+	<body>
+		<%- include('partials/header.ejs') %>
+
+		<section class="compare-car-section ref-line">
+			<h3>Costing vs Renting</h3>
+			<p>Compare</p>
+			<div class="header-div ref-line">
+				<div class="ref-line">
+					<strong>Total Price</strong>
+					<p>(in Lakhs)</p>
+				</div>
+				<div class="ref-line">
+					<strong>Cost</strong>
+					<p>(Per Day)</p>
+				</div>
+				<div class="ref-line">
+					<strong>Rent</strong>
+					<p>(Per Day)</p>
+				</div>
+			</div>
+			<div class="display-results ref-line">
+				<div class="car-w-image ref-line">
+					<!-- <img src="" alt=""> -->
+					 <strong class="car-name"></strong>
+				</div>
+				<div class="all-prices ref-line">
+					<strong class="total-price ref-line"></strong>
+					<strong class="cost-price ref-line"></strong>
+					<strong class="rent-price ref-line"></strong>
+				</div>
+			</div>
+			<select name="car" id="car">
+				<option value="" selected disabled hidden>Select Your Car</option>
+			</select>
+			
+		</section>
+
+		<%- include('partials/footer.ejs') %>
+
+		<script src="../js/compare.js"></script>
+
+	</body>
+</html>
