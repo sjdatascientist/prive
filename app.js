@@ -50,6 +50,10 @@ app.get('/memberships', (req, res) => {
     res.render('memberships')
 })
 
+app.get('/contact', (req, res) => {
+    res.render('contact')
+})
+
 app.get('/book', (req, res) => {
     res.render('book')
 })
