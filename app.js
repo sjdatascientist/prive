@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const path = require("path");
+const compression = require("compression")
 
 // Middleware to parse form data
 const handleFormData = require('./controllers/handleContactUsForm')
@@ -10,6 +11,7 @@ const paymentController = require('./controllers/paymentController');
 
 const app = express();
 
+app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Middleware to parse form data
 // app.use(express.urlencoded({ extended: true }));
@@ -75,6 +77,17 @@ app.get('/privacy-policy', (req, res) => {
     filepath = path.join(__dirname, "public", "Prive Drive - Privacy Policy.pdf");
     try {
         res.download(filepath, "Prive Drive - Privacy Policy.pdf")
+    }
+    catch (e) {
+        console.log('Error Downloading File:', err)
+        res.status(500).end(err)
+    }
+})
+
+app.get('/terms-and-conditions', (req, res) => {
+    filepath = path.join(__dirname, "public", "Prive Drive - Terms and Conditions.pdf");
+    try {
+        res.download(filepath, "Prive Drive - Terms and Conditions.pdf")
     }
     catch (e) {
         console.log('Error Downloading File:', err)

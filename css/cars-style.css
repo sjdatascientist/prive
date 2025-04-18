@@ -43,7 +43,7 @@ main {
 
 .main-section-header {
     width: 100%;
-    padding-inline: 2vw;
+    padding-inline: 3vw;
     /* margin-bottom: 3.5vw; */
     margin-bottom: 4rem;
     display: flex;
@@ -52,14 +52,14 @@ main {
 }
 
 .main-section-header > h3 {
-    font-size: max(1.7rem, 2.4vw);
+    font-size: max(2.6rem, 3vw);
     /* justify-self: center; */
 }
 
 .main-section-header > button {
-    font-size: max(.9rem, 1.6vw);
-    width: 20%;
-    height: max(2.5rem,4vw);
+    font-size: max(1.4rem, 1.6vw);
+    width: max(100px, 20%);
+    height: max(3rem,4vw);
     border-radius: .5rem;
     border: none;
     background-color: #ecff82;

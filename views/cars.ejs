@@ -13,26 +13,32 @@
 
 		<main class="main-section temp-border">
 			<div class="main-section-header temp-border">
-				<h3>Explore Our Vehicles</h3>
+				<h3 id="dynamic-header">Explore Vehicles</h3>
 				<button class="compare-btn">Compare</button>
 			</div>
 			<section class="cars-section temp-border">
 				<div class="cars-column-div temp-border">
-					<img src="assets/col1.png" alt="" />
+					<!-- <img src="assets/col1.png" alt="" /> -->
+					<img src="https://sowbpfqwcnvhxubqvzml.supabase.co/storage/v1/object/public/static-files.public//col1.png" alt="" />
 				</div>
 				<div class="cars-column-div temp-border">
-					<img src="assets/col2.png" alt="" />
+					<!-- <img src="assets/col1.png" alt="" /> -->
+					<img src="https://sowbpfqwcnvhxubqvzml.supabase.co/storage/v1/object/public/static-files.public//col2.png" alt="" />
 				</div>
 				<div class="cars-column-div temp-border">
-					<img src="assets/col3.png" alt="" />
+					<!-- <img src="assets/col1.png" alt="" /> -->
+					<img src="https://sowbpfqwcnvhxubqvzml.supabase.co/storage/v1/object/public/static-files.public//col3.png" alt="" />
 				</div>
 			</section>
 			<section class="cars-mobile-section temp-border">
 				<div class="cars-column-mobile-div temp-border">
-					<img src="assets/mobile-col1.svg" alt="" />
+					<!-- <img src="assets/mobile-col1.svg" alt="" /> -->
+					<!-- <object data="https://sowbpfqwcnvhxubqvzml.supabase.co/storage/v1/object/public/static-files.public//mobile-col1.svg" type=""></object> -->
+					 <img src="https://sowbpfqwcnvhxubqvzml.supabase.co/storage/v1/object/public/static-files.public//mobile-col1.svg" alt="">
 				</div>
 				<div class="cars-column-mobile-div temp-border">
-					<img src="assets/mobile-col2.svg" alt="" />
+					<!-- <img src="assets/mobile-col2.svg" alt="" /> -->
+					<img src="https://sowbpfqwcnvhxubqvzml.supabase.co/storage/v1/object/public/static-files.public//mobile-col2.svg" alt="">
 				</div>
 			</section>
 		</main>
@@ -44,6 +50,20 @@
 			compareButton.addEventListener('click', function () {
 				window.location.href = '/compare'
 			})
+
+			function updateText() {
+				const headerText = document.getElementById('dynamic-header')
+				if (window.innerWidth < 620) {
+					headerText.innerText = 'Explore'
+				}
+				else {
+					headerText.innerText = 'Explore Vehicles'
+				}
+			}
+
+			// Run on load and resize
+			window.addEventListener('load', updateText)
+			window.addEventListener('resize', updateText)
 		</script>
 	</body>
 </html>
