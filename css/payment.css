@@ -62,13 +62,6 @@ img[src="../assets/location.png"] {
 	margin-right: 3px;
 }
  */
-.under-construction {
-	font-size: 2vw;
-	display: block;
-	text-align: center;
-	margin-bottom: 3rem;
-	font-weight: 900;
-}
  
 button {
 	cursor: pointer;
@@ -84,6 +77,17 @@ button {
 	border: none;
 	background-color: #ECFF82;
 	margin-bottom: 5rem;
+}
+
+#payment-complete-div {
+	width: 100%;
+	height: auto;
+	margin-bottom: 3rem;
+}
+
+#payment-complete-div > img {
+	width: 100%;
+	height: auto;
 }
 
 @media (min-width: 320px) and (max-width: 620px) {

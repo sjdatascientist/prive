@@ -20,18 +20,36 @@
 					<p><%= city %></p>
 					<p><%= car %> (<%= fuel %>)</p>
 					<p><%= tickets %> Memberships <strong>(i.e. Rs <%= tickets*10000 %>)</strong></p>
-					
 				</div>
 			</div>
         </section>
 
-        <div class="under-construction">PAYMENT PART UNDER CONSTRUCTION</div>
+        <button id="fake-payment">Make Payment</button>
+		<div id="payment-complete-div">
+			<img src="../assets/payment-complete.png" alt="">
+		</div>
         <button id="btn-to-bookdates">Go To Book Dates</button>
 
         <%- include('partials/footer.ejs') %>
     
         <script>
             document.getElementById("btn-to-bookdates").addEventListener('click', () =>window.location.href = '/bookdates')
+
+			const fakePaymentBtn = document.getElementById('fake-payment')
+			const paymentDiv = document.getElementById('payment-complete-div')
+			const bookDatesBtn = document.getElementById('btn-to-bookdates')
+
+			paymentDiv.style.display = 'none'
+			bookDatesBtn.style.display = 'none'
+
+			fakePaymentBtn.addEventListener('click',() => {
+				fakePaymentBtn.style.display = 'none'
+				paymentDiv.style.display = 'block'
+				bookDatesBtn.style.display = 'block'
+			})
+
+
+
         </script>
 
 	</body>
