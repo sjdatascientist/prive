@@ -13,6 +13,7 @@ const app = express();
 
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 // Middleware to parse form data
 // app.use(express.urlencoded({ extended: true }));
 
@@ -37,8 +38,7 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-// app.post('/contactform', handleContactUsForm, sendMail);
-app.post('/contactform', handleFormData);
+app.post('/contactform', handleFormData, sendMail);
 
 app.get('/cars', (req, res) => {
     res.render('cars')

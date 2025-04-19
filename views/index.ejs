@@ -153,21 +153,13 @@
 				<div class="form-container">
 					<h3>Find The Right Car For You</h3>
 					<form>
-						<input type="text" name="name" placeholder="Your Name" />
-						<input type="email" name="email" placeholder="Enter Your Email" />
-						<input type="tel" name="phone" placeholder="Phone Number" />
-						<input type="text" name="car" placeholder="Your Car Brand" />
-						<!-- 
-                    <select id="dropdown" name="select-brand-options">
-                        <option value="" selected disabled>Select Brand</option>
-                    </select>
-                    <select id="dropdown" name="select-car-options">
-                        <option value="" selected disabled>Select Car</option>
-                    </select> -->
-
-						<select id="dropdown" name="city">
-							<option value="" selected disabled>Select City</option>
-							<option value="Banglore">Banglore</option>
+						<input type="text" name="name" id="name" placeholder="Your Name" minlength="3" maxlength="50" required/>
+						<input type="email" name="email" id="email" placeholder="Enter Your Email" required/>
+						<input type="tel" name="phone" id="phone" placeholder="Phone Number" title="'Please Enter 10 Digit Mobile Number" minlength="10" maxlength="10" required/>
+						<input type="text" name="car" id="car" placeholder="Select Car" required/>
+						<select id="dropdown" name="city" id="city" required>
+							<option value="" selected disabled hidden>Select City</option>
+							<option value="Bangalore">Bangalore</option>
 							<option value="New Delhi">New Delhi</option>
 							<option value="Mumbai">Mumbai</option>
 							<option value="Chennai">Chennai</option>
@@ -191,7 +183,7 @@
 							<option value="Ludhiana">Ludhiana</option>
 							<option value="Vadodra">Vadodra</option>
 						</select>
-						<button type="submit" class="form-get-quote">Get Quote</button>
+						<button type="submit" class="form-get-quote" id="submitBtn">Get Quote</button>
 					</form>
 				</div>
 			</section>
@@ -205,6 +197,7 @@
 
 		<!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
 		<script src="../js/accordian.js"></script>
+		<script src="../js/contact-form-submit.js"></script>
 		<script>
 			window.addEventListener('DOMContentLoaded', () => {
 				if (window.location.hash === '#faq') {

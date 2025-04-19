@@ -19,4 +19,4 @@ calenderInput.addEventListener("change", (event) => {
 		document.querySelector('em').innerHTML = `The selected booking dates are from ${bookingDates}`;
 	}
 })
-// 
+

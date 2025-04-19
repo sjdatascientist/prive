@@ -117,8 +117,8 @@ document.querySelectorAll(".accordian-header").forEach(header => {
   });
 
 // initially hide thanks element
-$('.thanks-4-contacting').hide()
-
+// $('.thanks-4-contacting').hide()
+/* 
 $('.form-get-quote').click(function(e) {
     e.preventDefault()
     $('.thanks-4-contacting').show()
@@ -127,3 +127,4 @@ $('.form-get-quote').click(function(e) {
         $('.thanks-4-contacting').hide()
     }, 5000)
 })
+ */

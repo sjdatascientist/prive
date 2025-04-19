@@ -545,9 +545,11 @@ button.form-get-quote {
 }
 
 .thanks-4-contacting {
-	width: 100%;
+	width: 80%;
 	height: auto;
 	margin: auto;
+	margin-block: 5rem;
+	border-radius: 3rem;
 	overflow: hidden;
 }
 

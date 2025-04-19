@@ -1,68 +1,40 @@
 require('dotenv').config()
 const nodemailer = require("nodemailer");
 
-/* 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for port 465, false for other ports
-    auth: {
-      user: process.env.GOOGLE_USERNAME,
-      pass: process.env.GOOGLE_PASSWORD
-    },
-  });
- */
 
-/* 
-async function sendMail() {
-    // taking out form data
-    const { name, email, phone, car, city } = res.locals.formData;
-
-    // send mail with defined transport object
-  const info = await transporter.sendMail({
-    from: 'prive.platform@gmail.com', // sender address
-    to: 'prive.platform@gmail.com',// list of receivers
-    subject: "User Details", // Subject line
-    text: `Name: ${name}
-            Email: ${email}
-            Phone: ${phone}
-            Car: ${car}
-            City: ${city}`, // plain text body
-    // html: "<b>Hello User, this is test mail", // html body
-  });
-
-  console.log("Message sent: %s", info.messageId);
-}
- */
-// Second controller: Email sender
-const sendMail = async (req, res) => {
-    const { name, email, phone } = res.locals.formData;
+const sendMail = (req, res) => {
+    const { name, email, phone, car, city } = req.formData;
     
     // Configure transporter (replace with your credentials)
     const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
+        service: "gmail",
+        // port: 587,
+        secure: true,
         auth: {
             user: 'prive.platform@gmail.com',     // Your Gmail
-            pass: process.env.GOOGLE_PASSWORD  // Generated App Password
+            pass: process.env.GOOGLE_APP_PASSWORD  // Generated App Password
         }
     });
 
-    // Email content
+    // Set Email Options
     const mailOptions = {
-        from: 'prive.platform@gmail.com',
-        to: 'prive.platform@gmail.com',          // Same as sender
-        subject: 'New Form Submission',
-        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}`
+        from: "'Privé Drive' <prive.platform@gmail.com>",
+        to: "jstasy909@gmail.com",
+        // cc: 'response@dieselry.com',    // Same as sender
+        bcc: "prive.platform@gmail.com" ,
+        subject: 'User Contacted Us!',
+        text: `New User Details From Contact Form:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCar Model: ${car}\nCity: ${city}`
     };
 
     try {
-        await transporter.sendMail(mailOptions);
-        res.send('Form submitted and email sent successfully');
+       transporter.sendMail(mailOptions);
+        // res.send('Form submitted and email sent successfully');
+        res.status(200).json({ message: 'Form submitted and email sent successfully' });
+        // res.sendStatus(200)
     } catch (error) {
-        console.error('Email send error:', error);
-        res.status(500).send('Error sending email');
+        // console.error('Email send error:', error);
+        // res.status(500).json({error: 'Failed to send email. Please try again later.'});
+        res.sendStatus(500)
     }
 };
 

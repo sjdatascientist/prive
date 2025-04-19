@@ -7,14 +7,14 @@ const handleFormData = (req, res, next) => {
         return res.status(400).send('All fields are required');
     }
 
-    res.locals.formData = {
+    // Instead of using res.locals.formData
+    req.formData = {
         name,
         email,
         phone,
         car,
         city,
     };
-    console.log(res.locals.formData);
     next();
 };
 
