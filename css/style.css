@@ -548,8 +548,8 @@ button.form-get-quote {
 	width: 80%;
 	height: auto;
 	margin: auto;
-	margin-block: 5rem;
-	border-radius: 2.5vw;
+	margin-bottom: 5rem;
+	border-radius: max(2rem,2vw);
 	overflow: hidden;
 }
 
