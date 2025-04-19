@@ -2,7 +2,7 @@ require('dotenv').config()
 const nodemailer = require("nodemailer");
 
 
-const sendMail = (req, res) => {
+const sendMail = async (req, res) => {
     const { name, email, phone, car, city } = req.formData;
     
     // Configure transporter (replace with your credentials)
@@ -27,7 +27,7 @@ const sendMail = (req, res) => {
     };
 
     try {
-       transporter.sendMail(mailOptions);
+       await transporter.sendMail(mailOptions);
         // res.send('Form submitted and email sent successfully');
         res.status(200).json({ message: 'Form submitted and email sent successfully' });
         // res.sendStatus(200)
