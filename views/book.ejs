@@ -65,6 +65,10 @@
 						<label for="car">Car Model</label>
 						<select name="car" id="car">
 							<option value="" selected disabled hidden>Select</option>
+							<% const carsList = Object.keys(cars) %>
+							<% carsList.forEach((car) => { %>
+							<option value="<%= car %>"><%= car %></option>
+							<% }); %>
 						</select>
 					</div>
 					<div class="ref-line">

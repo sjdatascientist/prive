@@ -21,13 +21,15 @@ $(document).ready(function () {
 			data: JSON.stringify(formData),
 			contentType: 'application/json',
 			dataType: 'json',
-			success: function (xhr, status, response) {
+			success: function (data, xhr, status, textStatus, response) {
 				console.log(`xhr: ${xhr}\n
                     Status: ${status}\n
                     Status Code: ${xhr.status}\n
-                    Message: ${response.message}\n
+					Text Status: ${textStatus}\n
                     xhrResponse: ${xhr.responseJSON}\n
-                    Response: ${response}`)
+                    Response: ${response}\n
+					Data: ${data.message}`
+				)
 				// Append success alert
 				$('.thanks-4-contacting').show(500)
 				$('.form-section').hide()

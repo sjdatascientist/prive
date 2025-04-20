@@ -4,8 +4,11 @@ const path = require("path");
 const compression = require("compression")
 
 // Middleware to parse form data
+const cars = require("./controllers/cars")
+
 const handleFormData = require('./controllers/handleContactUsForm')
 const sendMail = require('./controllers/sendMail')
+
 const paymentController = require('./controllers/paymentController');
 // import createOrder from "./controllers/paymentController"
 
@@ -14,8 +17,8 @@ const app = express();
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// Middleware to parse form data
-// app.use(express.urlencoded({ extended: true }));
+
+app.locals.globalCars = cars
 
 app.use("/assets", express.static(path.join(__dirname, "public")));
 
@@ -35,7 +38,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {cars})
 })
 
 app.post('/contactform', handleFormData, sendMail);
@@ -57,7 +60,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/book', (req, res) => {
-    res.render('book')
+    res.render('book', {cars})
 })
 
 app.post('/book/payment', (req, res) => {

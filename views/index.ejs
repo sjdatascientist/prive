@@ -158,6 +158,10 @@
 						<input type="tel" name="phone" id="phone" placeholder="Phone Number" title="'Please Enter 10 Digit Mobile Number" minlength="10" maxlength="10" required/>
 						<select name="car" id="car" required>
 							<option value="" selected disabled hidden>Select Car</option>
+							<% const carsList = Object.keys(cars) %>
+							<% carsList.forEach((car) => { %>
+							<option value="<%= car %>"><%= car %></option>
+							<% }); %>
 						</select>
 						<select name="city" id="city" required>
 							<option value="" selected disabled hidden>Select City</option>
@@ -209,6 +213,15 @@
 					}, 1000) // Adjust timing as needed
 				}
 			})
+
+			window.carsObj = <%- JSON.stringify(cars) %>;
+			window.carsList = <%- JSON.stringify(carsList) %>; 
+
+			/* You can access window global cars like this, only accessible to this window */
+			// console.log(window.globalCarsObj)
+			// console.log(window.gloablCarsList)
+
+			localStorage.setItem('localStoreCars', window.carsObj)
 		</script>
 	</body>
 </html>
