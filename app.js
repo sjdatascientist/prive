@@ -77,6 +77,9 @@ app.get('/privacy-policy', (req, res) => {
     res.render('privacy-policy')
 })
 
+app.get('/terms-and-conditions', (req, res) => {
+    res.render('terms-conditions')
+})
 /* 
 app.get('/privacy-policy', (req, res) => {
     filepath = path.join(__dirname, "public", "Prive Drive - Privacy Policy.pdf");
@@ -89,6 +92,8 @@ app.get('/privacy-policy', (req, res) => {
     }
 })
  */
+
+/* 
 app.get('/terms-and-conditions', (req, res) => {
     filepath = path.join(__dirname, "public", "Prive Drive - Terms and Conditions.pdf");
     try {
@@ -99,7 +104,7 @@ app.get('/terms-and-conditions', (req, res) => {
         res.status(500).end(err)
     }
 })
-
+ */
 app.post('/memberships/paymentform/createOrder', paymentController.createOrder)
 
 // Start the server
