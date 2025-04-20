@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	/* overflow-x: hidden;; */
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+    color: white;
+	font-weight: 400;
+	background: url('../assets/website-background.png');
+	background-size: cover;
+	height: 100vh;
+	/* overflow-x: hidden; */
+}
+/*  
+.ref-line {
+	border: 1px white dashed;
+}
+ */
+section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+h2 {
+    font-size: max(3rem,3.3vw);
+    width: fit-content;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+h4 {
+    font-size: max(1.8rem,1.8vw);
+    /* margin-top: 3rem; */
+    margin-bottom: .75rem;
+}
+
+p, li {
+    font-size: max(1.2rem,1.3vw);
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    margin-block: 3rem;
+}
+
+ul {
+    margin-left: 5rem;
+}
+
+ul li:last-child {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+
+}

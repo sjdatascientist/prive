@@ -74,6 +74,11 @@ app.get('/compare', (req, res) => {
 })
 
 app.get('/privacy-policy', (req, res) => {
+    res.render('privacy-policy')
+})
+
+/* 
+app.get('/privacy-policy', (req, res) => {
     filepath = path.join(__dirname, "public", "Prive Drive - Privacy Policy.pdf");
     try {
         res.download(filepath, "Prive Drive - Privacy Policy.pdf")
@@ -83,7 +88,7 @@ app.get('/privacy-policy', (req, res) => {
         res.status(500).end(err)
     }
 })
-
+ */
 app.get('/terms-and-conditions', (req, res) => {
     filepath = path.join(__dirname, "public", "Prive Drive - Terms and Conditions.pdf");
     try {
