@@ -499,7 +499,7 @@ form * {
 input {
 	color: gray;
 	font-size: 2.2rem;
-	font-weight: 100;
+	/* font-weight: 100; */
 }
 
 form input::placeholder {
