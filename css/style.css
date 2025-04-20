@@ -496,8 +496,15 @@ form * {
 	margin-bottom: 2rem;
 }
 
+input {
+	color: gray;
+	font-size: 2.2rem;
+	font-weight: 100;
+}
+
 form input::placeholder {
 	font-size: 2.5rem;
+	color: gray;
 }
 /* 
 div.dropdown-div {
@@ -517,7 +524,7 @@ form :nth-last-child(3) {
 	/* margin-left: 2rem; */
 }
 
-select[name='city'] {
+select[name='city'], select[name='car'] {
 	width: 100%;
 }
 
@@ -549,7 +556,7 @@ button.form-get-quote {
 	height: auto;
 	margin: auto;
 	margin-bottom: 5rem;
-	border-radius: max(2rem,2vw);
+	border-radius: max(1rem,2vw);
 	overflow: hidden;
 }
 

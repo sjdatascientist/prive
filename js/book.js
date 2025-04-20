@@ -1,7 +1,3 @@
-// const {carsListArray} = require('../data/cars_list');
-// import carsListArray from './data/cars_list.js'
-// console.log(carsListArray)
-
 const carsListArray = [
 	'MG Cyberstar',
 	'Mahindra SUV 700 D',

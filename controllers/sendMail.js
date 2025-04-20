@@ -2,7 +2,7 @@ require('dotenv').config()
 const nodemailer = require("nodemailer");
 
 
-const sendMail = (req, res) => {
+const sendMail = async (req, res) => {
     const { name, email, phone, car, city } = req.formData;
     
     // Configure transporter (replace with your credentials)
@@ -19,15 +19,14 @@ const sendMail = (req, res) => {
     // Set Email Options
     const mailOptions = {
         from: "'Privé Drive' <prive.platform@gmail.com>",
-        to: "jstasy909@gmail.com",
-        // cc: 'response@dieselry.com',    // Same as sender
+        to: "response@dieselry.com",
         bcc: "prive.platform@gmail.com" ,
         subject: 'User Contacted Us!',
         text: `New User Details From Contact Form:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCar Model: ${car}\nCity: ${city}`
     };
 
     try {
-        transporter.sendMail(mailOptions);
+        await transporter.sendMail(mailOptions);
         // res.send('Form submitted and email sent successfully');
         res.status(200).json({ message: 'Form submitted and email sent successfully' });
         // res.sendStatus(200)

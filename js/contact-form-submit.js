@@ -5,6 +5,8 @@ $(document).ready(function () {
 	$('form').on('submit', function (event) {
 		event.preventDefault() // Prevent the default form submission
 
+		$('#submitBtn').text("Sending Email..")
+
 		// Get form data
 		let formData = new FormData(event.target)
 

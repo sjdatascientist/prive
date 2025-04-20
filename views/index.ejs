@@ -156,8 +156,10 @@
 						<input type="text" name="name" id="name" placeholder="Your Name" minlength="3" maxlength="50" required/>
 						<input type="email" name="email" id="email" placeholder="Enter Your Email" required/>
 						<input type="tel" name="phone" id="phone" placeholder="Phone Number" title="'Please Enter 10 Digit Mobile Number" minlength="10" maxlength="10" required/>
-						<input type="text" name="car" id="car" placeholder="Select Car" required/>
-						<select id="dropdown" name="city" id="city" required>
+						<select name="car" id="car" required>
+							<option value="" selected disabled hidden>Select Car</option>
+						</select>
+						<select name="city" id="city" required>
 							<option value="" selected disabled hidden>Select City</option>
 							<option value="Bangalore">Bangalore</option>
 							<option value="New Delhi">New Delhi</option>

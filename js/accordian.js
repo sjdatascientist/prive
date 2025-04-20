@@ -116,15 +116,52 @@ document.querySelectorAll(".accordian-header").forEach(header => {
     document.querySelector(".form-container").scrollIntoView({ behavior: "smooth" });
   });
 
-// initially hide thanks element
-// $('.thanks-4-contacting').hide()
-/* 
-$('.form-get-quote').click(function(e) {
-    e.preventDefault()
-    $('.thanks-4-contacting').show()
-    $('.form-section').hide()
-    setTimeout(function() {
-        $('.thanks-4-contacting').hide()
-    }, 5000)
+  const carsListArray = [
+	'MG Cyberstar',
+	'Mahindra SUV 700 D',
+	'Mahindra Thar D',
+	'Jeep Meridian',
+	'Toyota Fortuner',
+	'Audi Q5',
+	'Mercedes E-class',
+	'Mercedes SUV GLC 300',
+	'BMW i7',
+	'Range Rover Defender',
+	'Jeep Wrangler',
+	'Range Rover Defender',
+	'Jeep Wrangler',
+	'Range Rover Velar Petrol',
+	'Innova Crysta',
+	'Toyota Vellfire',
+	'Kia Carens',
+	'Toyota Camry',
+	'BMW X5',
+	'MG Gloster',
+	'Mercedes Cabriolet',
+	'Mahindra Scorpio',
+	'Hyundai Creta',
+	'Kia Seltos',
+	'Mercedes GLS',
+	'Kia Carnival',
+	'Innova Hycross',
+	'Mahindra Thar Roxx',
+	'BMW X1 Sport',
+	'Jeep Compass',
+	'Land Rover Range Rover',
+	'Mahindra EV BE6',
+	'Mahindra EV BE9',
+	'BMW X3',
+	'Lexus ES 350H',
+	'Volvo S90',
+	'Grand Vitara',
+	'Mercedes GLA 200',
+]
+
+const carsSelectElement = document.getElementById('car')
+
+carsListArray.forEach((car) => {
+	const option = document.createElement('option')
+	option.value = car
+	option.textContent = car
+	carsSelectElement.appendChild(option)
 })
- */
