@@ -28,9 +28,9 @@
 			<hr />
 			<h4>Acceptance of Terms</h4>
 			<p>
-				By accessing and using www.Privédrive.co.in (referred to as the “Website”), along with its related sites, services, and tools, you agree
-				to be bound by the terms and conditions outlined in this User Agreement. These terms also apply to other digital platforms managed by
-				Dieselry Solutions Private Limited, including its subsidiaries and international affiliates.
+				By accessing and using www.Privédrive.co.in (referred to as the “Website”), along with its related sites, services, and tools, you
+				agree to be bound by the terms and conditions outlined in this User Agreement. These terms also apply to other digital platforms
+				managed by Dieselry Solutions Private Limited, including its subsidiaries and international affiliates.
 			</p>
 			<hr />
 			<h4>Website Ownership</h4>
@@ -394,15 +394,34 @@
 			<hr />
 			<input type="checkbox" name="agreement" id="agreement" />
 			<label for="agreement">I hereby declare that I have read all the Terms and Conditions and accepts them.</label>
+			<div class="buttons">
+				<button class="agree-btn" disabled>I Agree</button>
+				<button class="disagree-btn">I Disagree</button>
+			</div>
 		</section>
 
 		<%- include('partials/footer.ejs') %>
 
-        <script>
-            document.getElementsByClassName('privacy-policy-redirect')[0].addEventListener('click', () => {
-                window.location.href = '/privacy-policy'
-            })
-        </script>
+		<script>
+			document.getElementsByClassName('privacy-policy-redirect')[0].addEventListener('click', () => {
+				window.location.href = '/privacy-policy'
+			})
 
+			$(document).ready(function () {
+				// Listen for checkbox changes
+				$('#agreement').change(function () {
+					// Enable/disable button based on checkbox state
+					$('.agree-btn').prop('disabled', !$(this).is(':checked'))
+				})
+
+				$('.agree-btn').on('click',() => {
+					window.location.href = '/'
+				})
+
+				$('.disagree-btn').on('click',() => {
+					window.location.href = '/'
+				})
+			})
+		</script>
 	</body>
 </html>

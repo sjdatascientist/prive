@@ -88,6 +88,41 @@ label {
     transform: translate(30px, -20px);
 }
 
-@media (min-width: 320px) and (max-width: 620px) {
+.buttons {
+    display: flex;
+    column-gap: 3rem;
+}
 
+button {
+	display: inline-block;
+	margin-top: 3vw;
+	width: 15%;
+	height: 3vw;
+	border-radius: 1rem;
+	font-size: max(1.4rem, 1.1vw);
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+
+button.agree-btn:disabled {
+	background-color: gray;
+	cursor: none;
+}
+
+.agree-btn {
+	background-color: #ECFF82;
+}
+
+.disagree-btn {
+    color: white;
+    background-color: red;
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+    button {
+        width: 50%;
+        height: 4rem;
+    }
 }
