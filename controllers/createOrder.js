@@ -15,25 +15,20 @@ const createOrder = async (req, res) => {
 		plan = 'Platinum'
 	}
 
-	const phoneIN = '+91' + phone
-	const receipt = 'inv' + '_' + Date.now()
-
 	const options = {
 		amount: tickets * 10000 * 100,
 		currency: 'INR',
 		notes: {
-			Invoice_ID: receipt,
+			Order_Created_At: Date.now(),
 			Name: name,
 			Email: email,
-			Phone: phoneIN,
+			Phone: '+91' + phone,
 			City: city,
 			No_of_Memberships: tickets,
 			Plan: plan,
 			Car: car,
 			Fuel: fuel,
 		},
-		receipt,
-		// paymentCapture: 1,  // Auto-capture payment
 	}
 
 	try {
