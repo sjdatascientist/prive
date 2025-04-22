@@ -16,6 +16,7 @@
     "@supabase/supabase-js": "^2.49.4",
     "body-parser": "^2.2.0",
     "compression": "^1.8.0",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",

@@ -6,6 +6,8 @@
 		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 		<title>Payment | Privé Drive</title>
 		<link rel="stylesheet" href="../css/payment.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 	</head>
 	<body>
 		<%- include('partials/header.ejs') %>
@@ -14,6 +16,7 @@
             <h3>Profile Card</h3>
 			<div class="user-info-div ref-line">
 				<div class="main-user-info ref-line">
+					<% const {name, email, phone, city, car, tickets, fuel} = userData; %>
 					<strong><%= name %></strong><br>
 					<strong><%= email %></strong>
 					<p>+91-<%= phone %></p>
@@ -21,36 +24,27 @@
 					<p><%= car %> (<%= fuel %>)</p>
 					<p><%= tickets %> Memberships <strong>(i.e. Rs <%= tickets*10000 %>)</strong></p>
 				</div>
+				<div class="hidden-details">
+					<% const details = Object.keys(userData) %>
+					<% details.forEach((detail) => { %>
+					<p id="<%= detail %>"><%= userData[detail] %></p>
+					<% }); %>
+				</div>
+
 			</div>
         </section>
 
-        <button id="fake-payment">Make Payment</button>
+        <button id="paymentBtn">Make Payment</button>
 		<div id="payment-complete-div">
 			<img src="../assets/payment-complete.png" alt="">
+			<i>Redirecting to Booking Dates Page in 5 seconds...<br>
+			(Don't Close the Page!)</i>
 		</div>
         <button id="btn-to-bookdates">Go To Book Dates</button>
 
         <%- include('partials/footer.ejs') %>
     
-        <script>
-            document.getElementById("btn-to-bookdates").addEventListener('click', () =>window.location.href = '/bookdates')
-
-			const fakePaymentBtn = document.getElementById('fake-payment')
-			const paymentDiv = document.getElementById('payment-complete-div')
-			const bookDatesBtn = document.getElementById('btn-to-bookdates')
-
-			paymentDiv.style.display = 'none'
-			bookDatesBtn.style.display = 'none'
-
-			fakePaymentBtn.addEventListener('click',() => {
-				fakePaymentBtn.style.display = 'none'
-				paymentDiv.style.display = 'block'
-				bookDatesBtn.style.display = 'block'
-			})
-
-
-
-        </script>
+        <script src="../js/payment.js"></script>
 
 	</body>
 </html>

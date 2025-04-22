@@ -83,11 +83,22 @@ button {
 	width: 100%;
 	height: auto;
 	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #payment-complete-div > img {
 	width: 100%;
 	height: auto;
+}
+
+i {
+	width: max-content;
+	margin-block: 2vw;
+	font-size: max(1rem,1.5vw);
+	font-weight: 700;
+	text-align: center;
 }
 
 @media (min-width: 320px) and (max-width: 620px) {

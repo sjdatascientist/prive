@@ -3,23 +3,28 @@ const bodyParser = require('body-parser');
 const path = require("path");
 const compression = require("compression")
 
-// Middleware to parse form data
-const cars = require("./controllers/cars")
+// Importing JS variables
+const cars = require("./vars/cars")
 
+// Importing all controllers
 const handleFormData = require('./controllers/handleContactUsForm')
 const sendMail = require('./controllers/sendMail')
-
-const paymentController = require('./controllers/paymentController');
-// import createOrder from "./controllers/paymentController"
+const saveUserData = require("./controllers/saveUserData")
+const createOrder = require("./controllers/createOrder")
+const verifyPayment = require("./controllers/verifyPayment")
+const razorpayWebhook = require("./controllers/razorpayWebhook")
 
 const app = express();
 
+// Essentails middlewares for every request
 app.use(compression());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Setting an App variable for global usage
 app.locals.globalCars = cars
 
+// Serve public folder
 app.use("/assets", express.static(path.join(__dirname, "public")));
 
 // Serve Images from the assets folder
@@ -37,6 +42,7 @@ app.set("view engine", "ejs");
 // Set views folder
 app.set("views", path.join(__dirname, "views"));
 
+// All Routes
 app.get('/', (req, res) => {
     res.render('index', {cars})
 })
@@ -45,10 +51,6 @@ app.post('/contactform', handleFormData, sendMail);
 
 app.get('/cars', (req, res) => {
     res.render('cars')
-})
-
-app.get('/memberships/paymentform', (req, res) => {
-    res.render('paymentform')
 })
 
 app.get('/memberships', (req, res) => {
@@ -63,10 +65,16 @@ app.get('/book', (req, res) => {
     res.render('book', {cars})
 })
 
-app.post('/book/payment', (req, res) => {
-    const {name, email, phone, city, car, tickets, fuel} = req.body;
-    res.render('payment', {name, email, phone, city, car, tickets, fuel})
+app.post('/payment', saveUserData, (req, res) => {
+    const userData = req.userData
+    res.render('payment', {userData})
 })
+
+app.post('/create-order', createOrder)
+
+app.post('/verify-payment', verifyPayment)
+
+app.post('/webhook', razorpayWebhook)
 
 app.get('/bookdates', (req, res) => {
     res.render('bookdates')
@@ -83,32 +91,6 @@ app.get('/privacy-policy', (req, res) => {
 app.get('/terms-and-conditions', (req, res) => {
     res.render('terms-conditions')
 })
-/* 
-app.get('/privacy-policy', (req, res) => {
-    filepath = path.join(__dirname, "public", "Prive Drive - Privacy Policy.pdf");
-    try {
-        res.download(filepath, "Prive Drive - Privacy Policy.pdf")
-    }
-    catch (e) {
-        console.log('Error Downloading File:', err)
-        res.status(500).end(err)
-    }
-})
- */
-
-/* 
-app.get('/terms-and-conditions', (req, res) => {
-    filepath = path.join(__dirname, "public", "Prive Drive - Terms and Conditions.pdf");
-    try {
-        res.download(filepath, "Prive Drive - Terms and Conditions.pdf")
-    }
-    catch (e) {
-        console.log('Error Downloading File:', err)
-        res.status(500).end(err)
-    }
-})
- */
-app.post('/memberships/paymentform/createOrder', paymentController.createOrder)
 
 // Start the server
 const PORT = process.env.PORT || 3000;
