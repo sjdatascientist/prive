@@ -13,8 +13,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@ngrok/ngrok": "^1.5.0",
     "@supabase/supabase-js": "^2.49.4",
     "body-parser": "^2.2.0",
+    "change-case": "^5.4.4",
     "compression": "^1.8.0",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.7",

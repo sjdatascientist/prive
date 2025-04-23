@@ -19,9 +19,8 @@ const sendMail = async (req, res) => {
     // Set Email Options
     const mailOptions = {
         from: "'Privé Drive' <prive.platform@gmail.com>",
-        // to: "response@dieselry.com",
-        to: "prive.platform@gmail.com",
-        // bcc: "prive.platform@gmail.com" ,
+        to: "response@dieselry.com" ,
+        bcc: "prive.platform@gmail.com",
         subject: 'User Contacted Us!',
         text: `New User Details From Contact Form:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCar Model: ${car}\nCity: ${city}`
     };

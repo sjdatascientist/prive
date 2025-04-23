@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
 		<title>Contact Us | Privé Drive</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 		<link rel="stylesheet" href="../css/contact.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	</head>
@@ -37,9 +37,12 @@
 					<p>+91-9606996321</p>
 				</div>
 			</div>
-			
-			<button class="whatsapp-button"><i class="fab fa-whatsapp"></i>Chat With Us</button>
-			<!-- <button class="whatsapp-button"> Chat With Us</button>. -->
+
+			<div class="contact-buttons ref-line">
+				<button class="whatsapp-button"><i class="fab fa-whatsapp"></i>Chat</button>
+				<button class="call-button"><i class="fa-solid fa-phone"></i>Call</button>
+				<button class="mail-button"><i class="fa-solid fa-envelope"></i>Email</button>
+			</div>
 		</section>
 
 		<section class="map-section">
@@ -50,7 +53,15 @@
 
 		<script>
 			document.querySelector('.whatsapp-button').addEventListener('click', () => {
-				window.location.href = 'https://wa.me/+919606996322' // Replace with your desired link
+				window.location.href = 'https://wa.me/+919606996322'
+			})
+
+			document.querySelector('.call-button').addEventListener('click', () => {
+				window.location.href = 'tel:+919606996321'
+			})
+
+			document.querySelector('.mail-button').addEventListener('click', () => {
+				window.location.href = 'mailto:response@dieselry.com'
 			})
 		</script>
 	</body>
