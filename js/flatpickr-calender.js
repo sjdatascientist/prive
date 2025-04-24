@@ -80,6 +80,7 @@ calenderInput.addEventListener('change', (event) => {
 			).innerHTML = `You have exceeded the maximum number of booking dates (i.e. ${totalWeightedBookingDays} Days)<br>
 			Read Note for more info!`
 			document.querySelector('em').style.color = 'red'
+			document.getElementById('reserve-btn').disabled = true
 		}
 	}
 })
