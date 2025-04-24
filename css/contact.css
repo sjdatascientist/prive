@@ -87,7 +87,7 @@ h3 {
 
 .contact-buttons > button {
 	width: 33.33%;
-	height: 6vw;
+	height: max(3.5rem,6vw);
 	margin-top: 3vw;
 	font-size: max(1.3rem,1.4vw);
 	font-weight: bolder;
@@ -138,6 +138,14 @@ section.map-section {
 
 		.inner-div p {
 			width: 50%;
+		}
+
+		.contact-buttons {
+			flex-direction: column;
+		}
+
+		.contact-buttons > button {
+			width: 100%;
 		}
 
 		.whatsapp-button {

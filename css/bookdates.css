@@ -175,6 +175,7 @@ span.flatpickr-weekday {
 }
 
 .calender-section p {
+	text-align: center;
 	margin-block: 3rem;
 	font-size: max(1rem,1.1vw);
 	padding: 1rem;
@@ -197,6 +198,13 @@ span.flatpickr-weekday {
 	background-color: #ECFF82;
 }
 
+.calender-section button:disabled {
+	background-color: gray;
+	cursor: not-allowed;
+}
+
 em {
 	margin-top: 2rem;
+	text-align: center;
+	font-size: max(1rem,1.3vw);
 }
