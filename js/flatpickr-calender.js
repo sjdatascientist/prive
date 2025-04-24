@@ -72,6 +72,7 @@ calenderInput.addEventListener('change', (event) => {
 			document.querySelector('em').innerHTML = `The selected booking dates are from ${shortDate(selectedStartDate_long)} to ${shortDate(
 				selectedEndDate_long
 			)} (i.e. ${totalWeightedBookingDays} Days)`
+			document.querySelector('em').style.color = 'green'
 			document.getElementById('reserve-btn').disabled = false
 		} else {
 			document.querySelector(
