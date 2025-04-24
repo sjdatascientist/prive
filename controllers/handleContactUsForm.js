@@ -1,5 +1,3 @@
-const changeCase = require('change-case')
-
 // First controller: Form data handler
 const handleFormData = (req, res, next) => {
     const { name, email, phone, car, city} = req.body;
@@ -11,7 +9,7 @@ const handleFormData = (req, res, next) => {
 
     // Instead of using res.locals.formData
     req.formData = {
-        name: changeCase.capitalCase(name),
+        name,
         email: email.toLowerCase(),
         phone: '+91' + phone,
         car,
