@@ -4,6 +4,11 @@
 		"costPerDay": 5995,
 		"rentPerDay": 25000
 	},
+	"Audi Q7": {
+		"totalPrice": 125,
+		"costPerDay": 8000,
+		"rentPerDay": 45000
+	},
 	"BMW X1 Sport": {
 		"totalPrice": 64,
 		"costPerDay": 4315,
