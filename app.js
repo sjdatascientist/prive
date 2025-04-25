@@ -1,7 +1,7 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const path = require('path')
 const compression = require('compression')
+// const bodyParser = require('body-parser')
 
 // Importing JS variables
 const cars = require('./vars/cars')
@@ -16,6 +16,7 @@ const saveUserData = require('./controllers/saveUserData')
 const createOrder = require('./controllers/createOrder')
 const verifyPayment = require('./controllers/verifyPayment')
 const razorpayWebhook = require('./controllers/razorpayWebhook')
+const { fstat } = require('fs')
 
 const app = express()
 
@@ -93,6 +94,10 @@ app.get('/privacy-policy', (req, res) => {
 
 app.get('/terms-and-conditions', (req, res) => {
 	res.render('terms-conditions')
+})
+
+app.get('/getCars', (req, res) => {
+	res.json(cars)
 })
 
 // Start the server
