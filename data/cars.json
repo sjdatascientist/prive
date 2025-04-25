@@ -1,43 +1,207 @@
 {
-	"Audi Q5": {"totalPrice": 89, "costPerDay": 5995, "rentPerDay": 25000},
-	"BMW X1 Sport": {"totalPrice": 64, "costPerDay": 4315, "rentPerDay": 20000},
-	"BMW X3": {"totalPrice": 89, "costPerDay": 5998, "rentPerDay": 21000},
-	"BMW X5": {"totalPrice": 133, "costPerDay": 8967, "rentPerDay": 45000},
-	"BMW i7": {"totalPrice": 235, "costPerDay": 15844, "rentPerDay": 49000},
-	"Grand Vitara": {"totalPrice": 26, "costPerDay": 1752, "rentPerDay": 10000},
-	"Hyundai Creta": {"totalPrice": 24, "costPerDay": 1618, "rentPerDay": 10500},
-	"Innova Crysta": {"totalPrice": 78, "costPerDay": 5259, "rentPerDay": 25000},
-	"Innova Hycross": {"totalPrice": 36, "costPerDay": 2400, "rentPerDay": 11000},
-	"Jeep Compass": {"totalPrice": 30, "costPerDay": 1998, "rentPerDay": 12000},
-	"Jeep Meridian": {"totalPrice": 40, "costPerDay": 2696, "rentPerDay": 12000},
-	"Jeep Wrangler": {"totalPrice": 78, "costPerDay": 5259, "rentPerDay": 25000},
-	"Kia Carens": {"totalPrice": 18, "costPerDay": 1196, "rentPerDay": 6000},
-	"Kia Carnival": {"totalPrice": 80, "costPerDay": 5393, "rentPerDay": 24000},
-	"Kia Seltos GTX Plus D": {"totalPrice": 25, "costPerDay": 1690, "rentPerDay": 9750},
-	"Land Rover Range Rover": {"totalPrice": 340, "costPerDay": 22923, "rentPerDay": 100000},
-	"Lexus ES 350H": {"totalPrice": 86, "costPerDay": 5798, "rentPerDay": 20000},
-	"MG Cyberstar": {"totalPrice": 78, "costPerDay": 5259, "rentPerDay": 25000},
-	"MG Gloster": {"totalPrice": 40, "costPerDay": 2663, "rentPerDay": 12000},
-	"MG Hector": {"totalPrice": 18, "costPerDay": 1213, "rentPerDay": 7000},
-	"Mahindra EV BE6": {"totalPrice": 30, "costPerDay": 1998, "rentPerDay": 12000},
-	"Mahindra EV BE9": {"totalPrice": 31, "costPerDay": 2070, "rentPerDay": 12500},
-	"Mahindra SUV 700 D": {"totalPrice": 26, "costPerDay": 1752, "rentPerDay": 10000},
-	"Mahindra Scorpio": {"totalPrice": 27, "costPerDay": 1820, "rentPerDay": 11000},
-	"Mahindra Thar 20": {"totalPrice": 20, "costPerDay": 1348, "rentPerDay": 6000},
-	"Mahindra Thar Roxx": {"totalPrice": 21, "costPerDay": 1415, "rentPerDay": 7000},
-	"Mercedes Cabriolet": {"totalPrice": 139, "costPerDay": 9371, "rentPerDay": 50000},
-	"Mercedes E Class": {"totalPrice": 98, "costPerDay": 6607, "rentPerDay": 32000},
-	"Mercedes G Class": {"totalPrice": 3.4, "costPerDay": 22923, "rentPerDay": 1000000},
-	"Mercedes GLA 200": {"totalPrice": 60, "costPerDay": 3995, "rentPerDay": 23000},
-	"Mercedes GLS": {"totalPrice": 78, "costPerDay": 5259, "rentPerDay": 25000},
-	"Mercedes GLS 450": {"totalPrice": 168, "costPerDay": 11339, "rentPerDay": 500000},
-	"Mercedes GLS 450D": {"totalPrice": 162, "costPerDay": 10922, "rentPerDay": 500000},
-	"Mercedes SUV GLC 300": {"totalPrice": 95, "costPerDay": 6401, "rentPerDay": 30000},
-	"Mini Cooper": {"totalPrice": 48, "costPerDay": 3236, "rentPerDay": 20000},
-	"Range Rover Defender": {"totalPrice": 130, "costPerDay": 8764, "rentPerDay": 25000},
-	"Range Rover Velar Petrol": {"totalPrice": 78, "costPerDay": 5259, "rentPerDay": 25000},
-	"Toyota Camry": {"totalPrice": 60, "costPerDay": 3985, "rentPerDay": 17000},
-	"Toyota Fortuner": {"totalPrice": 54, "costPerDay": 3640, "rentPerDay": 15000},
-	"Toyota Vellfire": {"totalPrice": 110, "costPerDay": 7461, "rentPerDay": 37000},
-	"Volvo S90": {"totalPrice": 85, "costPerDay": 5730, "rentPerDay": 20000}
+	"Audi Q5": {
+		"totalPrice": 89,
+		"costPerDay": 5995,
+		"rentPerDay": 25000
+	},
+	"BMW X1 Sport": {
+		"totalPrice": 64,
+		"costPerDay": 4315,
+		"rentPerDay": 20000
+	},
+	"BMW X3": {
+		"totalPrice": 89,
+		"costPerDay": 5998,
+		"rentPerDay": 21000
+	},
+	"BMW X5": {
+		"totalPrice": 133,
+		"costPerDay": 8967,
+		"rentPerDay": 45000
+	},
+	"BMW i7": {
+		"totalPrice": 235,
+		"costPerDay": 15844,
+		"rentPerDay": 49000
+	},
+	"Grand Vitara": {
+		"totalPrice": 26,
+		"costPerDay": 1752,
+		"rentPerDay": 10000
+	},
+	"Hyundai Creta": {
+		"totalPrice": 24,
+		"costPerDay": 1618,
+		"rentPerDay": 10500
+	},
+	"Innova Crysta": {
+		"totalPrice": 78,
+		"costPerDay": 5259,
+		"rentPerDay": 25000
+	},
+	"Innova Hycross": {
+		"totalPrice": 36,
+		"costPerDay": 2400,
+		"rentPerDay": 11000
+	},
+	"Jeep Compass": {
+		"totalPrice": 30,
+		"costPerDay": 1998,
+		"rentPerDay": 12000
+	},
+	"Jeep Meridian": {
+		"totalPrice": 40,
+		"costPerDay": 2696,
+		"rentPerDay": 12000
+	},
+	"Jeep Wrangler": {
+		"totalPrice": 78,
+		"costPerDay": 5259,
+		"rentPerDay": 25000
+	},
+	"Kia Carens": {
+		"totalPrice": 18,
+		"costPerDay": 1196,
+		"rentPerDay": 6000
+	},
+	"Kia Carnival": {
+		"totalPrice": 80,
+		"costPerDay": 5393,
+		"rentPerDay": 24000
+	},
+	"Kia Seltos GTX Plus D": {
+		"totalPrice": 25,
+		"costPerDay": 1690,
+		"rentPerDay": 9750
+	},
+	"Land Rover Range Rover": {
+		"totalPrice": 340,
+		"costPerDay": 22923,
+		"rentPerDay": 100000
+	},
+	"Lexus ES 350H": {
+		"totalPrice": 86,
+		"costPerDay": 5798,
+		"rentPerDay": 20000
+	},
+	"MG Cyberstar": {
+		"totalPrice": 78,
+		"costPerDay": 5259,
+		"rentPerDay": 25000
+	},
+	"MG Gloster": {
+		"totalPrice": 40,
+		"costPerDay": 2663,
+		"rentPerDay": 12000
+	},
+	"MG Hector": {
+		"totalPrice": 18,
+		"costPerDay": 1213,
+		"rentPerDay": 7000
+	},
+	"Mahindra EV BE6": {
+		"totalPrice": 30,
+		"costPerDay": 1998,
+		"rentPerDay": 12000
+	},
+	"Mahindra EV BE9": {
+		"totalPrice": 31,
+		"costPerDay": 2070,
+		"rentPerDay": 12500
+	},
+	"Mahindra SUV 700 D": {
+		"totalPrice": 26,
+		"costPerDay": 1752,
+		"rentPerDay": 10000
+	},
+	"Mahindra Scorpio": {
+		"totalPrice": 27,
+		"costPerDay": 1820,
+		"rentPerDay": 11000
+	},
+	"Mahindra Thar 20": {
+		"totalPrice": 20,
+		"costPerDay": 1348,
+		"rentPerDay": 6000
+	},
+	"Mahindra Thar Roxx": {
+		"totalPrice": 21,
+		"costPerDay": 1415,
+		"rentPerDay": 7000
+	},
+	"Mercedes Cabriolet": {
+		"totalPrice": 139,
+		"costPerDay": 9371,
+		"rentPerDay": 50000
+	},
+	"Mercedes E Class": {
+		"totalPrice": 98,
+		"costPerDay": 6607,
+		"rentPerDay": 32000
+	},
+	"Mercedes G Class": {
+		"totalPrice": 3.4,
+		"costPerDay": 22923,
+		"rentPerDay": 1000000
+	},
+	"Mercedes GLA 200": {
+		"totalPrice": 60,
+		"costPerDay": 3995,
+		"rentPerDay": 23000
+	},
+	"Mercedes GLS": {
+		"totalPrice": 78,
+		"costPerDay": 5259,
+		"rentPerDay": 25000
+	},
+	"Mercedes GLS 450": {
+		"totalPrice": 168,
+		"costPerDay": 11339,
+		"rentPerDay": 500000
+	},
+	"Mercedes GLS 450D": {
+		"totalPrice": 162,
+		"costPerDay": 10922,
+		"rentPerDay": 500000
+	},
+	"Mercedes SUV GLC 300": {
+		"totalPrice": 95,
+		"costPerDay": 6401,
+		"rentPerDay": 30000
+	},
+	"Mini Cooper": {
+		"totalPrice": 48,
+		"costPerDay": 3236,
+		"rentPerDay": 20000
+	},
+	"Range Rover Defender": {
+		"totalPrice": 130,
+		"costPerDay": 8764,
+		"rentPerDay": 25000
+	},
+	"Range Rover Velar Petrol": {
+		"totalPrice": 78,
+		"costPerDay": 5259,
+		"rentPerDay": 25000
+	},
+	"Toyota Camry": {
+		"totalPrice": 60,
+		"costPerDay": 3985,
+		"rentPerDay": 17000
+	},
+	"Toyota Fortuner": {
+		"totalPrice": 54,
+		"costPerDay": 3640,
+		"rentPerDay": 15000
+	},
+	"Toyota Vellfire": {
+		"totalPrice": 110,
+		"costPerDay": 7461,
+		"rentPerDay": 37000
+	},
+	"Volvo S90": {
+		"totalPrice": 85,
+		"costPerDay": 5730,
+		"rentPerDay": 20000
+	}
 }
