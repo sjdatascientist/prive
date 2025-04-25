@@ -104,10 +104,10 @@
 		"costPerDay": 1618,
 		"rentPerDay": 10500
 	},
-	"Kia Seltos": {
-		"totalPrice": 0,
-		"costPerDay": 0,
-		"rentPerDay": 0
+	"Kia Seltos GTX Plus D": {
+		"totalPrice": 25,
+		"costPerDay": 1690,
+		"rentPerDay": 9750
 	},
 	"Mercedes GLS": {
 		"totalPrice": 78,
