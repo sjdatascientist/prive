@@ -87,7 +87,7 @@ h3 {
 
 .contact-buttons > button {
 	width: 33.33%;
-	height: max(3.5rem,6vw);
+	height: max(4.5rem,6vw);
 	margin-top: 3vw;
 	font-size: max(1.3rem,1.4vw);
 	font-weight: bolder;
