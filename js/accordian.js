@@ -89,7 +89,7 @@ const accordionData = {
 		{
 			header: 'Are there any fixed hours for the Chauffeurs?',
 			content:
-				'While we recommend max of 9-10 hours of duty for the chauffeurs , the extra hours if any could be paid to them as overtime charges of Rs500/hour.',
+				'While we recommend max of 9-10 hours of duty for the chauffeurs , the extra hours if any could be paid to them as overtime charges of Rs200/hour.',
 		},
 	],
 	set5: [
