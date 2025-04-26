@@ -3,7 +3,8 @@ const path = require('path')
 const compression = require('compression')
 // const bodyParser = require('body-parser')
 
-// Importing JS variables
+// Importing JS variables (utilities)
+const cities = require("./utils/cities")
 const cars = require('./utils/cars')
 
 // Importing Configs
@@ -49,7 +50,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 // All Routes
 app.get('/', (req, res) => {
-	res.render('index', {cars})
+	res.render('index', {cars, cities})
 })
 
 app.post('/contactform', handleFormData, sendMail)
@@ -67,7 +68,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/book', (req, res) => {
-	res.render('book', {cars})
+	res.render('book', {cars, cities})
 })
 
 app.post('/payment', saveUserData, (req, res) => {

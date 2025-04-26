@@ -165,29 +165,9 @@
 						</select>
 						<select name="city" id="city" required>
 							<option value="" selected disabled hidden>Select City</option>
-							<option value="Bangalore">Bangalore</option>
-							<option value="New Delhi">New Delhi</option>
-							<option value="Mumbai">Mumbai</option>
-							<option value="Chennai">Chennai</option>
-							<option value="Hyderabad">Hyderabad</option>
-							<option value="Pune">Pune</option>
-							<option value="Lucknow">Lucknow</option>
-							<option value="Kanpur">Kanpur</option>
-							<option value="Dehradun">Dehradun</option>
-							<option value="Mysore">Mysore</option>
-							<option value="Mangalore">Mangalore</option>
-							<option value="Ahmedabad">Ahmedabad</option>
-							<option value="Kolkata">Kolkata</option>
-							<option value="Cochin">Cochin</option>
-							<option value="Trivandrum">Trivandrum</option>
-							<option value="Surat">Surat</option>
-							<option value="Vishakapatnam">Vishakapatnam</option>
-							<option value="Jaipur">Jaipur</option>
-							<option value="Nagpur">Nagpur</option>
-							<option value="Indore">Indore</option>
-							<option value="Bhopal">Bhopal</option>
-							<option value="Ludhiana">Ludhiana</option>
-							<option value="Vadodra">Vadodra</option>
+							<% cities.forEach(city => { %>
+							<option value="<%= city %>"><%= city %></option>
+							<% }); %>
 						</select>
 						<button type="submit" class="form-get-quote" id="submitBtn">Get Quote</button>
 					</form>
