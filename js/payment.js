@@ -25,6 +25,14 @@ const {name, email, phone, city, car, tickets, fuel} = userData
 // After consuming details delete hidden element
 $('.hidden-details').delay(2000).remove()
 
+$.ajax({
+	url: "/saveBookingData",
+	method: "POST",
+	contentType: "application/json",
+	data: JSON.stringify(userData)
+})
+
+
 paymentBtn.addEventListener('click', async function () {
 	// Step 1: Create order on your server
 	$.ajax({
@@ -95,6 +103,14 @@ paymentBtn.addEventListener('click', async function () {
 						success: function () {
 							paymentDiv.style.display = 'block'
 							window.location.href = '/payment#payment-complete-div'
+							// Step 4: Update Payment Status to Completed in Database
+							$.ajax({
+								url: '/setPaymentComplete',
+								method: "PATCH",
+								contentType: 'application/json',
+								data: JSON.stringify(userData)
+								
+							})
 							setTimeout(function () {
 								window.location.href = '/bookdates'
 							}, 8000)

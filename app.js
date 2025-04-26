@@ -4,7 +4,7 @@ const compression = require('compression')
 // const bodyParser = require('body-parser')
 
 // Importing JS variables
-const cars = require('./vars/cars')
+const cars = require('./utils/cars')
 
 // Importing Configs
 const startNgrok = require('./config/ngrok')
@@ -13,10 +13,11 @@ const startNgrok = require('./config/ngrok')
 const handleFormData = require('./controllers/handleContactUsForm')
 const sendMail = require('./controllers/sendMail')
 const saveUserData = require('./controllers/saveUserData')
+const saveBookingData = require("./controllers/saveBookingData")
 const createOrder = require('./controllers/createOrder')
 const verifyPayment = require('./controllers/verifyPayment')
+const setPaymentComplete = require("./controllers/setPaymentComplete")
 const razorpayWebhook = require('./controllers/razorpayWebhook')
-const { fstat } = require('fs')
 
 const app = express()
 
@@ -74,9 +75,13 @@ app.post('/payment', saveUserData, (req, res) => {
 	res.render('payment', {userData})
 })
 
+app.post('/saveBookingData', saveBookingData)
+
 app.post('/create-order', createOrder)
 
 app.post('/verify-payment', verifyPayment)
+
+app.patch('/setPaymentComplete', setPaymentComplete)
 
 app.post('/webhook', razorpayWebhook)
 
