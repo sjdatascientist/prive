@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="../css/bookdates.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
         <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<%- include('partials/header.ejs') %>
@@ -30,6 +31,17 @@
 					<div id="three"></div>
 					<strong>Reserved by You</strong>
 				</div>
+			</div>
+			<!-- Dynamic Table -->
+			<div class="selected-dates-div">
+				<h4>The Selected Booking Dates Are ⬇️</h4>
+				<table>
+					<tr>
+						<th>Date</th>
+						<th>Day</th>
+					</tr>
+					<!-- Dynamic Row Inserting -->
+				</table>
 			</div>
 			<em></em>
 			<p class="ref-line"><strong>&#9888; Note: </strong>For <i>Saturday, Sunday, and Public Holidays</i> the charges will be <strong>twice </strong>than regular days!<br>

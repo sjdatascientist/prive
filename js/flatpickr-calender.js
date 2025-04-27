@@ -5,81 +5,116 @@ const maxDate = new Date().fp_incr(60)
 flatpickr('#flatpickr-calender', {
 	// dateFormat: 'd-m-y',
 	inline: true,
-	mode: 'range',
+	// mode: 'range',
+	mode: 'multiple',
 	minDate: today,
 	maxDate: maxDate,
 	disable: [''], // Takes date[] as value
 })
 
+// Initially hide Table Element
+$('.selected-dates-div').hide()
+
 const calenderInput = document.querySelector('#flatpickr-calender')
+
 calenderInput.addEventListener('change', (event) => {
-	bookingDates = event.target.value
+	// Remove left padding as soon as user enters input
+	$('input').css('padding-left', '10px')
+
+	// String user output
+	bookingDates_str = event.target.value
+
+	// Array of string with Unsorted Dates
+	const bookingDatesArrayUnsorted_str = bookingDates_str.split(', ').map((date_str) => date_str.trim())
+
+	function sortDates(dateArray) {
+		return dateArray.sort((a, b) => new Date(a) - new Date(b))
+	}
+
+	// Array of string with Sorted Dates
+	const bookingDatesArray_str = sortDates(bookingDatesArrayUnsorted_str)
+
+	// Array of date type values (Long Dates)
+	const bookingDates = bookingDatesArray_str.map((dateStr) => new Date(dateStr))
+
+	function formatDate(dateString) {
+		const date = new Date(dateString)
+		const day = date.getDate()
+		const year = date.getFullYear()
+
+		// Array of month names
+		const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+		const monthName = months[date.getMonth()]
+
+		return `${day} ${monthName} ${year}`
+	}
+
+	function getDayName(dateString) {
+		const date = new Date(dateString)
+		// Array of full day names
+		const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+		return days[date.getDay()]
+	}
+
+	$('.dynamic-data').remove()
+	if (bookingDatesArray_str) {
+		// Show table Div now
+		$('.selected-dates-div').show()
+		bookingDatesArray_str.map((dateStr) => {
+			let row = $("<tr class='dynamic-data'></tr>")
+			row.append('<td>' + formatDate(dateStr) + '</td>')
+			row.append('<td>' + getDayName(dateStr) + '</td>')
+			$('table').append(row)
+		})
+	}
 
 	function shortDate(date) {
 		const options = {day: '2-digit', month: '2-digit', year: 'numeric'}
 		return date.toLocaleDateString('en-IN', options).replace(/\//g, '-')
 	}
 
-	function getDateArray(start, end) {
-		let arr = []
-		let dt = new Date(start)
-		while (dt <= end) {
-			arr.push(new Date(dt))
-			dt.setDate(dt.getDate() + 1)
-		}
-		return arr
-	}
-
-	function getWeekendDates(startDate, endDate) {
-		const allDates = getDateArray(startDate, endDate)
-		return allDates.filter((date) => {
+	function getWeekendDates(dateArray) {
+		return dateArray.filter((dateStr) => {
+			const date = new Date(dateStr)
 			const day = date.getDay()
-			return day === 0 || day === 6 // 0 = Sunday, 6 = Saturday
+			return day === 0 || day === 6 // Sunday = 0, Saturday = 6
 		})
 	}
 
-	function calculateWeightedDays(startDate, endDate) {
-		let totalValue = 0
-		let currentDate = new Date(startDate)
+	const weekendDates = getWeekendDates(bookingDatesArray_str)
 
-		while (currentDate <= endDate) {
-			const day = currentDate.getDay()
-			// Weekend: Saturday (6) or Sunday (0)
+	function calculateWeightedDays(dateArray) {
+		let totalValue = 0
+		dateArray.forEach((dateStr) => {
+			const date = new Date(dateStr)
+			const day = date.getDay()
+
 			if (day === 0 || day === 6) {
+				// Weekend
 				totalValue += 2
 			} else {
-				// Weekday: Monday to Friday
+				// Weekday
 				totalValue += 1
 			}
-			currentDate.setDate(currentDate.getDate() + 1)
-		}
+		})
 		return totalValue
 	}
 
-	if (bookingDates.length == 24) {
-		// format 24-05-2025
-		const selectedStartDate_string = bookingDates.slice(0, 10)
-		const selectedStartEnd_string = bookingDates.slice(14, 25)
-		// format Thu Apr 24 2025 05:30:00 GMT+0530 (India Standard Time)
-		const selectedStartDate_long = new Date(selectedStartDate_string)
-		const selectedEndDate_long = new Date(selectedStartEnd_string)
-		// Generating date array from date range
-		const allDates = getDateArray(selectedStartDate_long, selectedEndDate_long)
-		const weekendDates = getWeekendDates(selectedStartDate_long, selectedEndDate_long)
-		const totalWeightedBookingDays = calculateWeightedDays(selectedStartDate_long, selectedEndDate_long)
+	const totalWeightedBookingDays = calculateWeightedDays(bookingDatesArray_str)
 
+
+	if (bookingDatesArray_str) {
 		if (totalWeightedBookingDays <= 10) {
-			document.querySelector('em').innerHTML = `The selected booking dates are from ${shortDate(selectedStartDate_long)} to ${shortDate(
-				selectedEndDate_long
-			)} (i.e. ${totalWeightedBookingDays} Days)`
-			document.querySelector('em').style.color = 'green'
+			document.querySelector('em').innerHTML = `Your total booking weighted dates are ${totalWeightedBookingDays} Days<br>
+			You can proceed for booking!`
+			document.querySelector('em').style.color = 'white'
+			document.querySelector('em').style.backgroundColor = 'mediumseagreen'
 			document.getElementById('reserve-btn').disabled = false
 		} else {
-			document.querySelector(
-				'em'
-			).innerHTML = `You have exceeded the maximum number of booking dates (i.e. ${totalWeightedBookingDays} Days)<br>
-			Read Note for more info!`
-			document.querySelector('em').style.color = 'red'
+			document.querySelector('em').innerHTML = `You have exceeded the maximum number of booking dates (i.e. ${totalWeightedBookingDays} Days)<br>
+			Note: A single weekend day (i.e. Saturday & Sunday) is counted as 2 days!`
+			document.querySelector('em').style.color = 'white'
+			document.querySelector('em').style.backgroundColor = 'tomato'
 			document.getElementById('reserve-btn').disabled = true
 		}
 	}
