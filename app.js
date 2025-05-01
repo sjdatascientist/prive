@@ -119,6 +119,10 @@ app.get('/getCars', (req, res) => {
 	res.json(cars)
 })
 
+app.get('/pay', (req, res) => {
+	res.render('pay')
+})
+
 // Start the server
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
