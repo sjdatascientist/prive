@@ -20,7 +20,7 @@ const saveBookingData = async (req, res) => {
 
 	// Adding data to bookings table
 	async function isSameBookingExist(userID, carID) {
-		const response = await supabase
+		const {data, error} = await supabase
 			.from('bookings')
 			.select('*')
 			.match({
@@ -31,13 +31,12 @@ const saveBookingData = async (req, res) => {
 				amount: 10000 * userData.tickets,
 			})
 			.select()
-		const data = response.data[0]
-		if (data) {
+		if (data.length > 0) {
 			console.log('Same Booking Already Exist With Record:', data)
 			// Fetch existing booking_id
-			const bookingID = data.booking_id
+			const bookingID = data[0].booking_id
 			// 409 Conflict Error
-			res.status(409).json({
+			res.json({
 				message: 'Record Conflict! Same Booking Already Exist',
 				record: data,
 				booking_id: bookingID,
@@ -62,6 +61,13 @@ const saveBookingData = async (req, res) => {
 				console.log('Error inserting Booking Data:', error)
 			} else {
 				console.log('New Booking Data Saved Successfully: ', data)
+				// Fetch New Booking ID
+				const bookingID = data[0].booking_id
+				res.status(201).json({
+					message: "No Record Confliction, Voila! New Data Added",
+					record: data,
+					booking_id: bookingID
+				})
 			}
 		}
 	}

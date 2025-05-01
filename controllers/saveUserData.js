@@ -14,7 +14,6 @@ const saveUserData = async (req, res, next) => {
 		fuel,
 	}
 
-
 	async function isUserinDB(email = userData['email']) {
 		const response = await supabase.from('users').select('*').eq('email', email)
 		if (response.data.length == 0) {

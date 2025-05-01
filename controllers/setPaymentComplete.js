@@ -9,7 +9,7 @@ const setPaymentComplete = async (req, res) => {
     
 	const userID = await getUserID(userData.email)
 	const carID = await getCarID(userData.car)
-	const bookingID = await getBookingID(userID, carID, userData.tickets)
+	const bookingID = await getBookingID(userID, carID, userData.city, userData.tickets)
 
 	const {data, error} = await supabase.from('bookings').update({payment_status: 'Completed'}).eq('booking_id', bookingID).select()
 

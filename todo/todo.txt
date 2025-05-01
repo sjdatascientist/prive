@@ -1,0 +1,11 @@
+TODO 1. upload booking dates to supabase as an date array with group, shareholder_no.(auto incremental with supabase setting, set limit < 13)
+TODO 2. fetch calender to get already booked dates in a city with a car 
+
+STEPS:
+1. sbse phle disabled dates fetch hogi, it can be empty or not
+    i. if empty, num shareholders = 0, assign 1st serial number to any new user
+    ii. if empty, no disabled dates
+    iii. if not empty, check no. of existing records and assign length + 1 serial no. to user, apply supabase DB constraint to col. num_shareholder
+    iv. if not empty: flatten dates col. to get all disabled dates
+
+2. now upload user according to this condition, group no, shareholder serail no., reservation dates

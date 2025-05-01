@@ -14,11 +14,14 @@ const startNgrok = require('./config/ngrok')
 const handleFormData = require('./controllers/handleContactUsForm')
 const sendMail = require('./controllers/sendMail')
 const saveUserData = require('./controllers/saveUserData')
+const updateBookingData = require("./controllers/updateBookingData")
 const saveBookingData = require("./controllers/saveBookingData")
 const createOrder = require('./controllers/createOrder')
 const verifyPayment = require('./controllers/verifyPayment')
 const setPaymentComplete = require("./controllers/setPaymentComplete")
 const razorpayWebhook = require('./controllers/razorpayWebhook')
+const getBookingCalender = require('./controllers/getBookingCalender')
+const reserveBookingDates = require("./controllers/reserveBookingDates")
 
 const app = express()
 
@@ -82,13 +85,23 @@ app.post('/create-order', createOrder)
 
 app.post('/verify-payment', verifyPayment)
 
-app.patch('/setPaymentComplete', setPaymentComplete)
+// app.patch('/setPaymentComplete', setPaymentComplete)
 
 app.post('/webhook', razorpayWebhook)
+
+app.patch('/updateBookingData', updateBookingData)
 
 app.get('/bookdates', (req, res) => {
 	res.render('bookdates')
 })
+
+app.post('/getBookingCalender', getBookingCalender)
+
+app.patch('/reserveBookingDates', reserveBookingDates)
+
+// app.post('/updateBookingData',  updateBookingData)
+
+
 
 app.get('/compare', (req, res) => {
 	res.render('compare')

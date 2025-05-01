@@ -1,3 +1,30 @@
+const userData = JSON.parse(sessionStorage.getItem("userData"))
+const userBookingID = JSON.parse(sessionStorage.getItem("userBookingID"))
+const allDetails = {...userData, userBookingID};
+// const allDetailsJSON = JSON.stringify(allDetails)
+/* console.log(userData);
+console.log(userBookingID);
+console.log(allDetails);
+console.log(allDetailsJSON); */
+
+$.ajax({
+	url: '/getBookingCalender',
+	method: "POST",
+	contentType: "application/json",
+	data: JSON.stringify({
+		bookingID: userBookingID,
+		email: userData.email,
+		phone: userData.phone,
+		city: userData.city,
+		car: userData.car,
+	}),
+	dataType: "json",
+	success: function(rawData) {
+		// const data = JSON.parse(rawData);
+		consoleLog('post req sent done!');
+	}
+})
+
 // Get today's date
 const today = new Date()
 const maxDate = new Date().fp_incr(60)
@@ -110,6 +137,17 @@ calenderInput.addEventListener('change', (event) => {
 			document.querySelector('em').style.color = 'white'
 			document.querySelector('em').style.backgroundColor = 'mediumseagreen'
 			document.getElementById('reserve-btn').disabled = false
+
+			$('#reserve-btn').on('click', function () {
+				$.ajax({
+					url: "/reserveBookingDates",
+					method: "PATCH",
+					contentType: "application/json",
+					data: JSON.stringify({
+						booking_id: userBookingID,
+						booking_dates: bookingDatesArray_str})
+				})
+			})
 		} else {
 			document.querySelector('em').innerHTML = `You have exceeded the maximum number of booking dates (i.e. ${totalWeightedBookingDays} Days)<br>
 			Note: A single weekend day (i.e. Saturday & Sunday) is counted as 2 days!`
