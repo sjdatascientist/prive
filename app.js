@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const compression = require('compression')
+const cors = require('cors')
 // const bodyParser = require('body-parser')
 
 // Importing JS variables (utilities)
@@ -24,6 +25,8 @@ const getBookingCalender = require('./controllers/getBookingCalender')
 const reserveBookingDates = require("./controllers/reserveBookingDates")
 
 const app = express()
+
+app.use(cors())
 
 // Essentails middlewares for every request
 app.use(compression())
