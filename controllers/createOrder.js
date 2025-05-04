@@ -14,7 +14,8 @@ const createOrder = async (req, res) => {
 	}
 
 	const options = {
-		amount: tickets * 10000 * 100,
+		// amount: tickets * 10000 * 100,
+		amount: tickets * 100,	// For testing live payments
 		currency: 'INR',
 		notes: {
 			Order_Created_At: Date.now(),
