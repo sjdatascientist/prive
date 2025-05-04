@@ -6,12 +6,6 @@
 			"use": "@vercel/node"
 		}
 	],
-	"routes": [
-		{
-			"src": "/(.*)",
-			"dest": "app.js"
-		}
-	],
 	"headers": [
 		{
 			"src": "/(.*)",
@@ -28,7 +22,8 @@
 					"key": "Access-Control-Allow-Headers",
 					"value": "X-Requested-With, Content-Type, Authorization"
 				}
-			]
+			],
+			"dest": "app.js"
 		}
 	]
 }
