@@ -36,7 +36,7 @@ const createOrder = async (req, res) => {
 		const response = await razorpay.orders.create(options)
 		const filepath = path.join(__dirname, '../data/order.json')
 		fs.writeFileSync(filepath, JSON.stringify(response, null, 2))
-		res.status(200).send(JSON.stringify(response, null, 2))
+		res.status(200).json(JSON.stringify(response, null, 2))
 	} catch (error) {
 		console.error(error)
 		res.status(500).send('Error creating order')
