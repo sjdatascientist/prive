@@ -8,53 +8,44 @@ paymentDiv.style.display = 'none'
 bookDatesBtn.style.display = 'none'
 
 // Initially hide details
-document.querySelectorAll('.hidden-details').forEach((el) => {
-	el.style.display = 'none'
-})
+$('.hidden-details').hide()
 
 const userData = {
-	name: document.getElementById('name').textContent,
-	email: document.getElementById('email').textContent,
-	phone: document.getElementById('phone').textContent,
-	city: document.getElementById('city').textContent,
-	car: document.getElementById('car').textContent,
-	fuel: document.getElementById('fuel').textContent,
-	tickets: Number(document.getElementById('tickets').textContent),
+	name: $('#name').text(),
+	email: $('#email').text(),
+	phone: $('#phone').text(),
+	city: $('#city').text(),
+	car: $('#car').text(),
+	fuel: $('#fuel').text(),
+	tickets: Number($('#tickets').text()),
 }
 
 const {name, email, phone, city, car, tickets, fuel} = userData
 
 // Saving user details on client side
-sessionStorage.setItem('userData', JSON.stringify(userData))
+sessionStorage.setItem("userData", JSON.stringify(userData))
 
 // After consuming details delete hidden element
-setTimeout(() => {
-	document.querySelectorAll('.hidden-details').forEach((el) => {
-		el.remove()
-	})
-}, 2000)
+$('.hidden-details').delay(2000).remove()
 
-fetch('/saveBookingData', {
-	method: 'POST',
-	headers: {
-		'Content-Type': 'application/json',
-	},
-	body: JSON.stringify(userData),
-})
-	.then((response) => response.json())
-	.then((data) => {
+$.ajax({
+	url: "/saveBookingData",
+	method: "POST",
+	contentType: "application/json",
+	data: JSON.stringify(userData),
+	success: function (data) {
 		const userBookingID = data.booking_id
-		sessionStorage.setItem('userBookingID', JSON.stringify(userBookingID))
+		sessionStorage.setItem("userBookingID", JSON.stringify(userBookingID))
 
 		// After this activate pay now button for further processing
 		paymentBtn.addEventListener('click', async function () {
 			// Step 1: Create order on your server
-			fetch('/create-order', {
-				method: 'post',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
+			$.ajax({
+				// async: false,
+				url: '/create-order',
+				method: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify({
 					name,
 					email,
 					phone,
@@ -63,17 +54,13 @@ fetch('/saveBookingData', {
 					tickets,
 					fuel,
 				}),
-			})
-				.then((response) => response.json())
-				.then((data) => {
+				dataType: 'json',
+				success: function (data) {
 					const order = JSON.parse(data)
-					// const order = data
-
+		
 					// Step 2: Open Razorpay checkout
 					const options = {
-						// for live environment
-						// For test environment
-						key: 'rzp_live_sw0tY7r67y7YTy',
+						key: 'rzp_test_GG15JZpgJ2KB0r',
 						amount: order.amount,
 						currency: order.currency,
 						name: 'Privé Drive',
@@ -105,52 +92,51 @@ fetch('/saveBookingData', {
 							enabled: true,
 							max_count: 4,
 						},
-
+		
 						// Step 3: Verify Payment Signature
 						handler: function (response) {
-							fetch('/verify-payment', {
+							$.ajax({
+								url: '/verify-payment',
 								method: 'POST',
-								headers: {
-									'Content-Type': 'application/json',
-								},
-								body: JSON.stringify({
+								contentType: 'application/json',
+								data: JSON.stringify({
 									order_id: response.razorpay_order_id,
 									payment_id: response.razorpay_payment_id,
 									signature: response.razorpay_signature,
 								}),
-							})
-								.then((response) => response.json())
-								.then(() => {
+								dataType: 'json',
+								success: function () {
 									paymentDiv.style.display = 'block'
 									window.location.href = '/payment#payment-complete-div'
 									// Step 4: Update Payment Status to Completed in Database,
 									// and assign group no. & shareholder serial number to user
-									fetch('/updateBookingData', {
-										method: 'PATCH',
-										headers: {
-											'Content-Type': 'application/json',
-										},
-										body: JSON.stringify({
+									$.ajax({
+										url: '/updateBookingData',
+										method: "PATCH",
+										contentType: 'application/json',
+										data: JSON.stringify({
 											userData,
-											userBookingID,
-										}),
+											userBookingID
+										})
+										
 									})
-
 									setTimeout(function () {
 										window.location.href = '/bookdates'
 									}, 8000)
-								})
-								.catch(() => {
+								},
+								error: function () {
 									alert('Payment Failed! Signature Verification Mismatched')
-								})
+								},
+							})
 						},
 					}
 					// Create Razorpay Modal Window and Open Pop-Up
 					const razorpayWindow = new Razorpay(options)
 					razorpayWindow.open()
-				})
+				},
+			})
 		})
-	})
-	.catch((error) => {
-		console.error('Error:', error)
-	})
+	}
+})
+
+
