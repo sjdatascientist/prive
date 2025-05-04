@@ -2,13 +2,20 @@
 	"version": 2,
 	"builds": [
 		{
-			"src": "app.js",
+			"src": "./app.js",
 			"use": "@vercel/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "/app.js",
+			"methods": ["GET", "POST", "PATCH", "OPTIONS"]
 		}
 	],
 	"headers": [
 		{
-			"src": "/(.*)",
+			"source": "/(.*)",
 			"headers": [
 				{
 					"key": "Access-Control-Allow-Origin",
@@ -16,14 +23,17 @@
 				},
 				{
 					"key": "Access-Control-Allow-Methods",
-					"value": "GET,POST,PUT,PATCH,OPTIONS"
+					"value": "GET,POST,PATCH,OPTIONS"
 				},
 				{
 					"key": "Access-Control-Allow-Headers",
-					"value": "X-Requested-With, Content-Type, Authorization"
+					"value": "X-Requested-With, Content-Type, Authorization, Razorpay-Signature"
+				},
+				{
+					"key": "Access-Control-Allow-Credentials",
+					"value": "true"
 				}
-			],
-			"dest": "app.js"
+			]
 		}
 	]
 }
