@@ -1,5 +1,5 @@
 const path = require('path')
-const fs = require('fs')
+// const fs = require('fs')
 const razorpay = require('../config/razorpay')
 
 const createOrder = async (req, res) => {
@@ -34,8 +34,8 @@ const createOrder = async (req, res) => {
 
 	try {
 		const response = await razorpay.orders.create(options)
-		const filepath = path.join(__dirname, '../data/order.json')
-		fs.writeFileSync(filepath, JSON.stringify(response, null, 2))
+		// const filepath = path.join(__dirname, '../data/order.json')
+		// fs.writeFileSync(filepath, JSON.stringify(response, null, 2))
 		res.status(200).json(JSON.stringify(response, null, 2))
 	} catch (error) {
 		console.error(error)
