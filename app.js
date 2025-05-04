@@ -26,12 +26,12 @@ const reserveBookingDates = require("./controllers/reserveBookingDates")
 
 const app = express()
 
-app.use(cors())
 
 // Essentails middlewares for every request
 app.use(compression())
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(cors())
 
 // Setting an App variable for global usage
 app.locals.globalCars = cars
