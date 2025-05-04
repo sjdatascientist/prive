@@ -50,7 +50,7 @@ fetch("/saveBookingData", {
   paymentBtn.addEventListener('click', async function () {
     // Step 1: Create order on your server
     fetch('/create-order', {
-      method: 'POST',
+      method: 'post',
       headers: {
         'Content-Type': 'application/json',
       },
