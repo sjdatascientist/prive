@@ -28,6 +28,7 @@ const createOrder = async (req, res) => {
 			Plan: plan,
 			Car: car,
 			Fuel: fuel,
+			public_key: process.env.RAZORPAY_ID_KEY
 		},
 	}
 
@@ -35,10 +36,10 @@ const createOrder = async (req, res) => {
 		const response = await razorpay.orders.create(options)
 		const filepath = path.join(__dirname, '../data/order.json')
 		fs.writeFileSync(filepath, JSON.stringify(response, null, 2))
-		res.json(JSON.stringify(response, null, 2)).end()
+		res.status(200).send(JSON.stringify(response, null, 2))
 	} catch (error) {
 		console.error(error)
-		res.send('Error creating order').end()
+		res.status(500).send('Error creating order')
 	}
 }
 

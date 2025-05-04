@@ -60,7 +60,7 @@ $.ajax({
 		
 					// Step 2: Open Razorpay checkout
 					const options = {
-						key: 'rzp_test_GG15JZpgJ2KB0r',
+						key: order.notes.public_key,
 						amount: order.amount,
 						currency: order.currency,
 						name: 'Privé Drive',
