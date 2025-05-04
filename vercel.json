@@ -1,16 +1,34 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "app.js"
-      }
-    ]
-  }
-  
+	"version": 2,
+	"builds": [
+		{
+			"src": "app.js",
+			"use": "@vercel/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "app.js"
+		}
+	],
+	"headers": [
+		{
+			"src": "/(.*)",
+			"headers": [
+				{
+					"key": "Access-Control-Allow-Origin",
+					"value": "https://prive-ten.vercel.app"
+				},
+				{
+					"key": "Access-Control-Allow-Methods",
+					"value": "GET,POST,PUT,PATCH,OPTIONS"
+				},
+				{
+					"key": "Access-Control-Allow-Headers",
+					"value": "X-Requested-With, Content-Type, Authorization"
+				}
+			]
+		}
+	]
+}
