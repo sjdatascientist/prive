@@ -1,82 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-		<title>Memberships | Privé Drive</title>
-		<link rel="stylesheet" href="../css/memberships-style.css" />
-	</head>
-	<body>
-		<%- include('partials/header') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <title>Memberships | Privé Drive</title>
+    <link rel="stylesheet" href="../css/memberships-style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
 
-		<main class="main-section temp-border">
-			<h3>Memberships</h3>
-			<section class="memberships-section temp-border">
-				<div class="membership-column-div temp-border">
-					<img src="../assets/Silver.svg" alt="" />
-					<!-- <form>
+    <main class="main-section temp-border">
+        <h3>Memberships</h3>
+        <section class="memberships-section temp-border">
+            <div class="membership-column-div temp-border">
+                <img src="../assets/Silver.svg" alt="">
+                <!-- <form>
                     <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QEWBXlMKNEeD46" async>
                     </script>
                 </form> -->
-					<div class="btn-div">
-						<img class="btn-img" src="../assets/btns/silver.png" alt="" />
-					</div>
-					
-				</div>
-				<div class="membership-column-div temp-border">
-					<img src="../assets/Gold.svg" alt="" />
-					<div class="btn-div">
-						<img class="btn-img" src="../assets/btns/gold.png" alt="" />
-					</div>
-					<!-- <form>
+                <iframe title="payment-form" class="razorpay-payment-form-frame svelte-7tbrl8" frameborder="0" height="100%" width="100%" allowtransparency="true" allowpaymentrequest="" src="https://razorpay.me/@dieselrysolutionsprivatelimit"></iframe>
+            </div>
+            <div class="membership-column-div temp-border">
+                <img src="../assets/Gold.svg" alt="">
+                <form>
                     <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QEWW7MQGJ16Dwt" async>
                     </script>
-                </form> -->
-					<!-- <button class="gold-btn">Select</button> -->
-				</div>
-				<div class="membership-column-div temp-border">
-					<img src="../assets/Platinum.svg" alt="" />
-					<div class="btn-div">
-						<img class="btn-img" src="../assets/btns/platinum.png" alt="" />
-					</div>
-					<!-- <form>
+                </form>
+                <!-- <button class="gold-btn">Select</button> -->
+            </div>
+            <div class="membership-column-div temp-border">
+                <img src="../assets/Platinum.svg" alt="">
+                <form>
                     <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QEWZPU8yz0z4G2" async>
                     </script>
-                </form> -->
-					<!-- <button class="platinum-btn">Select</button> -->
-				</div>
-			</section>
-		</main>
+                </form>
+                <!-- <button class="platinum-btn">Select</button> -->
+            </div>
+        </section>
+    </main>
 
-		<div class="subscription-info">
-			<p>
-				The company will try to make sure that you get some car for the usage. If the delay is(if) due to non compliance of rules by some
-				other members, that member would be levied a penalty of 3 days for each day of delay.
-			</p>
-			<br />
-			<p>Whenever the car gets sold after 4-5 years, the proceeds gets shared equally among the share holders.</p>
-			<br />
-			<p>One can take more than one share among the 10-12 members or take share in different set of cars to enjoy more than one car.</p>
-		</div>
+    <div class="subscription-info">
+        <p>The company will try to make sure that you get some car for the usage. If the delay is(if) due to non compliance of rules by some other members, that member would be levied a penalty of 3 days for each day of delay.</p><br>
+        <p> Whenever the car gets sold after 4-5 years, the proceeds  gets shared equally among the share holders.</p>
+        <br>
+        <p>One can take more than one share among the 10-12  members or take share in different set of cars to enjoy  more than one car.</p>
+    </div>
 
-        <iframe
-        id="iframe"
-        style="height: 100dvh; display: none;"
-        title="payment-form"
-        class="razorpay-payment-form-frame svelte-7tbrl8"
-        frameborder="0"
-        width="100%"
-        allowtransparency="true"
-        allowpaymentrequest=""
-        src="https://razorpay.me/@dieselrysolutionsprivatelimit"></iframe>   
-        <!-- <div class="payment-div-new">
-            
-        </div> -->
+    <%- include('partials/footer.ejs') %>
 
-		<%- include('partials/footer.ejs') %>
-
-		<script src="../js/menu-btn-script.js"></script>
-		<script src="../js/membership-btn-script.js"></script>
-	</body>
+    <script src="../js/menu-btn-script.js"></script>
+    <script src="../js/membership-btn-script.js"></script>
+</body>
 </html>

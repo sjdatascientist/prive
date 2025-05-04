@@ -1,7 +1,6 @@
 const express = require('express')
 const path = require('path')
 const compression = require('compression')
-const cors = require('cors')
 // const bodyParser = require('body-parser')
 
 // Importing JS variables (utilities)
@@ -26,12 +25,10 @@ const reserveBookingDates = require("./controllers/reserveBookingDates")
 
 const app = express()
 
-
 // Essentails middlewares for every request
 app.use(compression())
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-app.use(cors())
 
 // Setting an App variable for global usage
 app.locals.globalCars = cars
@@ -120,10 +117,6 @@ app.get('/terms-and-conditions', (req, res) => {
 
 app.get('/getCars', (req, res) => {
 	res.json(cars)
-})
-
-app.get('/pay', (req, res) => {
-	res.render('pay')
 })
 
 // Start the server
