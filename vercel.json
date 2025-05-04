@@ -13,7 +13,7 @@
 			"methods": ["GET", "POST", "PATCH", "OPTIONS"]
 		}
 	],
-
+  
 	"headers": [
 		{
 			"source": "/(.*)",
@@ -29,8 +29,11 @@
 				{
 					"key": "Access-Control-Allow-Headers",
 					"value": "X-Requested-With, Content-Type, Authorization, Razorpay-Signature"
+				},
+				{
+					"key": "Access-Control-Allow-Credentials",
+					"value": "true"
 				}
-				
 			]
 		}
 	]
