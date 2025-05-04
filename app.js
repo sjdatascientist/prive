@@ -30,8 +30,10 @@ app.use(compression())
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
-// Setting an App variable for global usage
-app.locals.globalCars = cars
+// Setting app locals variable for global usage across server
+app.locals.cars = cars
+app.locals.cities = cities
+// Can be accessed in controllers also via req.app.locals.${variable_name}
 
 // Serve public folder
 app.use('/assets', express.static(path.join(__dirname, 'public')))
@@ -53,7 +55,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 // All Routes
 app.get('/', (req, res) => {
-	res.render('index', {cars, cities})
+	res.render('index')
 })
 
 app.post('/contactform', handleFormData, sendMail)
@@ -71,7 +73,9 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/book', (req, res) => {
-	res.render('book', {cars, cities})
+	res.render('book')
+	// No need to pass data explicitly as app global variables are automatically passed to ejs like below
+	// res.render('book', {cars, cities})		
 })
 
 app.post('/payment', saveUserData, (req, res) => {
