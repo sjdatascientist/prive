@@ -120,6 +120,24 @@ $.ajax({
 										})
 										
 									})
+
+									// Step 5: Send Payment Confirmation Email to User & Ourself
+									$.ajax({
+										url : "./sendConfirmationMail",
+										method: "POST",
+										contentType: 'application/json',
+										data: JSON.stringify({
+											name,
+											email,
+											phone,
+											city,
+											car,
+											tickets,
+											fuel
+										})
+									})
+
+									// Redirect to next page for book slots
 									setTimeout(function () {
 										window.location.href = '/bookdates'
 									}, 8000)

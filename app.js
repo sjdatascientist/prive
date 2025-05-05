@@ -18,6 +18,7 @@ const updateBookingData = require("./controllers/updateBookingData")
 const saveBookingData = require("./controllers/saveBookingData")
 const createOrder = require('./controllers/createOrder')
 const verifyPayment = require('./controllers/verifyPayment')
+const sendConfirmationMail = require("./controllers/sendConfirmationMail")
 const setPaymentComplete = require("./controllers/setPaymentComplete")
 const razorpayWebhook = require('./controllers/razorpayWebhook')
 const getBookingCalender = require('./controllers/getBookingCalender')
@@ -97,6 +98,8 @@ app.post('/verify-payment', verifyPayment)
 app.post('/webhook', razorpayWebhook)
 
 app.patch('/updateBookingData', updateBookingData)
+
+app.post('/sendConfirmationMail', sendConfirmationMail)
 
 app.get('/bookdates', (req, res) => {
 	res.render('bookdates')
