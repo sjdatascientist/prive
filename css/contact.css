@@ -83,6 +83,7 @@ h3 {
 	display: flex;
 	justify-items: space-between;
 	column-gap: 2vw;
+	margin-bottom: 3rem;
 }
 
 .contact-buttons > button {
@@ -122,6 +123,67 @@ section.map-section {
 	height: auto;
 }
 
+.contact-us-section {
+	margin-block: 4vw;
+	width: 70%;
+}
+
+.contact-us-section h3 {
+	margin-bottom: 4vw;
+}
+
+.contact-us-section form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: max(1.5rem, 2vw);
+}
+
+.contact-us-section input,
+.contact-us-section select,
+.contact-us-section textarea {
+	font-family: Montserrat, sans-serif;
+	width: 100%;
+	height: max(4rem, 3vw);
+	padding: 2vw;
+	font-size: 1.5vw;
+	color: gray;
+}
+
+.contact-us-section textarea {
+	height: max(10rem, 14vw);
+}
+
+.contact-us-section input::placeholder,
+/* .contact-us-section select::placeholder, */
+.contact-us-section textarea::placeholder {
+	font-size: max(1.2rem, 1.5vw);
+	color: gray;
+}
+
+.reach-out-btn {
+	width: 30%;
+	height: max(4rem, 4vw);
+	font-family: Montserrat, sans-serif;
+	font-size: max(1.2rem, 1.5vw);
+	font-weight: bold;
+	background-color: #ecff82;
+}
+
+.thanks-4-contacting {
+	width: 80%;
+	height: auto;
+	margin: auto;
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+	border-radius: max(1rem,2vw);
+	overflow: hidden;
+}
+
+.thanks-4-contacting img {
+	width: 100%;
+	height: auto;
+}
 
 @media (min-width: 320px) and (max-width: 620px) {
 
@@ -160,5 +222,13 @@ section.map-section {
 
 		i {
 			scale: 1;
+		}
+
+		.contact-us-section {
+			width: 80%;
+		}
+
+		.reach-out-btn {
+			width: 100%;
 		}
 }

@@ -1,0 +1,47 @@
+$(document).ready(function () {
+	// initially hide thanks element
+	$('.thanks-4-contacting').hide()
+
+	$('form').on('submit', function (event) {
+		event.preventDefault() // Prevent the default form submission
+
+		$('#submitBtn').text('Sending..')
+
+		// Get form data
+		let formData = new FormData(event.target)
+
+		// Convert form data to JSON
+		formData = Object.fromEntries(formData.entries())
+
+		console.log(formData) // Log the form data
+
+		$.ajax({
+			url: '/reach-out',
+			method: 'POST',
+			data: JSON.stringify(formData),
+			contentType: 'application/json',
+			dataType: 'json',
+			success: function (data, xhr, status, textStatus, response) {
+				console.log(`xhr: ${xhr}\n
+                    Status: ${status}\n
+                    Status Code: ${xhr.status}\n
+                    Text Status: ${textStatus}\n
+                    xhrResponse: ${xhr.responseJSON}\n
+                    Response: ${response}\n
+                    Data: ${data.message}`)
+				// Append success alert
+				$('.thanks-4-contacting').show(500)
+				$('.contact-us-section').hide()
+				$('.thanks-4-contacting').delay(30000).hide(500)
+			},
+			error: function (xhr, status, response) {
+				console.log(`xhr: ${xhr}\n
+                    Status: ${status}\n
+                    Status Code: ${xhr.status}\n
+                    Error: ${response.error}\n
+                    Response: ${response}`)
+				alert('500 Internal Server Error While Sending Email')
+			},
+		})
+	})
+})

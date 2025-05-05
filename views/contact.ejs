@@ -45,9 +45,33 @@
 			</div>
 		</section>
 
-		<section class="map-section">
+		<!-- <section class="map-section">
 			<img src="../assets/map.png" alt="" />
+		</section> -->
+
+		<section class="contact-us-section">
+			<h3>Reach Out To Us</h3>
+			<form>
+				<input type="text" name="name" id="name" placeholder="Your Name" minlength="3" maxlength="50" required />
+				<input type="email" name="email" id="email" placeholder="Enter Your Email" required />
+				<input
+					type="tel"
+					name="phone"
+					id="phone"
+					placeholder="Phone Number"
+					title="'Please Enter 10 Digit Mobile Number"
+					minlength="10"
+					maxlength="10"
+					required />
+				<input type="text" name="city" id="city" placeholder="Enter Your City" minlength="3" maxlength="25" required />
+				<textarea name="message" id="message" placeholder="Enter Your Message" required></textarea>
+				<button type="submit" class="reach-out-btn id="submitBtn">Send Message</button>
+			</form>
 		</section>
+
+		<div class="thanks-4-contacting">
+			<img src="../assets/thankyou.png" alt="">
+		</div>
 
 		<%- include('partials/footer.ejs') %>
 
@@ -64,5 +88,6 @@
 				window.location.href = 'mailto:response@dieselry.com'
 			})
 		</script>
+		<script src="../js/reachOut.js"></script>
 	</body>
 </html>

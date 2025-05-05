@@ -22,6 +22,7 @@ const setPaymentComplete = require("./controllers/setPaymentComplete")
 const razorpayWebhook = require('./controllers/razorpayWebhook')
 const getBookingCalender = require('./controllers/getBookingCalender')
 const reserveBookingDates = require("./controllers/reserveBookingDates")
+const reachOut = require("./controllers/reachOut")
 
 const app = express()
 
@@ -71,6 +72,8 @@ app.get('/memberships', (req, res) => {
 app.get('/contact', (req, res) => {
 	res.render('contact')
 })
+
+app.post('/reach-out', reachOut)
 
 app.get('/book', (req, res) => {
 	res.render('book')
