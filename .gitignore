@@ -1,6 +1,6 @@
 .qodo
 node_modules/
-
 .vercel
 .extra
 .env
+.bat
