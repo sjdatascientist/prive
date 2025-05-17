@@ -5,7 +5,15 @@ const compression = require('compression')
 
 // Importing JS variables (utilities)
 const cities = require("./utils/cities")
-const cars = require('./utils/cars')
+
+const getCarsData = require('./utils/cars')
+
+async function data() {
+	const cars = await getCarsData()
+	app.locals.cars = cars
+	app.locals.cities = cities
+};
+data();
 
 // Importing Configs
 const startNgrok = require('./config/ngrok')
@@ -33,8 +41,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 // Setting app locals variable for global usage across server
-app.locals.cars = cars
-app.locals.cities = cities
+
 // Can be accessed in controllers also via req.app.locals.${variable_name}
 
 // Serve public folder
@@ -57,7 +64,8 @@ app.set('views', path.join(__dirname, 'views'))
 
 // All Routes
 app.get('/', (req, res) => {
-	res.render('index')
+	// res.render('index')
+	res.send('<h1>Your Trial Period Has Expired.<br>Please Purchase The Plan To Get Website Running!</h1>')
 })
 
 app.post('/contactform', handleFormData, sendMail)
@@ -123,10 +131,6 @@ app.get('/privacy-policy', (req, res) => {
 
 app.get('/terms-and-conditions', (req, res) => {
 	res.render('terms-conditions')
-})
-
-app.get('/getCars', (req, res) => {
-	res.json(cars)
 })
 
 // Start the server
