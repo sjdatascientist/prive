@@ -64,8 +64,8 @@ app.set('views', path.join(__dirname, 'views'))
 
 // All Routes
 app.get('/', (req, res) => {
-	res.render('index')
-	// res.send('<h1>Your Trial Period Has Expired.<br>Please Purchase The Plan To Get Website Running!</h1>')
+	// res.render('index')
+	res.send('<h1>Your Trial Period Has Expired.<br>Please Purchase The Plan To Get Website Running!</h1>')
 })
 
 app.post('/contactform', handleFormData, sendMail)
